@@ -39,14 +39,88 @@ error() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - ERROR - $msg" >> "$LOG_FILE"
 }
 
+# Fonction pour charger la liste d'exclusions
+load_exclusions() {
+    local exclusions_file="$SCRIPT_DIR/exclusions.conf"
+    EXCLUDED_REPOS=()
+    
+    if [ -f "$exclusions_file" ]; then
+        while IFS= read -r line; do
+            # Ignorer les commentaires et lignes vides
+            if [[ ! "$line" =~ ^[[:space:]]*# ]] && [[ -n "${line// }" ]]; then
+                # Extraire la partie avant le commentaire
+                local repo=$(echo "$line" | cut -d'#' -f1 | xargs)
+                if [ -n "$repo" ]; then
+                    EXCLUDED_REPOS+=("$repo")
+                fi
+            fi
+        done < "$exclusions_file"
+        
+        if [ ${#EXCLUDED_REPOS[@]} -gt 0 ]; then
+            log "Exclusions chargées: ${EXCLUDED_REPOS[*]}"
+        fi
+    else
+        log "Aucun fichier d'exclusions trouvé: $exclusions_file"
+    fi
+}
+
+# Fonction pour vérifier si un repository est exclu
+is_repo_excluded() {
+    local repo_path="$1"
+    local family_name=$(basename "$(dirname "$repo_path")")
+    local repo_name=$(basename "$repo_path")
+    local full_path="$family_name/$repo_name"
+    
+    for excluded in "${EXCLUDED_REPOS[@]}"; do
+        if [ "$excluded" = "$repo_name" ] || [ "$excluded" = "$full_path" ]; then
+            return 0  # Exclu
+        fi
+    done
+    
+    return 1  # Pas exclu
+}
+
+# Fonction pour détecter si un repository est en cours d'utilisation
+is_repo_busy() {
+    local repo_path="$1"
+    local repo_name=$(basename "$repo_path")
+    
+    # D'abord vérifier les exclusions manuelles (prioritaire)
+    if is_repo_excluded "$repo_path"; then
+        return 0  # Traiter comme occupé
+    fi
+    
+    # Vérifier les fichiers de lock Git (seule détection fiable)
+    if [ -f "$repo_path/.git/index.lock" ]; then
+        return 0  # Busy
+    fi
+    
+    return 1  # Not busy
+}
+
 # Fonction pour synchroniser un submodule
 sync_submodule() {
     local submodule_path="$1"
     local submodule_name=$(basename "$submodule_path")
+    local safe_mode="$2"
     
     if [ ! -d "$submodule_path" ]; then
         warning "Submodule $submodule_name non trouvé: $submodule_path"
         return 1
+    fi
+    
+    # Vérifier si le repo est exclu ou en cours d'utilisation
+    if is_repo_busy "$submodule_path"; then
+        if is_repo_excluded "$submodule_path"; then
+            warning "� $submodule_name: Exclu par configuration"
+        else
+            warning "🔒 $submodule_name: Git lock détecté"
+        fi
+        if [ "$safe_mode" = "true" ]; then
+            return 2  # Code spécial pour "ignoré"
+        else
+            warning "⚠️  $submodule_name: Synchronisation forcée malgré l'exclusion/lock"
+        fi
     fi
     
     cd "$submodule_path"
@@ -111,6 +185,7 @@ sync_submodule() {
 sync_family() {
     local family_path="$1"
     local family_name=$(basename "$family_path")
+    local safe_mode="$2"
     
     if [ ! -d "$family_path" ]; then
         warning "Famille $family_name non trouvée: $family_path"
@@ -121,17 +196,26 @@ sync_family() {
     
     local total=0
     local success_count=0
+    local ignored_count=0
     
     for submodule in "$family_path"/*; do
         if [ -d "$submodule" ]; then
             total=$((total + 1))
-            if sync_submodule "$submodule"; then
+            local result
+            sync_submodule "$submodule" "$safe_mode"
+            result=$?
+            
+            if [ $result -eq 0 ]; then
                 success_count=$((success_count + 1))
+            elif [ $result -eq 2 ]; then
+                ignored_count=$((ignored_count + 1))
             fi
         fi
     done
     
-    if [ $total -eq $success_count ]; then
+    if [ $ignored_count -gt 0 ]; then
+        warning "Famille $family_name: $success_count/$total synchronisés ($ignored_count ignorés)"
+    elif [ $total -eq $success_count ]; then
         success "Famille $family_name: $success_count/$total submodules synchronisés"
     else
         warning "Famille $family_name: $success_count/$total submodules synchronisés"
@@ -204,9 +288,48 @@ EOF
 
 # Fonction principale
 main() {
-    local action="$1"
+    local action=""
+    local safe_mode="true"  # Mode sécurisé par défaut
+    
+    # Vérifier les options
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --safe)
+                safe_mode="true"
+                shift
+                ;;
+            --force)
+                safe_mode="false" 
+                shift
+                ;;
+            status|update|report|full)
+                action="$1"
+                shift
+                ;;
+            *)
+                if [ -z "$action" ]; then
+                    action="status"  # Par défaut
+                fi
+                shift
+                ;;
+        esac
+    done
+    
+    # Action par défaut si rien spécifié
+    if [ -z "$action" ]; then
+        action="status"
+    fi
     
     log "=== Synchronisation Globale GitHub Centralized ==="
+    
+    # Charger les exclusions
+    load_exclusions
+    
+    if [ "$safe_mode" = "true" ]; then
+        log "Mode sécurisé activé - respecte les exclusions et git locks"
+    else
+        log "Mode force activé - ignore les exclusions (DANGEREUX)"
+    fi
     
     cd "$REPO_ROOT"
     
@@ -221,12 +344,16 @@ main() {
             # Synchroniser toutes les familles
             for family_dir in projects/*; do
                 if [ -d "$family_dir" ]; then
-                    sync_family "$family_dir"
+                    sync_family "$family_dir" "$safe_mode"
                 fi
             done
             ;;
         "update")
-            update_submodules
+            if [ "$safe_mode" = "true" ]; then
+                warning "Mode sécurisé: mise à jour des submodules ignorée"
+            else
+                update_submodules
+            fi
             ;;
         "report")
             generate_health_report
@@ -235,19 +362,26 @@ main() {
             # Synchronisation complète
             for family_dir in projects/*; do
                 if [ -d "$family_dir" ]; then
-                    sync_family "$family_dir"
+                    sync_family "$family_dir" "$safe_mode"
                 fi
             done
-            update_submodules
+            if [ "$safe_mode" = "false" ]; then
+                update_submodules
+            fi
             generate_health_report
             ;;
         *)
-            echo "Usage: $0 [status|update|report|full]"
+            echo "Usage: $0 [status|update|report|full] [--safe|--force]"
             echo ""
+            echo "Actions:"
             echo "  status  - Affiche le statut de tous les submodules (défaut)"
             echo "  update  - Met à jour tous les submodules"
             echo "  report  - Génère un rapport de santé"
             echo "  full    - Synchronisation complète + rapport"
+            echo ""
+            echo "Options:"
+            echo "  --safe  - Ignore les repositories en cours d'utilisation"
+            echo "  --force - Force la synchronisation même des repos occupés"
             exit 1
             ;;
     esac
