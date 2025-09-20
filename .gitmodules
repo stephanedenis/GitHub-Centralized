@@ -1,0 +1,51 @@
+[submodule "projects/panini/PaniniFS-AttributionRegistry"]
+	path = projects/panini/PaniniFS-AttributionRegistry
+	url = https://github.com/stephanedenis/PaniniFS-AttributionRegistry.git
+[submodule "projects/panini/PaniniFS-CloudOrchestrator"]
+	path = projects/panini/PaniniFS-CloudOrchestrator
+	url = https://github.com/stephanedenis/PaniniFS-CloudOrchestrator.git
+[submodule "projects/panini/PaniniFS-UltraReactive"]
+	path = projects/panini/PaniniFS-UltraReactive
+	url = https://github.com/stephanedenis/PaniniFS-UltraReactive.git
+[submodule "projects/panini/PaniniFS"]
+	path = projects/panini/PaniniFS
+	url = https://github.com/stephanedenis/PaniniFS.git
+[submodule "projects/panini/PaniniFS-Research"]
+	path = projects/panini/PaniniFS-Research
+	url = https://github.com/stephanedenis/PaniniFS-Research.git
+[submodule "projects/panini/PaniniFS-PublicationEngine"]
+	path = projects/panini/PaniniFS-PublicationEngine
+	url = https://github.com/stephanedenis/PaniniFS-PublicationEngine.git
+[submodule "projects/panini/PaniniFS-SemanticCore"]
+	path = projects/panini/PaniniFS-SemanticCore
+	url = https://github.com/stephanedenis/PaniniFS-SemanticCore.git
+[submodule "projects/panini/PaniniFS-DatasetsIngestion"]
+	path = projects/panini/PaniniFS-DatasetsIngestion
+	url = https://github.com/stephanedenis/PaniniFS-DatasetsIngestion.git
+[submodule "projects/panini/PaniniFS-CoLabController"]
+	path = projects/panini/PaniniFS-CoLabController
+	url = https://github.com/stephanedenis/PaniniFS-CoLabController.git
+[submodule "projects/panini/PaniniFS-CopilotageShared"]
+	path = projects/panini/PaniniFS-CopilotageShared
+	url = https://github.com/stephanedenis/PaniniFS-CopilotageShared.git
+[submodule "projects/panini/PaniniFS-AutonomousMissions"]
+	path = projects/panini/PaniniFS-AutonomousMissions
+	url = https://github.com/stephanedenis/PaniniFS-AutonomousMissions.git
+[submodule "projects/panini/PaniniFS-ExecutionOrchestrator"]
+	path = projects/panini/PaniniFS-ExecutionOrchestrator
+	url = https://github.com/stephanedenis/PaniniFS-ExecutionOrchestrator.git
+[submodule "projects/equipment/equipment-remarkable"]
+	path = projects/equipment/equipment-remarkable
+	url = https://github.com/stephanedenis/equipment-remarkable.git
+[submodule "projects/tooling/copilotage"]
+	path = projects/tooling/copilotage
+	url = https://github.com/stephanedenis/copilotage.git
+[submodule "projects/tooling/copilotage-shared"]
+	path = projects/tooling/copilotage-shared
+	url = https://github.com/stephanedenis/copilotage-shared.git
+[submodule "projects/exploration/CALME"]
+	path = projects/exploration/CALME
+	url = https://github.com/stephanedenis/CALME.git
+[submodule "projects/exploration/OntoWave"]
+	path = projects/exploration/OntoWave
+	url = https://github.com/stephanedenis/OntoWave.git
