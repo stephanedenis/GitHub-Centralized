@@ -49,3 +49,6 @@
 [submodule "projects/exploration/OntoWave"]
 	path = projects/exploration/OntoWave
 	url = https://github.com/stephanedenis/OntoWave.git
+[submodule "projects/equipment/equipment-hauru"]
+	path = projects/equipment/equipment-hauru
+	url = git@github.com:stephanedenis/equipment-hauru.git
