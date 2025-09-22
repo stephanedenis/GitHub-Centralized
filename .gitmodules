@@ -52,3 +52,9 @@
 [submodule "projects/equipment/equipment-hauru"]
 	path = projects/equipment/equipment-hauru
 	url = git@github.com:stephanedenis/equipment-hauru.git
+[submodule "projects/equipment/equipment-router"]
+	path = projects/equipment/equipment-router
+	url = git@github.com:stephanedenis/equipment-router.git
+[submodule "projects/equipment/equipment-mystery"]
+	path = projects/equipment/equipment-mystery
+	url = git@github.com:stephanedenis/equipment-mystery.git
