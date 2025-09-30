@@ -1,0 +1,308 @@
+{
+  "timestamp": "2025-09-30T20:49:24.092249+00:00",
+  "total_tests": 49,
+  "discovered_patterns": [
+    {
+      "pattern_id": "pattern_1759265364.091451",
+      "description": "Symétrie composition/décomposition sur 27 items",
+      "discovered_at": "2025-09-30T20:49:24.091471+00:00",
+      "symmetry_score": 1.0,
+      "recurrence_count": 27,
+      "cross_domain_validated": true,
+      "is_universal_candidate": true
+    },
+    {
+      "pattern_id": "pattern_1759265364.091778",
+      "description": "Symétrie composition/décomposition sur 3 items",
+      "discovered_at": "2025-09-30T20:49:24.091790+00:00",
+      "symmetry_score": 1.0,
+      "recurrence_count": 3,
+      "cross_domain_validated": true,
+      "is_universal_candidate": true
+    },
+    {
+      "pattern_id": "pattern_1759265364.091906",
+      "description": "Symétrie composition/décomposition sur 4 items",
+      "discovered_at": "2025-09-30T20:49:24.091919+00:00",
+      "symmetry_score": 1.0,
+      "recurrence_count": 4,
+      "cross_domain_validated": true,
+      "is_universal_candidate": true
+    },
+    {
+      "pattern_id": "pattern_1759265364.091995",
+      "description": "Symétrie composition/décomposition sur 3 items",
+      "discovered_at": "2025-09-30T20:49:24.092003+00:00",
+      "symmetry_score": 1.0,
+      "recurrence_count": 3,
+      "cross_domain_validated": true,
+      "is_universal_candidate": true
+    },
+    {
+      "pattern_id": "pattern_1759265364.092069",
+      "description": "Symétrie composition/décomposition sur 3 items",
+      "discovered_at": "2025-09-30T20:49:24.092076+00:00",
+      "symmetry_score": 1.0,
+      "recurrence_count": 3,
+      "cross_domain_validated": true,
+      "is_universal_candidate": true
+    },
+    {
+      "pattern_id": "pattern_1759265364.092144",
+      "description": "Symétrie composition/décomposition sur 3 items",
+      "discovered_at": "2025-09-30T20:49:24.092151+00:00",
+      "symmetry_score": 1.0,
+      "recurrence_count": 3,
+      "cross_domain_validated": true,
+      "is_universal_candidate": true
+    }
+  ],
+  "symmetry_log": [
+    {
+      "timestamp": "2025-09-30T20:49:24.091543+00:00",
+      "original": "think",
+      "components": [
+        "t",
+        "h",
+        "i",
+        "n",
+        "k"
+      ],
+      "reconstructed": "think",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091615+00:00",
+      "original": "running fast",
+      "components": [
+        "running",
+        "fast"
+      ],
+      "reconstructed": "runningfast",
+      "is_symmetric": false,
+      "symmetry_score": 0.03125
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091658+00:00",
+      "original": "eating food",
+      "components": [
+        "eating",
+        "food"
+      ],
+      "reconstructed": "eatingfood",
+      "is_symmetric": false,
+      "symmetry_score": 0.0625
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091685+00:00",
+      "original": "thinking deeply",
+      "components": [
+        "thinking",
+        "deeply"
+      ],
+      "reconstructed": "thinkingdeeply",
+      "is_symmetric": false,
+      "symmetry_score": 0.015625
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091708+00:00",
+      "original": "universal semantic atoms",
+      "components": [
+        "universal",
+        "semantic",
+        "atoms"
+      ],
+      "reconstructed": "universalsemanticatoms",
+      "is_symmetric": false,
+      "symmetry_score": 0.03125
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091731+00:00",
+      "original": "composition decomposition symmetry",
+      "components": [
+        "composition",
+        "decomposition",
+        "symmetry"
+      ],
+      "reconstructed": "compositiondecompositionsymmetry",
+      "is_symmetric": false,
+      "symmetry_score": 0.09375
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091754+00:00",
+      "original": "information theory paradigm",
+      "components": [
+        "information",
+        "theory",
+        "paradigm"
+      ],
+      "reconstructed": "informationtheoryparadigm",
+      "is_symmetric": false,
+      "symmetry_score": 0.03125
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091843+00:00",
+      "original": "word",
+      "components": [
+        "w",
+        "o",
+        "r",
+        "d"
+      ],
+      "reconstructed": "word",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091861+00:00",
+      "original": "sentence",
+      "components": [
+        "s",
+        "e",
+        "n",
+        "t",
+        "e"
+      ],
+      "reconstructed": "sentence",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091874+00:00",
+      "original": "grammar",
+      "components": [
+        "g",
+        "r",
+        "a",
+        "m",
+        "m"
+      ],
+      "reconstructed": "grammar",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091887+00:00",
+      "original": "syntax",
+      "components": [
+        "s",
+        "y",
+        "n",
+        "t",
+        "a"
+      ],
+      "reconstructed": "syntax",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091954+00:00",
+      "original": "123",
+      "components": [
+        "1",
+        "2",
+        "3"
+      ],
+      "reconstructed": "123",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091966+00:00",
+      "original": "456",
+      "components": [
+        "4",
+        "5",
+        "6"
+      ],
+      "reconstructed": "456",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.091978+00:00",
+      "original": "789",
+      "components": [
+        "7",
+        "8",
+        "9"
+      ],
+      "reconstructed": "789",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.092028+00:00",
+      "original": "@",
+      "components": [
+        "@"
+      ],
+      "reconstructed": "@",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.092040+00:00",
+      "original": "#",
+      "components": [
+        "#"
+      ],
+      "reconstructed": "#",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.092052+00:00",
+      "original": "$",
+      "components": [
+        "$"
+      ],
+      "reconstructed": "$",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.092101+00:00",
+      "original": "abc123",
+      "components": [
+        "a",
+        "b",
+        "c",
+        "1",
+        "2"
+      ],
+      "reconstructed": "abc123",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.092115+00:00",
+      "original": "test@domain",
+      "components": [
+        "t",
+        "e",
+        "s",
+        "t",
+        "@"
+      ],
+      "reconstructed": "test@domain",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:49:24.092127+00:00",
+      "original": "file_name.json",
+      "components": [
+        "f",
+        "i",
+        "l",
+        "e",
+        "_"
+      ],
+      "reconstructed": "file_name.json",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    }
+  ]
+}

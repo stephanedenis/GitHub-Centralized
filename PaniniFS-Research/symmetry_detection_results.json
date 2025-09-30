@@ -1,0 +1,131 @@
+{
+  "timestamp": "2025-09-30T20:48:33.064594+00:00",
+  "total_tests": 10,
+  "discovered_patterns": [
+    {
+      "pattern_id": "pattern_1759265313.064538",
+      "description": "Symétrie composition/décomposition sur 2 items",
+      "discovered_at": "2025-09-30T20:48:33.064556+00:00",
+      "symmetry_score": 1.0,
+      "recurrence_count": 2,
+      "cross_domain_validated": false,
+      "is_universal_candidate": false
+    }
+  ],
+  "symmetry_log": [
+    {
+      "timestamp": "2025-09-30T20:48:33.064101+00:00",
+      "original": "hello world",
+      "components": [
+        "hello",
+        "world"
+      ],
+      "reconstructed": "helloworld",
+      "is_symmetric": false,
+      "symmetry_score": 0.0625
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064149+00:00",
+      "original": "composition test",
+      "components": [
+        "composition",
+        "test"
+      ],
+      "reconstructed": "compositiontest",
+      "is_symmetric": false,
+      "symmetry_score": 0.046875
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064182+00:00",
+      "original": "semantic atoms",
+      "components": [
+        "semantic",
+        "atoms"
+      ],
+      "reconstructed": "semanticatoms",
+      "is_symmetric": false,
+      "symmetry_score": 0.09375
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064208+00:00",
+      "original": "universal theory",
+      "components": [
+        "universal",
+        "theory"
+      ],
+      "reconstructed": "universaltheory",
+      "is_symmetric": false,
+      "symmetry_score": 0.015625
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064232+00:00",
+      "original": "panini research",
+      "components": [
+        "panini",
+        "research"
+      ],
+      "reconstructed": "paniniresearch",
+      "is_symmetric": false,
+      "symmetry_score": 0.109375
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064365+00:00",
+      "original": "['atom1', 'atom2', 'atom3']",
+      "components": [
+        "atom1",
+        "atom2",
+        "atom3"
+      ],
+      "reconstructed": "atom1atom2atom3",
+      "is_symmetric": false,
+      "symmetry_score": 0.03125
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064393+00:00",
+      "original": "['compose', 'decompose']",
+      "components": [
+        "compose",
+        "decompose"
+      ],
+      "reconstructed": "composedecompose",
+      "is_symmetric": false,
+      "symmetry_score": 0.046875
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064409+00:00",
+      "original": "single_string",
+      "components": [
+        "s",
+        "i",
+        "n",
+        "g",
+        "l"
+      ],
+      "reconstructed": "single_string",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064440+00:00",
+      "original": "['nested', ['structure']]",
+      "components": [
+        "nested",
+        "['structure']"
+      ],
+      "reconstructed": "['nested', ['structure']]",
+      "is_symmetric": true,
+      "symmetry_score": 1.0
+    },
+    {
+      "timestamp": "2025-09-30T20:48:33.064491+00:00",
+      "original": "another test",
+      "components": [
+        "another",
+        "test"
+      ],
+      "reconstructed": "anothertest",
+      "is_symmetric": false,
+      "symmetry_score": 0.078125
+    }
+  ]
+}
