@@ -1,0 +1,219 @@
+{
+  "copilotage_version": "1.0",
+  "spec_type": "date_formatting_standard",
+  "created": "2025-09-29T16:15:00Z",
+  "description": "Règles de copilotage pour standardisation des formats de dates",
+  
+  "date_formatting_rules": {
+    "mandatory_format": {
+      "standard": "ISO 8601",
+      "date_format": "YYYY-MM-DD",
+      "datetime_format": "YYYY-MM-DDTHH:mm:ssZ",
+      "time_zone": "UTC (Z) or explicit offset (+HH:mm)",
+      "examples": {
+        "date_only": "2025-09-29",
+        "datetime_utc": "2025-09-29T16:15:00Z",
+        "datetime_offset": "2025-09-29T18:15:00+02:00",
+        "timestamp_precision": "2025-09-29T16:15:30.123Z"
+      }
+    },
+    
+    "forbidden_formats": [
+      "MM/DD/YYYY",
+      "DD/MM/YYYY", 
+      "MM-DD-YYYY",
+      "DD-MM-YYYY",
+      "YYYY/MM/DD",
+      "Month DD, YYYY",
+      "DD Month YYYY",
+      "relative_dates_without_context"
+    ],
+    
+    "enforcement_scope": {
+      "file_names": {
+        "rule": "MUST use YYYY-MM-DD format in filenames",
+        "examples": [
+          "analyse_2025-09-29_corpus.json",
+          "dhatu_evolution_2025-09-29T16-15-00Z.json",
+          "rapport_2025-09-29.md"
+        ],
+        "forbidden_examples": [
+          "analyse_29-09-2025.json",
+          "rapport_09_29_2025.md",
+          "data_sep_29_2025.json"
+        ]
+      },
+      
+      "json_fields": {
+        "rule": "ALL date/datetime fields MUST use ISO 8601",
+        "standard_field_names": [
+          "timestamp",
+          "created_at", 
+          "updated_at",
+          "modified",
+          "date_created",
+          "last_modified",
+          "analysis_date",
+          "processing_time"
+        ],
+        "example_structure": {
+          "timestamp": "2025-09-29T16:15:00Z",
+          "created_at": "2025-09-29T16:15:00Z",
+          "last_modified": "2025-09-29T16:15:30.123Z",
+          "analysis_date": "2025-09-29"
+        }
+      },
+      
+      "log_entries": {
+        "rule": "Log timestamps MUST be ISO 8601 with timezone",
+        "format": "[YYYY-MM-DDTHH:mm:ss.sssZ] LOG_LEVEL message",
+        "examples": [
+          "[2025-09-29T16:15:00.123Z] INFO Démarrage analyse corpus",
+          "[2025-09-29T16:15:30.456Z] ERROR Erreur traitement dhātu",
+          "[2025-09-29T16:16:00.789Z] DEBUG Molécule sémantique détectée"
+        ]
+      },
+      
+      "python_code": {
+        "rule": "Use datetime.isoformat() and timezone-aware objects",
+        "recommended_imports": [
+          "from datetime import datetime, timezone",
+          "import dateutil.parser"
+        ],
+        "code_examples": {
+          "current_timestamp": "datetime.now(timezone.utc).isoformat()",
+          "parse_iso_date": "dateutil.parser.parse('2025-09-29T16:15:00Z')",
+          "format_for_filename": "datetime.now(timezone.utc).strftime('%Y-%m-%dT%H-%M-%SZ')"
+        }
+      },
+      
+      "documentation": {
+        "rule": "All dates in documentation MUST be ISO format",
+        "markdown_examples": [
+          "## Analyse du 2025-09-29",
+          "Dernière mise à jour: 2025-09-29T16:15:00Z",
+          "Période d'étude: 2025-09-01 à 2025-09-29"
+        ]
+      }
+    }
+  },
+  
+  "validation_rules": {
+    "automated_checks": {
+      "file_naming": {
+        "pattern": ".*\\d{4}-\\d{2}-\\d{2}.*",
+        "description": "Files with dates must use YYYY-MM-DD format"
+      },
+      "json_validation": {
+        "date_fields_regex": "\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z?)?",
+        "description": "Date fields must match ISO 8601 pattern"
+      },
+      "log_validation": {
+        "timestamp_regex": "\\[\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z\\]",
+        "description": "Log timestamps must be ISO 8601 with brackets"
+      }
+    },
+    
+    "quality_gates": {
+      "pre_commit": "Validate all date formats before commit",
+      "file_creation": "Check date format in new file names",
+      "json_update": "Validate date fields in JSON modifications",
+      "log_writing": "Ensure log timestamps are ISO compliant"
+    }
+  },
+  
+  "migration_strategy": {
+    "existing_files": {
+      "priority": "HIGH",
+      "action": "Convert non-ISO dates to ISO format",
+      "backup_required": true,
+      "batch_conversion": true
+    },
+    
+    "conversion_tools": {
+      "filename_converter": "Rename files with non-ISO dates",
+      "json_date_updater": "Update date fields in JSON files", 
+      "log_timestamp_fixer": "Fix log timestamp formats"
+    },
+    
+    "rollout_phases": [
+      {
+        "phase": 1,
+        "scope": "New files only",
+        "duration": "Immediate"
+      },
+      {
+        "phase": 2, 
+        "scope": "Critical analysis files",
+        "duration": "Within 24h"
+      },
+      {
+        "phase": 3,
+        "scope": "All existing files",
+        "duration": "Within 1 week"
+      }
+    ]
+  },
+  
+  "enforcement_level": {
+    "new_code": "MANDATORY",
+    "existing_code": "GRADUAL_MIGRATION", 
+    "documentation": "MANDATORY",
+    "file_naming": "MANDATORY",
+    "json_data": "MANDATORY",
+    "log_files": "MANDATORY"
+  },
+  
+  "exceptions": {
+    "user_display": {
+      "description": "Human-readable dates for UI display only",
+      "formats_allowed": ["DD/MM/YYYY for French users", "localized date strings"],
+      "requirement": "Must be generated from ISO source, not stored"
+    },
+    "external_apis": {
+      "description": "When interfacing with external systems with fixed formats",
+      "requirement": "Convert immediately upon data ingestion"
+    }
+  },
+  
+  "compliance_monitoring": {
+    "daily_checks": [
+      "Scan new files for non-ISO date formats",
+      "Validate JSON date fields",
+      "Check log timestamp compliance"
+    ],
+    "weekly_reports": "Generate compliance report with violations",
+    "automated_fixes": "Auto-correct where safe and unambiguous"
+  },
+  
+  "team_guidelines": {
+    "developer_responsibilities": [
+      "Always use ISO 8601 for all date/time values",
+      "Configure IDEs to default to ISO format",
+      "Validate date formats before committing",
+      "Use timezone-aware datetime objects in Python"
+    ],
+    
+    "code_review_checklist": [
+      "✓ All dates are in ISO 8601 format",
+      "✓ Timezone information is explicit", 
+      "✓ File names follow YYYY-MM-DD convention",
+      "✓ Log timestamps are ISO compliant"
+    ]
+  },
+  
+  "tools_integration": {
+    "git_hooks": {
+      "pre_commit": "Validate date formats",
+      "commit_msg": "Check commit message dates"
+    },
+    "ide_config": {
+      "vscode_settings": "Configure date format preferences",
+      "python_templates": "Use ISO format in code templates"
+    },
+    "linting": {
+      "custom_rules": "Add date format validation to linters",
+      "automation": "Integrate with CI/CD pipeline"
+    }
+  }
+}

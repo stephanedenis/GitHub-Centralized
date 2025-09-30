@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-09-29T16:11:51.096287",
+  "active_files": [
+    {
+      "path": "/home/stephane/GitHub/PaniniFS-Research/dashboard_real_data.json",
+      "name": "dashboard_real_data.json",
+      "modified": "2025-09-29 16:11:47.445327",
+      "size": 273,
+      "type": "json"
+    }
+  ],
+  "json_content": [
+    {
+      "file": "dashboard_real_data.json",
+      "structure": "dict",
+      "size": 6,
+      "content_preview": {
+        "type": "dictionary",
+        "keys_count": 6,
+        "sample_keys": [
+          "timestamp",
+          "active_files",
+          "json_content",
+          "running_processes",
+          "recent_logs",
+          "workspace_stats"
+        ],
+        "content_type": "unknown"
+      },
+      "last_modified": "2025-09-29 16:11:47.445327"
+    }
+  ],
+  "running_processes": [],
+  "recent_logs": [],
+  "workspace_stats": {
+    "total_json_files": 1,
+    "total_py_files": 2,
+    "total_log_files": 0,
+    "workspace_size": 45185
+  }
+}

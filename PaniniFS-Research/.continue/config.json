@@ -1,0 +1,67 @@
+{
+  "models": [
+    {
+      "title": "OpenAI GPT-4",
+      "provider": "openai",
+      "model": "gpt-4",
+      "apiKey": "$OPENAI_API_KEY"
+    }
+  ],
+  "contextProviders": [
+    {
+      "name": "file",
+      "params": {
+        "include": [
+          "copilotage_date_iso_standard.json",
+          "COPILOTAGE_*.md",
+          "REGLES_*.md",
+          "*.py"
+        ]
+      }
+    },
+    {
+      "name": "folder",
+      "params": {
+        "folders": [
+          "."
+        ]
+      }
+    },
+    {
+      "name": "github-issues",
+      "params": {
+        "repo": "stephanedenis/PaniniFS-Research",
+        "token": "$GITHUB_TOKEN"
+      }
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "validate-copilotage",
+      "prompt": "Valider ce code selon les règles de copilotage ISO 8601 définies dans copilotage_date_iso_standard.json. Vérifier:\n1. Format dates ISO 8601\n2. Timezone UTC explicite\n3. Conformité règles projet\n4. Documentation adequate",
+      "description": "Valide selon règles copilotage"
+    },
+    {
+      "name": "panini-linguistic-focus", 
+      "prompt": "Analyser ce code dans le contexte des travaux linguistiques Panini. Séparer clairement:\n1. OUTILS DE GESTION (dashboards, monitoring, infrastructure)\n2. ÉTUDES LINGUISTIQUES (dhātu, sémantique, théories)\nPrioriser les aspects linguistiques selon les règles de copilotage.",
+      "description": "Focus linguistique vs outils"
+    },
+    {
+      "name": "autonomous-system-check",
+      "prompt": "Vérifier si ce code fait partie des systèmes autonomes qui devraient tourner en continu. Si oui, s'assurer qu'il:\n1. Peut tourner en arrière-plan\n2. Génère des logs détaillés\n3. Respecte les contraintes d'autonomie\n4. S'intègre avec les autres systèmes",
+      "description": "Vérification systèmes autonomes"
+    }
+  ],
+  "systemMessage": "Tu es un assistant de développement spécialisé dans les travaux linguistiques de recherche Panini. Tu dois:\n\n1. TOUJOURS respecter les règles de copilotage ISO 8601 définies dans copilotage_date_iso_standard.json\n2. DISTINGUER clairement les outils de gestion des études linguistiques\n3. PRIORISER les aspects dhātu, sémantique et théories linguistiques\n4. MAINTENIR la cohérence avec les systèmes autonomes existants\n5. UTILISER les GitHub Issues comme mémoire d'état du projet\n\nContexte projet: Recherche sur la théorie Panini comme système sémantique universel et théorie de l'information.",
+  "allowAnonymousTelemetry": false,
+  "docs": [
+    {
+      "title": "Règles Copilotage",
+      "startUrl": "file://copilotage_date_iso_standard.json"
+    },
+    {
+      "title": "Documentation Panini",
+      "startUrl": "file://VUE_MODELE_PANINI_COMPLET.md"
+    }
+  ]
+}

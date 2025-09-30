@@ -1,0 +1,279 @@
+{
+  "renommeur_github_repository_autonome.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "GitHubRepositoryRenamer",
+        "docstring": "Renommeur autonome repository GitHub"
+      }
+    ],
+    "docstrings": [
+      "RENOMMEUR GITHUB REPOSITORY AUTONOME\n===================================\nSystème Python autonome pour renommer repository GitHub\nPaniniFS-Research → Panini\n\nRespecte contraintes autonomie :\n- Python pur (pas de shell, pipes, python3 -c)\n- Gestion complète via git commands subprocess\n- Sauvegarde aut",
+      "Analyser impact potential sur GitHub Projects/Issues",
+      "#!/usr/bin/env python3\n# Script généré automatiquement pour mise à jour remote local\n# À exécuter APRÈS renommage GitHub manual\n\nimport subprocess\nfrom pathlib import Path\n\ndef update_remote():\n    repo_path = Path(\"{self.repo_path}\")\n    new_remote = \"ssh://git@github.com/stephanedenis/{self.new_na",
+      "🔄 RENOMMAGE GITHUB REPOSITORY - RAPPORT COMPLET\n===============================================\nGénéré le: {datetime.now().strftime(\"%d/%m/%Y %H:%M:%S\")}\n\n📊 INFORMATIONS GÉNÉRALES:\n• Repository: {self.old_name} → {self.new_name}\n• Path local: {self.repo_path}\n• Remote original: {self.backup_info.get"
+    ],
+    "data_structures": [],
+    "theoretical_concepts": []
+  },
+  "renommeur_github_automatique_complet.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "GitHubAutomaticRenamer",
+        "docstring": "Renommeur GitHub automatique avec GH CLI + SSH"
+      }
+    ],
+    "docstrings": [
+      "RENOMMEUR GITHUB AUTOMATIQUE - GH CLI + SSH\n==========================================\nSystème Python autonome complet pour renommage GitHub :\n- Repository renaming via GH CLI\n- Projects migration automatique  \n- Issues/PRs gestion automatique\n- SSH + GH CLI configuré (pas d'authentification manuell",
+      "🔄 RENOMMAGE GITHUB AUTOMATIQUE - RÉSUMÉ COMPLET\n===============================================\nExécuté le: {datetime.now().strftime(\"%d/%m/%Y %H:%M:%S\")}\n\n📊 MIGRATION RÉALISÉE:\n• Repository: {self.old_name} → {self.new_name}\n• Owner: {self.owner}\n• Sauvegarde: {self.migration_data.get('backup_tag',"
+    ],
+    "data_structures": [],
+    "theoretical_concepts": []
+  },
+  "systeme_semantique_panini_fondamental.py": {
+    "has_content": true,
+    "dhatu_mentions": [
+      "2. Implémentation moteur inférence 3. Intégration théorie dhātu 4. Architecture PanLang basée sur fondements"
+    ],
+    "class_definitions": [
+      {
+        "name": "SemanticUniversal",
+        "docstring": "Universel sémantique fondamental"
+      },
+      {
+        "name": "PaniniSemanticFoundation",
+        "docstring": "Fondement sémantique Panini - Théorie de l'information universelle"
+      }
+    ],
+    "docstrings": [
+      "SYSTÈME SÉMANTIQUE PANINI FONDAMENTAL\n====================================\nModélisation de la sémantique Panini comme théorie de l'information universelle :\n- Universaux sémantiques (pas seulement linguistiques)\n- Composition fractale multi-niveaux\n- Multi-domaine (mathématiques, physique, biologie,",
+      "Fondement sémantique Panini - Théorie de l'information universelle",
+      "Initialiser les universaux sémantiques fondamentaux",
+      "🧠 SYSTÈME SÉMANTIQUE PANINI - FONDEMENT THÉORIQUE\n=================================================\nGénéré le: {datetime.now().strftime(\"%d/%m/%Y %H:%M:%S\")}\n\n📊 MÉTRIQUES SYSTÈME:\n• Universaux fondamentaux: {self.system_metrics['universals_count']}\n• Profondeur compositionnelle: {self.system_metrics",
+      "• {category.upper()}: {data['count']} universaux\n  - Information moyenne: {data.get('avg_information', 0):.2f} bits\n  - Universalité moyenne: {data.get('avg_universality', 0):.2f}",
+      "🌐 DOMAINES COUVERTS:\n{chr(10).join(f\"• {domain}: {desc}\" for domain, desc in self.domains.items())}\n\n🔄 RÈGLES COMPOSITION FRACTALE:\n• Règles définies: {len(self.composition_rules)}\n• Types: {list(set(r.composition_type for r in self.composition_rules.values()))}\n• Profondeur maximale: {max((r.fracta",
+      "Exécution complète établissement fondement sémantique"
+    ],
+    "data_structures": [
+      "self.universals: Dict[str, SemanticUniversal] = {}         self.composition_rules: Dict[str, FractalCompositionRule] = {}         self.domain_correspo",
+      "core_universals = [             # Relations fondamentales             SemanticUniversal(",
+      "self.universals[universal.id] = universal                  self.system_metrics['universals_count'] = len(self.universals)",
+      "self.system_metrics['universals_count'] = len(self.universals)         self.logger.info(f\"✅ {len(core_universals)} universaux fondamentaux initialisés",
+      "input_universals=[\"rel_causation\", \"rel_containment\"],                 output_universal=\"rel_causal_containment\",                 composition_type=\"em",
+      "input_universals=[\"ent_pattern\", \"proc_iteration\"],                 output_universal=\"ent_iterative_pattern\",                 composition_type=\"recurs",
+      "input_universals=[\"proc_transformation\", \"ent_boundary\"],                 output_universal=\"proc_boundary_transform\",                 composition_type",
+      "input_universals=[\"rel_similarity\", \"prop_intensity\"],                 output_universal=\"rel_intensive_similarity\",                  composition_type=",
+      "domain_mappings={                     'mathematics': 'x ∈ S (set membership)',                     'physics': 'particle in field region',",
+      "domain_mappings={                     'mathematics': 'f: X → Y (function)',                     'physics': 'state transition',",
+      "domain_mappings={                     'mathematics': 'mathematical structure',                     'physics': 'wave interference',",
+      "self.domain_correspondences[correspondence.universal_id] = correspondence                  # Calculer couverture domaines",
+      "self.system_metrics['information_density'] = total_information / total_universals                  # Métriques par catégorie",
+      "categories[universal.category] = {                     'count': 0,                     'total_information': 0.0,",
+      "categories[universal.category]['count'] += 1             categories[universal.category]['total_information'] += universal.information_content         ",
+      "categories[universal.category]['total_information'] += universal.information_content             categories[universal.category]['avg_universality'] +=",
+      "categories[universal.category]['avg_universality'] += universal.universality_score                  # Moyennes par catégorie",
+      "data['avg_universality'] = data['avg_universality'] / data['count']                  self.system_metrics['categories'] = categories",
+      "report_file = f\"PANINI_SEMANTIC_FOUNDATION_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md\"                  try:"
+    ],
+    "theoretical_concepts": []
+  },
+  "recherche_autonome_panini_10h.py": {
+    "has_content": true,
+    "dhatu_mentions": [
+      "information_theory_refs: List[str]     dhatu_references: List[str]     analysis_timestamp: str",
+      "panini_refs = []             dhatu_refs = []             info_theory_refs = []",
+      "# Rechercher références dhātu                                 dhatu_matches = self.extract_dhatu_references(content)",
+      "# Rechercher références dhātu                                 dhatu_matches = self.extract_dhatu_references(content)                                 d",
+      "dhatu_matches = self.extract_dhatu_references(content)                                 dhatu_refs.extend(dhatu_matches)",
+      "information_theory_refs=list(set(info_theory_refs)),                 dhatu_references=list(set(dhatu_refs)),                 analysis_timestamp=dateti",
+      "'universaux', 'universal', 'semantic',             'dhātu', 'dhatu', 'grammaire',             'composition', 'fractale', 'récursif'",
+      "def extract_dhatu_references(self, content: str) -> List[str]:         \"\"\"Extraire références dhātu\"\"\"",
+      "def extract_dhatu_references(self, content: str) -> List[str]:         \"\"\"Extraire références dhātu\"\"\"         dhatu_terms = [",
+      "\"\"\"Extraire références dhātu\"\"\"         dhatu_terms = [             'dhātu', 'dhatu', 'racine', 'root',",
+      "dhatu_terms = [             'dhātu', 'dhatu', 'racine', 'root',             'morphologie', 'morphology',",
+      "return self.extract_term_references(content, dhatu_terms)"
+    ],
+    "class_definitions": [
+      {
+        "name": "ArchiveAnalysis",
+        "docstring": "Analyse d'archive de repository"
+      },
+      {
+        "name": "UniversalExperiment",
+        "docstring": "Expérience sur universaux sémantiques"
+      },
+      {
+        "name": "AutonomousPaniniResearcher",
+        "docstring": "Chercheur autonome Panini - 10h de recherche approfondie"
+      }
+    ],
+    "docstrings": [
+      "RECHERCHE AUTONOME PANINI 10H - THÉORIE GÉNÉRALE DE L'INFORMATION\n================================================================\nSystème autonome de recherche approfondie sur 10h pour :\n1. Révision complète archives tous repositories\n2. Analyse théories information (Shannon, Huffman, Boltzmann)\n3.",
+      "Chercheur autonome Panini - 10h de recherche approfondie",
+      "🧠 RECHERCHE AUTONOME PANINI 10H - THÉORIE GÉNÉRALE INFORMATION\n==============================================================\nRecherche autonome approfondie - {datetime.now().strftime(\"%d/%m/%Y %H:%M:%S\")}\n\n📊 MÉTRIQUES RECHERCHE:\n• Durée: {datetime.now() - self.research_start}\n• Archives analysées: "
+    ],
+    "data_structures": [
+      "self.information_theory_synthesis = {}         self.universal_experiments: List[UniversalExperiment] = []         self.panini_implications = {}",
+      "self.universal_experiments: List[UniversalExperiment] = []         self.panini_implications = {}",
+      "outputs=[\"information_theory_analysis.json\"]             ),             ResearchPhase(",
+      "dependencies=[\"phase_03_information_theory\"],                 outputs=[\"compression_analysis.json\"]             ),",
+      "dependencies=[\"phase_05_universal_gradations\"],                 outputs=[\"universal_sets_comparison.json\"]             ),",
+      "outputs=[\"universal_sets_comparison.json\"]             ),             ResearchPhase(",
+      "dependencies=[\"phase_06_universal_sets\"],                 outputs=[\"ingestion_model.json\"]             ),",
+      "info_theory_refs = []             key_concepts = []",
+      "self.information_theory_synthesis = {             'shannon': shannon_analysis,             'huffman': huffman_analysis,",
+      "test_universals = ['containment', 'causation', 'similarity', 'pattern', 'transformation']                  # Simuler métriques basées sur type gradati"
+    ],
+    "theoretical_concepts": []
+  },
+  "systeme_apprentissage_continu_panini.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "ContinuousLearningPaniniSystem",
+        "docstring": "Système apprentissage continu Panini - Autonomie parfaite"
+      }
+    ],
+    "docstrings": [
+      "SYSTÈME APPRENTISSAGE CONTINU PANINI - AUTONOMIE PARFAITE\n========================================================\nSystème qui travaille sans arrêt pour :\n- Réviser TOUTES nos discussions à chaque cycle\n- Réévaluer tous les aspects déjà discutés\n- Affiner le modèle pour 100% restitution\n- Élargir do",
+      "Système apprentissage continu Panini - Autonomie parfaite",
+      "CREATE TABLE IF NOT EXISTS learning_cycles (\n                cycle_id INTEGER PRIMARY KEY,\n                start_time TEXT,\n                end_time TEXT,\n                discoveries_json TEXT,\n                universals_found_json TEXT,\n                patterns_identified_json TEXT,\n               ",
+      "CREATE TABLE IF NOT EXISTS discovered_universals (\n                id TEXT PRIMARY KEY,\n                name TEXT,\n                abstraction_level TEXT,\n                pattern_signature TEXT,\n                occurrence_frequency INTEGER,\n                cross_domain_score REAL,\n                in",
+      "CREATE TABLE IF NOT EXISTS semantic_patterns (\n                id TEXT PRIMARY KEY,\n                name TEXT,\n                pattern_type TEXT,\n                abstract_form TEXT,\n                domain_manifestations_json TEXT,\n                universals_involved_json TEXT,\n                comple",
+      "INSERT INTO learning_cycles \n            (cycle_id, start_time, end_time, discoveries_json, universals_found_json,\n             patterns_identified_json, restitution_fidelity, research_depth)\n            VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+      "🧠 APPRENTISSAGE CONTINU PANINI - RAPPORT FINAL\n==============================================\nDurée fonctionnement: {duration}\nCycles complétés: {self.learning_metrics['cycles_completed']}\nUniversaux découverts: {self.learning_metrics['universals_discovered']}\nPatterns identifiés: {self.learning_met"
+    ],
+    "data_structures": [
+      "universals_found: List[str] = None     patterns_identified: List[str] = None     model_improvements: Dict[str, Any] = None",
+      "semantic_domains_expanded: List[str] = None     research_depth: int = 0     cpu_hours_used: float = 0.0",
+      "self.discovered_universals: Dict[str, UniversalCandidate] = {}         self.identified_patterns: Dict[str, SemanticPattern] = {}",
+      "self.identified_patterns: Dict[str, SemanticPattern] = {}                  # Métriques apprentissage",
+      "universals_found=[],             patterns_identified=[],             model_improvements={},",
+      "semantic_domains_expanded=[]         )",
+      "new_universals = []                  # Analyser chaque corpus",
+      "self.discovered_universals[universal.id] = universal             cycle.universals_found.append(universal.id)",
+      "self.learning_metrics['universals_discovered'] += len(cycle.universals_found)         self.learning_metrics['patterns_identified'] += len(cycle.patter"
+    ],
+    "theoretical_concepts": []
+  },
+  "systeme_recherche_autonome_simple.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "SystemeRecherchePaniniAutonome",
+        "docstring": "Système de recherche autonome Panini - Version déployable"
+      }
+    ],
+    "docstrings": [
+      "SYSTÈME RECHERCHE AUTONOME PANINI - VERSION DÉPLOYABLE\n======================================================\nSystème d'apprentissage continu qui travaille sans arrêt pour affiner\net découvrir de nouveaux aspects de la théorie Panini comme théorie \ngénérale de l'information.\n\nFONCTIONNEMENT AUTONOME",
+      "Système de recherche autonome Panini - Version déployable",
+      "CREATE TABLE IF NOT EXISTS cycles_recherche (\n                id INTEGER PRIMARY KEY,\n                timestamp TEXT,\n                type_recherche TEXT,\n                résultats_json TEXT,\n                métriques_json TEXT,\n                durée_seconde REAL\n            )",
+      "CREATE TABLE IF NOT EXISTS universaux_panini (\n                id TEXT PRIMARY KEY,\n                nom TEXT,\n                niveau TEXT,\n                score_validation REAL,\n                occurrences INTEGER,\n                cycle_découverte INTEGER,\n                définition TEXT\n           ",
+      "CREATE TABLE IF NOT EXISTS patterns_sémantiques (\n                id TEXT PRIMARY KEY,\n                nom TEXT,\n                type_pattern TEXT,\n                forme_abstraite TEXT,\n                domaines_json TEXT,\n                score_prédictif REAL,\n                cycle_découverte INTEGER",
+      "Réviser toutes les discussions pour extraire insights",
+      "INSERT INTO cycles_recherche \n            (timestamp, type_recherche, résultats_json, métriques_json, durée_seconde)\n            VALUES (?, ?, ?, ?, ?)",
+      "🧠 RECHERCHE AUTONOME PANINI - RAPPORT FINAL\n===========================================\nDémarrage: {self.system_start.strftime('%Y-%m-%d %H:%M:%S')}\nDurée fonctionnement: {durée_totale}\nCycles complétés: {self.metrics['cycles_total']}\n\n📊 DÉCOUVERTES TOTALES:\n• Universaux découverts: {self.metrics['u"
+    ],
+    "data_structures": [
+      "universal_keywords = [             'contain', 'cause', 'similar', 'pattern', 'transform',             'iterate', 'bound', 'intens', 'continu', 'emerg'"
+    ],
+    "theoretical_concepts": []
+  },
+  "panini_recherche_autonome.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "PaniniRechercheContinue",
+        "docstring": "Système recherche continue Panini - Ultra-simple"
+      }
+    ],
+    "docstrings": [
+      "PANINI RECHERCHE AUTONOME - VERSION ULTRA-DÉPLOYABLE\n===================================================\nSystème qui travaille sans arrêt pour affiner et découvrir \nnouveaux universaux et patterns Panini.\n\nAUTONOMIE PARFAITE - Travaille jusqu'à interruption.",
+      "CREATE TABLE IF NOT EXISTS découvertes \n                     (id INTEGER PRIMARY KEY, timestamp TEXT, type TEXT, \n                      valeur TEXT, score REAL, cycle INTEGER)",
+      "🧠 PANINI RECHERCHE AUTONOME - RAPPORT FINAL\n===========================================\nDémarrage: {self.démarrage.strftime('%Y-%m-%d %H:%M:%S')}\nDurée totale: {durée_totale}\nCycles: {self.métriques['cycles']}\n\nDÉCOUVERTES:\n• Universaux trouvés: {self.métriques['universaux_trouvés']}\n• Patterns iden"
+    ],
+    "data_structures": [],
+    "theoretical_concepts": []
+  },
+  "panini_autonome_parfait.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "PaniniAutonomeParfait",
+        "docstring": "Système Panini Autonome - Travail sans arrêt"
+      }
+    ],
+    "docstrings": [
+      "PANINI AUTONOME PARFAIT - APPRENTISSAGE CONTINU\n===============================================\nSystème qui travaille SANS ARRÊT pour :\n✓ Réviser toutes nos discussions à chaque cycle\n✓ Réévaluer tous les aspects déjà discutés  \n✓ Affiner le modèle pour restitution 100%\n✓ Élargir domaines champs sém",
+      "CREATE TABLE IF NOT EXISTS learning_cycles (\n                id INTEGER PRIMARY KEY,\n                timestamp TEXT,\n                cycle_number INTEGER,\n                discoveries_count INTEGER,\n                new_universals TEXT,\n                new_patterns TEXT,\n                model_improvem",
+      "CREATE TABLE IF NOT EXISTS discovered_universals (\n                id TEXT PRIMARY KEY,\n                name TEXT,\n                abstraction_level TEXT,\n                discovery_cycle INTEGER,\n                validation_score REAL,\n                cross_domain_score REAL,\n                occurren",
+      "CREATE TABLE IF NOT EXISTS semantic_patterns (\n                id TEXT PRIMARY KEY,\n                name TEXT,\n                pattern_type TEXT,\n                discovery_cycle INTEGER,\n                abstract_form TEXT,\n                constituent_universals TEXT,\n                domain_manifesta",
+      "CREATE TABLE IF NOT EXISTS discussion_insights (\n                id INTEGER PRIMARY KEY,\n                file_path TEXT,\n                analysis_timestamp TEXT,\n                insights_extracted TEXT,\n                universals_mentioned TEXT,\n                patterns_identified TEXT,\n            ",
+      "INSERT OR REPLACE INTO discussion_insights\n            (file_path, analysis_timestamp, insights_extracted, relevance_score)\n            VALUES (?, ?, ?, ?)",
+      "INSERT INTO learning_cycles\n            (timestamp, cycle_number, discoveries_count, new_universals,\n             new_patterns, restitution_score, duration_seconds)\n            VALUES (?, ?, ?, ?, ?, ?, ?)",
+      "🧠 PANINI AUTONOME PARFAIT - RAPPORT FINAL\n=========================================\nDémarrage: {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}\nDurée totale: {total_duration}\nCycles complétés: {self.metrics['cycles_completed']}\n\n🏆 DÉCOUVERTES TOTALES:\n• Universaux découverts: {self.metrics['universal"
+    ],
+    "data_structures": [
+      "universal_patterns = [             r'universa[ul]\\w*\\s+([a-zA-Z_]+)',             r'(containment|causation|similarity|pattern|transformation)',",
+      "theory_patterns = [             r'théorie\\s+([a-zA-Z_]+)',             r'modèle\\s+([a-zA-Z_]+)',",
+      "molecular_universals = []                  # Compositions d'universaux atomiques",
+      "atomic_universals = list(self.panini_model['universals'].keys())                  # Générer compositions potentielles",
+      "molecular_universals = self.panini_model.get('molecular_universals', {})                  if len(molecular_universals) >= 2:",
+      "old_score = universal_data['score']             new_score = min(0.99, old_score + 0.001)  # Amélioration progressive",
+      "universal_data['score'] = new_score                 improvements.append({                     'type': 'universal_optimization',",
+      "score1 = self.panini_model['universals'][univ1]['score']         score2 = self.panini_model['universals'][univ2]['score']         return (score1 + sco",
+      "score2 = self.panini_model['universals'][univ2]['score']         return (score1 + score2) / 2 * 0.9  # Pénalité composition",
+      "universals_used = []         for universal in self.panini_model['universals']:             if universal.lower() in text.lower():",
+      "name = universal['name']             self.panini_model['molecular_universals'][name] = universal",
+      "self.panini_model['molecular_universals'][name] = universal                  # Ajouter nouveaux patterns",
+      "self.metrics['universals_discovered'] += len(results['new_universals'])         self.metrics['patterns_identified'] += len(results['new_patterns'])   ",
+      "total_discoveries = (self.metrics['universals_discovered'] +                                 self.metrics['patterns_identified'])             self.met"
+    ],
+    "theoretical_concepts": []
+  },
+  "panini_ultra_simple.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "PaniniAutonome",
+        "docstring": "Panini Autonome - Ultra-simple et fonctionnel"
+      }
+    ],
+    "docstrings": [
+      "PANINI AUTONOME - VERSION ULTRA-SIMPLE QUI MARCHE\n=================================================\nSystème qui travaille SANS ARRÊT - Version déployable immédiatement"
+    ],
+    "data_structures": [
+      "new_universal = f\"universal_{self.cycle}\"                 self.model['universals'][new_universal] = 0.75                 print(f\"   🔬 Discovered: {new",
+      "self.model['universals'][new_universal] = 0.75                 print(f\"   🔬 Discovered: {new_universal}\")"
+    ],
+    "theoretical_concepts": []
+  },
+  "dashboard_panini_monitoring.py": {
+    "has_content": true,
+    "dhatu_mentions": [],
+    "class_definitions": [
+      {
+        "name": "PaniniDashboard",
+        "docstring": "Dashboard monitoring Panini autonome"
+      }
+    ],
+    "docstrings": [
+      "PANINI AUTONOME - DASHBOARD MONITORING TEMPS RÉEL\n================================================\nDashboard pour voir avancements, découvertes et études en cours",
+      "SELECT timestamp, 'universel' as type, name as value \n                FROM discovered_universals \n                ORDER BY discovery_cycle DESC LIMIT 3\n                \n                UNION ALL\n                \n                SELECT timestamp, 'pattern' as type, name as value \n                FROM",
+      "SELECT cycle_number, timestamp, discoveries_count, restitution_score\n                FROM learning_cycles \n                ORDER BY cycle_number DESC LIMIT 4"
+    ],
+    "data_structures": [
+      "universals = model.get('universals', {})                 molecular = model.get('molecular_universals', {})                 superior = model.get('super",
+      "molecular = model.get('molecular_universals', {})                 superior = model.get('superior_abstractions', {})                 domains = model.ge"
+    ],
+    "theoretical_concepts": []
+  }
+}

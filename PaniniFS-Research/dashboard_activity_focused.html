@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Panini - Activité Temps Réel</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0f23;
+            color: #e6fffa;
+            font-size: 12px;
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #1a2332, #2d1b3d);
+            padding: 12px 20px;
+            border-bottom: 3px solid #00ff41;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 255, 65, 0.3);
+        }
+        
+        .title {
+            font-size: 20px;
+            color: #00ff41;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+        
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ff6b6b;
+            font-size: 11px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.2); }
+        }
+        
+        .main-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            padding: 15px;
+            height: calc(100vh - 60px);
+        }
+        
+        .primary-activity {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 15px;
+        }
+        
+        .focus-banner {
+            background: linear-gradient(135deg, #2d1b3d, #1a3d3d);
+            border: 2px solid #00d4aa;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
+        }
+        
+        .focus-title {
+            color: #00ff41;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .focus-content {
+            color: #64ffda;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+        .focus-metrics {
+            display: flex;
+            gap: 20px;
+            font-size: 11px;
+        }
+        
+        .metric {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 4px 8px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+        }
+        
+        .activity-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .activity-panel {
+            background: #1a202c;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            overflow: hidden;
+            max-height: 500px;
+        }
+        
+        .panel-header {
+            background: #2d3748;
+            padding: 10px 15px;
+            font-weight: bold;
+            color: #64ffda;
+            font-size: 12px;
+            border-bottom: 1px solid #4a5568;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .panel-content {
+            padding: 10px;
+            height: calc(100% - 40px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #4a5568 #1a202c;
+        }
+        
+        .sidebar {
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+            gap: 15px;
+        }
+        
+        .hot-topics {
+            background: #3d1a1a;
+            border: 2px solid #ff8c00;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+        }
+        
+        .hot-title {
+            color: #ff8c00;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .topic-item {
+            background: rgba(255, 140, 0, 0.1);
+            margin: 5px 0;
+            padding: 8px 10px;
+            border-radius: 5px;
+            border-left: 3px solid #ff8c00;
+        }
+        
+        .topic-name {
+            color: #ffeb3b;
+            font-weight: bold;
+            font-size: 11px;
+        }
+        
+        .topic-score {
+            color: #ff8c00;
+            font-size: 10px;
+            float: right;
+        }
+        
+        .recent-work-item {
+            background: #2d3748;
+            margin: 6px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid transparent;
+            font-size: 11px;
+            position: relative;
+        }
+        
+        .work-dhatu { border-left-color: #00ff41; }
+        .work-semantic { border-left-color: #9f7aea; }
+        .work-research { border-left-color: #ffc107; }
+        .work-autonomous { border-left-color: #00d4aa; }
+        .work-python { border-left-color: #64ffda; }
+        
+        .work-name {
+            color: #e6fffa;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        .work-meta {
+            color: #a0aec0;
+            font-size: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .work-concepts {
+            color: #64ffda;
+            font-size: 10px;
+            background: rgba(100, 255, 218, 0.1);
+            padding: 3px 6px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        
+        .activity-score {
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            background: #00ff41;
+            color: #0a0f23;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 9px;
+            font-weight: bold;
+        }
+        
+        .minimal-panel {
+            background: #1a202c;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            max-height: 200px;
+            overflow: hidden;
+        }
+        
+        .minimal-header {
+            background: #2d3748;
+            padding: 6px 10px;
+            font-size: 10px;
+            color: #a0aec0;
+            text-transform: uppercase;
+        }
+        
+        .minimal-content {
+            padding: 8px;
+            font-size: 10px;
+            color: #718096;
+        }
+        
+        .stream-line {
+            padding: 2px 0;
+            border-bottom: 1px solid rgba(45, 55, 72, 0.3);
+            font-size: 10px;
+        }
+        
+        .timestamp {
+            color: #64ffda;
+            font-size: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">🔥 PANINI - ACTIVITÉ TEMPS RÉEL</div>
+        <div class="live-indicator">
+            <div class="live-dot"></div>
+            <span>LIVE</span>
+            <span id="current-time">-</span>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <!-- Activité Principale -->
+        <div class="primary-activity">
+            <!-- Banner Focus -->
+            <div class="focus-banner">
+                <div class="focus-title">
+                    <span id="focus-icon">🎯</span>
+                    <span id="focus-name">FOCUS PRINCIPAL</span>
+                </div>
+                <div class="focus-content" id="focus-description">
+                    Analyse en cours...
+                </div>
+                <div class="focus-metrics">
+                    <div class="metric">📁 Fichiers: <span id="active-files">-</span></div>
+                    <div class="metric">🔄 Processus: <span id="active-processes">-</span></div>
+                    <div class="metric">🔥 Activité: <span id="activity-level">-</span></div>
+                </div>
+            </div>
+            
+            <!-- Grille Activité -->
+            <div class="activity-grid">
+                <!-- Travaux Récents Actifs -->
+                <div class="activity-panel">
+                    <div class="panel-header">
+                        🚀 TRAVAUX EN COURS
+                        <span id="work-count">-</span>
+                    </div>
+                    <div class="panel-content">
+                        <div id="recent-work"></div>
+                    </div>
+                </div>
+                
+                <!-- Données en Évolution -->
+                <div class="activity-panel">
+                    <div class="panel-header">
+                        📊 DONNÉES EN MOUVEMENT
+                        <span id="data-changes">-</span>
+                    </div>
+                    <div class="panel-content">
+                        <div id="evolving-data"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sujets Chauds -->
+            <div class="hot-topics">
+                <div class="hot-title">
+                    🔥 SUJETS DU MOMENT
+                    <span id="topics-count" style="color: #a0aec0; font-size: 10px;">-</span>
+                </div>
+                <div id="hot-topics-list"></div>
+            </div>
+            
+            <!-- Panels Minimisés -->
+            <div class="minimal-panel">
+                <div class="minimal-header">📈 Métriques Système</div>
+                <div class="minimal-content" id="system-metrics">
+                    Chargement...
+                </div>
+            </div>
+            
+            <div class="minimal-panel">
+                <div class="minimal-header">📝 Stream Logs</div>
+                <div class="minimal-content" id="log-stream">
+                    En attente d'activité...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let activityData = {};
+        let lastUpdate = new Date();
+        
+        async function loadActivityData() {
+            try {
+                const response = await fetch('activity_dashboard_data.json?' + new Date().getTime());
+                if (response.ok) {
+                    activityData = await response.json();
+                    updateDashboard();
+                } else {
+                    console.error('Failed to load activity data');
+                }
+            } catch (error) {
+                console.error('Error loading activity data:', error);
+            }
+        }
+        
+        function updateDashboard() {
+            updateFocusBanner();
+            updateRecentWork();
+            updateHotTopics();
+            updateEvolvingData();
+            updateSystemMetrics();
+            updateLogStream();
+            
+            lastUpdate = new Date();
+        }
+        
+        function updateFocusBanner() {
+            const focus = activityData.activity_focus?.main_focus;
+            const summary = activityData.activity_summary;
+            
+            if (focus) {
+                document.getElementById('focus-name').textContent = 
+                    focus.name.toUpperCase().replace('_', ' ');
+                document.getElementById('focus-description').textContent = 
+                    activityData.activity_focus.recommendation || 'Activité en cours';
+                    
+                // Icône selon le type
+                const icons = {
+                    'dhatu_work': '🔬',
+                    'semantic_research': '🧠',
+                    'research_active': '📚',
+                    'autonomous_system': '🤖',
+                    'python_code': '🐍'
+                };
+                document.getElementById('focus-icon').textContent = 
+                    icons[focus.name] || '🎯';
+            }
+            
+            document.getElementById('active-files').textContent = summary?.active_files || 0;
+            document.getElementById('active-processes').textContent = summary?.running_processes || 0;
+            document.getElementById('activity-level').textContent = 
+                summary?.hot_topics_count > 5 ? 'HAUTE' : summary?.hot_topics_count > 2 ? 'MOYENNE' : 'FAIBLE';
+        }
+        
+        function updateRecentWork() {
+            const container = document.getElementById('recent-work');
+            const recentWork = activityData.recent_work || [];
+            
+            document.getElementById('work-count').textContent = recentWork.length;
+            
+            container.innerHTML = recentWork.slice(0, 8).map(work => {
+                const typeClass = getWorkTypeClass(work.type);
+                const concepts = work.content_analysis?.concepts?.slice(0, 2) || [];
+                
+                return `
+                    <div class="recent-work-item ${typeClass}">
+                        <div class="activity-score">${work.activity_score?.toFixed(1) || '0'}</div>
+                        <div class="work-name">${work.name}</div>
+                        <div class="work-meta">
+                            ${formatDate(work.modified)} • ${formatBytes(work.size)}
+                        </div>
+                        ${concepts.length > 0 ? `
+                            <div class="work-concepts">
+                                ${concepts.join(', ')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function updateHotTopics() {
+            const container = document.getElementById('hot-topics-list');
+            const topics = activityData.hot_topics || [];
+            
+            document.getElementById('topics-count').textContent = topics.length;
+            
+            container.innerHTML = topics.slice(0, 6).map(topic => `
+                <div class="topic-item">
+                    <div class="topic-name">${topic.name}</div>
+                    <div class="topic-score">${topic.activity_score.toFixed(0)}</div>
+                    <div style="clear: both; color: #a0aec0; font-size: 9px; margin-top: 2px;">
+                        ${topic.frequency} occurences
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function updateEvolvingData() {
+            const container = document.getElementById('evolving-data');
+            const recentWork = activityData.recent_work || [];
+            
+            // Filtrer pour les données qui évoluent
+            const evolvingFiles = recentWork.filter(work => 
+                work.content_analysis?.dhatu_references > 0 ||
+                work.content_analysis?.activity_indicators?.includes('work_in_progress') ||
+                work.type === 'dhatu_work'
+            );
+            
+            document.getElementById('data-changes').textContent = evolvingFiles.length;
+            
+            container.innerHTML = evolvingFiles.slice(0, 6).map(work => {
+                const indicators = work.content_analysis?.activity_indicators || [];
+                const dhatuRefs = work.content_analysis?.dhatu_references || 0;
+                
+                return `
+                    <div class="recent-work-item work-dhatu">
+                        <div class="work-name">${work.name}</div>
+                        <div class="work-meta">
+                            Modifié: ${formatDate(work.modified)}
+                        </div>
+                        ${dhatuRefs > 0 ? `
+                            <div style="color: #00ff41; font-size: 10px; margin-top: 3px;">
+                                🔬 ${dhatuRefs} références dhātu
+                            </div>
+                        ` : ''}
+                        ${indicators.length > 0 ? `
+                            <div style="color: #64ffda; font-size: 10px; margin-top: 3px;">
+                                🔄 ${indicators.join(', ')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function updateSystemMetrics() {
+            const container = document.getElementById('system-metrics');
+            const summary = activityData.activity_summary;
+            
+            if (summary) {
+                container.innerHTML = `
+                    <div class="stream-line">📁 Fichiers actifs: ${summary.active_files}</div>
+                    <div class="stream-line">🔄 Processus: ${summary.running_processes}</div>
+                    <div class="stream-line">📝 Logs: ${summary.active_logs}</div>
+                    <div class="stream-line">🔥 Topics: ${summary.hot_topics_count}</div>
+                    <div class="stream-line">⏰ MàJ: ${formatTime(activityData.timestamp)}</div>
+                `;
+            }
+        }
+        
+        function updateLogStream() {
+            const container = document.getElementById('log-stream');
+            const logActivity = activityData.log_streams || [];
+            
+            if (logActivity.length > 0) {
+                container.innerHTML = logActivity.slice(0, 3).map(log => `
+                    <div class="stream-line">
+                        <span style="color: #64ffda;">${log.name}:</span><br>
+                        ${log.recent_lines?.slice(-1)[0] || 'Pas d\'activité récente'}
+                    </div>
+                `).join('');
+            } else {
+                container.innerHTML = '<div class="stream-line">Aucune activité log détectée</div>';
+            }
+        }
+        
+        function getWorkTypeClass(type) {
+            const mapping = {
+                'dhatu_work': 'work-dhatu',
+                'semantic_research': 'work-semantic', 
+                'research_active': 'work-research',
+                'autonomous_system': 'work-autonomous',
+                'python_code': 'work-python'
+            };
+            return mapping[type] || 'work-python';
+        }
+        
+        function formatBytes(bytes) {
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + sizes[i];
+        }
+        
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toISOString().slice(11, 16); // HH:mm
+        }
+        
+        function formatTime(dateStr) {
+            const date = new Date(dateStr);
+            return date.toISOString().slice(11, 19); // HH:mm:ss
+        }
+        
+        function init() {
+            loadActivityData();
+            
+            // Recharger les données toutes les 10 secondes (plus réactif)
+            setInterval(loadActivityData, 10000);
+            
+            // Mettre à jour l'heure toutes les secondes
+            setInterval(() => {
+                document.getElementById('current-time').textContent = 
+                    new Date().toISOString().slice(11, 19);
+            }, 1000);
+        }
+        
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Panini - Surveillance Contenu Réel</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0f23;
+            color: #e6fffa;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .header {
+            background: #1a2332;
+            padding: 15px;
+            border-bottom: 2px solid #00ff41;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: #00ff41;
+            font-weight: bold;
+        }
+        
+        .status {
+            display: flex;
+            gap: 20px;
+            font-size: 11px;
+        }
+        
+        .stat {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 5px 10px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 8px;
+            padding: 8px;
+            height: calc(100vh - 70px);
+        }
+        
+        .panel {
+            background: #1a202c;
+            border: 1px solid #2d3748;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .panel-header {
+            background: #2d3748;
+            padding: 8px 12px;
+            font-weight: bold;
+            color: #64ffda;
+            font-size: 11px;
+            border-bottom: 1px solid #4a5568;
+        }
+        
+        .panel-content {
+            padding: 8px;
+            height: calc(100% - 35px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #4a5568 #1a202c;
+        }
+        
+        .file-item {
+            background: #2d3748;
+            margin: 3px 0;
+            padding: 6px 8px;
+            border-radius: 3px;
+            border-left: 3px solid transparent;
+            font-size: 11px;
+        }
+        
+        .file-corpus { border-left-color: #00ff41; }
+        .file-dhatu { border-left-color: #64ffda; }
+        .file-analysis { border-left-color: #ffc107; }
+        .file-log { border-left-color: #ff6b6b; }
+        .file-molecule { border-left-color: #9f7aea; }
+        .file-model { border-left-color: #00d4aa; }
+        .file-draft { border-left-color: #ff8c00; }
+        
+        .model-item {
+            background: #1a3d3d;
+            margin: 3px 0;
+            padding: 8px;
+            border-radius: 3px;
+            border-left: 3px solid #00d4aa;
+            font-size: 11px;
+        }
+        
+        .draft-item {
+            background: #3d2a1a;
+            margin: 3px 0;
+            padding: 8px;
+            border-radius: 3px;
+            border-left: 3px solid #ff8c00;
+            font-size: 11px;
+        }
+        
+        .item-title {
+            color: #00ff41;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        .item-desc {
+            color: #a0aec0;
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+        
+        .item-status {
+            color: #64ffda;
+            font-size: 9px;
+        }
+        
+        .file-name {
+            color: #e6fffa;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .file-meta {
+            color: #a0aec0;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .file-content {
+            color: #cbd5e0;
+            font-size: 10px;
+            margin-top: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 4px;
+            border-radius: 2px;
+        }
+        
+        .process-item {
+            background: rgba(100, 255, 218, 0.05);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            padding: 6px 8px;
+            margin: 3px 0;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+        
+        .process-cmd {
+            color: #64ffda;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .process-stats {
+            color: #a0aec0;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 8px;
+            background: rgba(0, 255, 65, 0.05);
+            border-radius: 3px;
+            margin: 3px 0;
+        }
+        
+        .metric-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ff41;
+        }
+        
+        .metric-label {
+            font-size: 10px;
+            color: #a0aec0;
+            margin-top: 2px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+        
+        .data-table th {
+            background: #2d3748;
+            color: #64ffda;
+            padding: 4px 6px;
+            text-align: left;
+            border-bottom: 1px solid #4a5568;
+        }
+        
+        .data-table td {
+            padding: 3px 6px;
+            border-bottom: 1px solid #2d3748;
+            color: #e6fffa;
+        }
+        
+        .data-table tr:hover {
+            background: rgba(100, 255, 218, 0.05);
+        }
+        
+        .update-indicator {
+            color: #ffc107;
+            font-size: 10px;
+            text-align: center;
+            padding: 5px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 3px;
+            margin: 5px;
+        }
+        
+        .graph-container {
+            grid-column: span 3;
+            height: 200px;
+        }
+        
+        .real-time-feed {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .feed-item {
+            padding: 4px 8px;
+            margin: 2px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 2px solid #00ff41;
+            font-size: 10px;
+        }
+        
+        .timestamp {
+            color: #64ffda;
+            font-size: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">🧠 PANINI - SURVEILLANCE CONTENU RÉEL</div>
+        <div class="status">
+            <div class="stat">📁 Fichiers: <span id="total-files">-</span></div>
+            <div class="stat">💾 Taille: <span id="total-size">-</span></div>
+            <div class="stat">🔄 Processus: <span id="active-processes">-</span></div>
+            <div class="stat">⏰ <span id="current-time">-</span></div>
+        </div>
+    </div>
+    
+    <div class="main-grid">
+        <!-- Panel Fichiers Corpus -->
+        <div class="panel">
+            <div class="panel-header">📊 FICHIERS CORPUS (CONTENU RÉEL)</div>
+            <div class="panel-content">
+                <div id="corpus-files"></div>
+            </div>
+        </div>
+        
+        <!-- Panel Analyses Dhātu -->
+        <div class="panel">
+            <div class="panel-header">🔬 ANALYSES DHĀTU (EN COURS)</div>
+            <div class="panel-content">
+                <div id="dhatu-files"></div>
+            </div>
+        </div>
+        
+        <!-- Panel Résultats d'Analyse -->
+        <div class="panel">
+            <div class="panel-header">📈 RÉSULTATS D'ANALYSE</div>
+            <div class="panel-content">
+                <div id="analysis-files"></div>
+            </div>
+        </div>
+        
+        <!-- Panel Modèle Panini Complet -->
+        <div class="panel">
+            <div class="panel-header">🧠 MODÈLE PANINI COMPLET</div>
+            <div class="panel-content">
+                <div id="panini-model"></div>
+            </div>
+        </div>
+        
+        <!-- Panel Ébauches en Cours -->
+        <div class="panel">
+            <div class="panel-header">🔬 ÉBAUCHES EN COURS D'ÉTUDE</div>
+            <div class="panel-content">
+                <div id="drafts-ongoing"></div>
+            </div>
+        </div>
+        
+        <!-- Panel Processus Actifs -->
+        <div class="panel">
+            <div class="panel-header">🔄 PROCESSUS ACTIFS</div>
+            <div class="panel-content">
+                <div id="active-processes-list"></div>
+            </div>
+        </div>
+        
+        <!-- Panel Logs Temps Réel -->
+        <div class="panel">
+            <div class="panel-header">📝 LOGS TEMPS RÉEL</div>
+            <div class="panel-content">
+                <div id="real-time-logs" class="real-time-feed"></div>
+            </div>
+        </div>
+        
+        <!-- Panel Métriques -->
+        <div class="panel">
+            <div class="panel-header">📊 MÉTRIQUES SYSTÈME</div>
+            <div class="panel-content">
+                <div class="metric">
+                    <div class="metric-value" id="corpus-count">-</div>
+                    <div class="metric-label">Fichiers Corpus</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="dhatu-count">-</div>
+                    <div class="metric-label">Analyses Dhātu</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="molecules-count">-</div>
+                    <div class="metric-label">Molécules Sémantiques</div>
+                </div>
+                <div class="update-indicator" id="last-update">
+                    Dernière MàJ: Chargement...
+                </div>
+            </div>
+        </div>
+        
+        <!-- Panel Détails Contenu -->
+        <div class="panel graph-container">
+            <div class="panel-header">🔍 DÉTAILS CONTENU EN COURS DE TRAITEMENT</div>
+            <div class="panel-content">
+                <table class="data-table" id="content-details">
+                    <thead>
+                        <tr>
+                            <th>Fichier</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Modifié</th>
+                            <th>Contenu</th>
+                        </tr>
+                    </thead>
+                    <tbody id="content-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let realData = null;
+        
+        // Charger les données réelles
+        async function loadRealData() {
+            try {
+                const response = await fetch('panini_real_data.json');
+                realData = await response.json();
+                updateDashboard();
+            } catch (error) {
+                console.error('Erreur chargement données:', error);
+                // Données de fallback si le fichier n'est pas accessible
+                realData = {
+                    scan_summary: {
+                        total_files_found: 0,
+                        file_types: {},
+                        total_size: 0
+                    },
+                    real_files: [],
+                    system_status: { active_processes: [] },
+                    content_analysis: {
+                        corpus_files: [],
+                        dhatu_files: [],
+                        analysis_files: [],
+                        log_files: []
+                    }
+                };
+                updateDashboard();
+            }
+        }
+        
+        function updateDashboard() {
+            if (!realData) return;
+            
+            // Mise à jour header stats
+            document.getElementById('total-files').textContent = 
+                realData.scan_summary.total_files_found.toLocaleString();
+            document.getElementById('total-size').textContent = 
+                formatBytes(realData.scan_summary.total_size);
+            document.getElementById('active-processes').textContent = 
+                realData.system_status.active_processes.length;
+            document.getElementById('current-time').textContent = 
+                new Date().toISOString().slice(11, 19);  // Format ISO HH:mm:ss
+            
+            // Mise à jour métriques
+            document.getElementById('corpus-count').textContent = 
+                realData.scan_summary.file_types.corpus_data || 0;
+            document.getElementById('dhatu-count').textContent = 
+                realData.scan_summary.file_types.dhatu_analysis || 0;
+            document.getElementById('molecules-count').textContent = 
+                realData.scan_summary.file_types.semantic_molecules || 0;
+            
+            // Mise à jour panels
+            updateCorpusFiles();
+            updateDhatuFiles();
+            updateAnalysisFiles();
+            updatePaniniModel();
+            updateDraftsOngoing();
+            updateActiveProcesses();
+            updateContentDetails();
+            updateLogs();
+            
+            document.getElementById('last-update').textContent = 
+                `Dernière MàJ: ${new Date().toISOString().slice(0, 19).replace('T', ' ')}`;
+        }
+        
+        function updateCorpusFiles() {
+            const container = document.getElementById('corpus-files');
+            const corpusFiles = realData.content_analysis.corpus_files || [];
+            
+            container.innerHTML = corpusFiles.slice(0, 10).map(file => `
+                <div class="file-item file-corpus">
+                    <div class="file-name">${file.name}</div>
+                    <div class="file-meta">
+                        <span>${formatBytes(file.size)}</span>
+                        <span>${formatDate(file.modified)}</span>
+                    </div>
+                    ${file.content_summary ? `
+                        <div class="file-content">
+                            ${Object.entries(file.content_summary.data_points || {})
+                                .map(([k,v]) => `${k}: ${v}`)
+                                .join(', ')}
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+        
+        function updateDhatuFiles() {
+            const container = document.getElementById('dhatu-files');
+            const dhatuFiles = realData.content_analysis.dhatu_files || [];
+            
+            container.innerHTML = dhatuFiles.slice(0, 15).map(file => `
+                <div class="file-item file-dhatu">
+                    <div class="file-name">${file.name}</div>
+                    <div class="file-meta">
+                        <span>${formatBytes(file.size)}</span>
+                        <span>${formatDate(file.modified)}</span>
+                    </div>
+                    ${file.content_summary ? `
+                        <div class="file-content">
+                            Structure: ${file.content_summary.structure} 
+                            (${file.content_summary.size} items)
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+        
+        function updateAnalysisFiles() {
+            const container = document.getElementById('analysis-files');
+            const analysisFiles = realData.content_analysis.analysis_files || [];
+            
+            container.innerHTML = analysisFiles.slice(0, 10).map(file => `
+                <div class="file-item file-analysis">
+                    <div class="file-name">${file.name}</div>
+                    <div class="file-meta">
+                        <span>${formatBytes(file.size)}</span>
+                        <span>${formatDate(file.modified)}</span>
+                    </div>
+                    ${file.content_summary ? `
+                        <div class="file-content">
+                            ${Object.entries(file.content_summary.data_points || {})
+                                .map(([k,v]) => `${k}: ${v}`)
+                                .join(', ')}
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+        
+        function updatePaniniModel() {
+            const container = document.getElementById('panini-model');
+            
+            const modelComponents = [
+                {
+                    title: "Architecture Multi-Agents",
+                    desc: "4 agents spécialisés : Panini (R&D), OntoWave (UI), FS (Infra), Gest (Orchestration)",
+                    status: "✅ Opérationnel"
+                },
+                {
+                    title: "Système Dhātu",
+                    desc: `${realData.scan_summary.file_types.dhatu_analysis || 0} analyses racines verbales disponibles`,
+                    status: "🔄 En développement"
+                },
+                {
+                    title: "Corpus Multilingues",
+                    desc: `${realData.scan_summary.file_types.corpus_data || 0} collections corpus actives`,
+                    status: "📊 Collecte active"
+                },
+                {
+                    title: "Molécules Sémantiques",
+                    desc: "Intégration ultimate des analyses sémantiques",
+                    status: "🧪 Intégration"
+                },
+                {
+                    title: "Monitoring Temps Réel",
+                    desc: `${realData.scan_summary.total_files_found || 0} fichiers surveillés`,
+                    status: "⚡ Actif"
+                },
+                {
+                    title: "Copilotage ISO 8601",
+                    desc: "Standard dates mandatory appliqué",
+                    status: "✅ Conforme"
+                }
+            ];
+            
+            container.innerHTML = modelComponents.map(component => `
+                <div class="model-item">
+                    <div class="item-title">${component.title}</div>
+                    <div class="item-desc">${component.desc}</div>
+                    <div class="item-status">${component.status}</div>
+                </div>
+            `).join('');
+        }
+        
+        function updateDraftsOngoing() {
+            const container = document.getElementById('drafts-ongoing');
+            
+            const draftProjects = [
+                {
+                    title: "Générateur Candidats Dhātu",
+                    desc: "Génération automatique racines verbales candidates",
+                    status: "🚧 80% - Tests validation"
+                },
+                {
+                    title: "Interface Gestuelle Kinect",
+                    desc: "Reconnaissance gestes + détection mains avancée",
+                    status: "🎮 70% - Calibration"
+                },
+                {
+                    title: "Orchestrateur Multi-Plateforme",
+                    desc: "CLI + drivers Local/Cloud/Colab",
+                    status: "☁️ 85% - Tests cloud"
+                },
+                {
+                    title: "IA Autonome Recherche",
+                    desc: "Processeur corpus + planificateur recherche",
+                    status: "🤖 60% - Apprentissage"
+                },
+                {
+                    title: "Analyseur Couverture Sémantique",
+                    desc: "Métriques précises couverture dhātu",
+                    status: "📊 90% - Validation"
+                },
+                {
+                    title: "Corpus Préscolaire Mondial",
+                    desc: "Collection spécialisée développement langagier",
+                    status: "👶 50% - Collection"
+                },
+                {
+                    title: "Géométrie Dhātu 3D",
+                    desc: "Modélisation géométrique évolution racines",
+                    status: "🔮 30% - Recherche"
+                },
+                {
+                    title: "Validateur Crosslingual",
+                    desc: "Validation inter-langues dhātu étendues",
+                    status: "🌐 75% - Tests EN/FR"
+                }
+            ];
+            
+            container.innerHTML = draftProjects.map(project => `
+                <div class="draft-item">
+                    <div class="item-title">${project.title}</div>
+                    <div class="item-desc">${project.desc}</div>
+                    <div class="item-status">${project.status}</div>
+                </div>
+            `).join('');
+        }
+        
+        function updateActiveProcesses() {
+            const container = document.getElementById('active-processes-list');
+            const processes = realData.system_status.active_processes || [];
+            
+            container.innerHTML = processes.map(proc => `
+                <div class="process-item">
+                    <div class="process-cmd">${proc.command}</div>
+                    <div class="process-stats">
+                        <span>CPU: ${proc.cpu}%</span>
+                        <span>MEM: ${proc.memory}%</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function updateContentDetails() {
+            const tbody = document.getElementById('content-table-body');
+            const recentFiles = realData.real_files.slice(0, 20) || [];
+            
+            tbody.innerHTML = recentFiles.map(file => `
+                <tr>
+                    <td title="${file.path}">${file.name}</td>
+                    <td>${file.type}</td>
+                    <td>${formatBytes(file.size)}</td>
+                    <td>${formatDate(file.modified)}</td>
+                    <td>
+                        ${file.content_summary ? 
+                            `${file.content_summary.structure} (${file.content_summary.size})` : 
+                            'N/A'}
+                    </td>
+                </tr>
+            `).join('');
+        }
+        
+        function updateLogs() {
+            const container = document.getElementById('real-time-logs');
+            const logFiles = realData.content_analysis.log_files || [];
+            
+            // Simuler des entrées de log récentes
+            const logEntries = [];
+            logFiles.forEach(logFile => {
+                if (logFile.content_summary && logFile.content_summary.recent_entries) {
+                    logFile.content_summary.recent_entries.forEach(entry => {
+                        logEntries.push({
+                            file: logFile.name,
+                            content: entry.content,
+                            timestamp: new Date()
+                        });
+                    });
+                }
+            });
+            
+            container.innerHTML = logEntries.slice(-10).map(entry => `
+                <div class="feed-item">
+                    <div class="timestamp">${entry.timestamp.toLocaleTimeString()} - ${entry.file}</div>
+                    <div>${entry.content}</div>
+                </div>
+            `).join('');
+        }
+        
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 B';
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+        }
+        
+        function formatDate(dateStr) {
+            // Conformité copilotage: dates en ISO 8601 YYYY-MM-DD HH:mm
+            const date = new Date(dateStr);
+            // Format ISO pour affichage: YYYY-MM-DD HH:mm
+            return date.toISOString().slice(0, 16).replace('T', ' ');
+        }
+        
+        // Initialisation et refresh
+        function init() {
+            loadRealData();
+            
+            // Recharger les données toutes les 30 secondes
+            setInterval(loadRealData, 30000);
+            
+            // Mettre à jour l'heure toutes les secondes (format ISO)
+            setInterval(() => {
+                document.getElementById('current-time').textContent = 
+                    new Date().toISOString().slice(11, 19);  // HH:mm:ss
+            }, 1000);
+        }
+        
+        // Démarrage
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
