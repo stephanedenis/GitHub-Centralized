@@ -27,18 +27,31 @@
 
 **Exigence** : Ingestion ET restitution parfaite
 
-### 3. ATOMES SÉMANTIQUES - APPROCHE PROGRESSIVE
+### 3. ATOMES SÉMANTIQUES - NOUVEAU PARADIGME
+
+**FOCUS : Représentation sémantique PURE**
+
+**Objectif fondamental** :
+- Modèle qui **évolue en découvrant symétries parfaites**
+- **Composition ↔ Décomposition** : patterns symétriques
+- Patterns deviennent **candidats universaux**
+
+**Nouveau paradigme théorie information** :
+- ❌ PAS limité au langage
+- ❌ PAS limité aux données binaires
+- ✅ Théorie information universelle
+- ✅ Symétries compositionnelles pures
 
 **Dhātu comme point de départ** :
 - Commencer par premiers dhātu = atomes initiaux
 - **NE PAS se limiter** à cet ensemble
 - **NE PAS contraindre** à cette seule approche
-- **Découverte progressive** de nouveaux atomes
+- **Découverte progressive** de nouveaux atomes via symétries
 
 **Évolution organique** :
 - Dhātu = hypothèse initiale
-- Validation empirique par compression
-- Extension/modification selon résultats
+- Validation via symétries composition/décomposition
+- Extension/modification selon patterns découverts
 - Atomes finaux ≠ nécessairement dhātu
 
 ### 4. MULTILINGUISME COMME OUTIL DE VALIDATION
@@ -83,9 +96,11 @@
 ### Métriques Validation
 
 **Pour chaque format** :
-- Taux compression obtenu
+- Taux compression obtenu (si réussite)
 - Temps ingestion/restitution
-- Intégrité parfaite (100%)
+- **Intégrité : 100% OU ÉCHEC** (pas de zone grise)
+- % seulement indicateur progression temporaire
+- Métrique finale : taux réussite (succès / tentatives)
 - Scalabilité (millions fichiers)
 
 ### Corpus Validation Multi-Format
@@ -100,10 +115,21 @@
 
 ### Base Traducteurs/Styles
 
-**Métadonnées à colliger** :
+**Métadonnées CRITIQUES** :
+- **QUI** : Identité traducteur (auteur traduction)
+- **QUAND** : Époque traduction (contexte temporel)
+- **OÙ** : Contexte culturel/géographique
+- **BIAIS** : Culturel (milieu, vécu, époque)
+- **STYLE** : Patterns récurrents = signature traducteur
+
+**Principe fondamental** : Traducteur = auteur avec interprétation propre
+
+**Schéma exemple** :
 ```json
 {
   "traducteur": "nom_traducteur",
+  "epoque": "2015",
+  "contexte_culturel": "France, urbain",
   "langue_source": "en",
   "langue_cible": "fr", 
   "corpus": ["livre1", "livre2"],
@@ -189,18 +215,20 @@ corpus/
 ## 🚫 NON-PRIORITÉS CONFIRMÉES
 
 - ❌ PanLang gestuelle (après PaniniFS)
-- ❌ Interface visualisation (sauf métriques validation)
-- ❌ Dashboards esthétiques (seulement monitoring technique)
+- ❌ Interface visualisation (sauf dashboard modulaire recherches Panini)
+- ❌ Animations décoratives (seulement si utilité perspectives/attention)
 - ❌ Corpus préscolaire (après validation adultes)
 
 ## ✅ PRIORITÉS ABSOLUES
 
-1. **Validateurs PaniniFS robustes**
-2. **Multi-formats ingestion/restitution**
-3. **Séparation contenant/contenu**
-4. **Multilinguisme pour universaux**
-5. **Base métadonnées traducteurs**
-6. **Atomes évolutifs (pas figés dhātu)**
+1. **Validateurs PaniniFS robustes** (intégrité 100% OU échec)
+2. **Multi-formats ingestion/restitution** (tous formats populaires)
+3. **Séparation contenant/contenu** (3 niveaux)
+4. **Symétries composition/décomposition** (nouveau paradigme)
+5. **Multilinguisme pour universaux** (validation cross-lingue)
+6. **Base métadonnées traducteurs** (qui/quand/où + biais/styles)
+7. **Atomes évolutifs** (dhātu = départ, pas contrainte)
+8. **Dashboard modulaire écosystème Panini** (UHD/4K, GitHub Pages)
 
 ---
 

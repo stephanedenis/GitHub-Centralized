@@ -23,6 +23,18 @@
 - **Métrique principale** : **Taux de compression** nouvelle information ajoutée
 - **Dictionnaire idéal** : **Plus compact** + **Plus efficace** intégration nouveaux faits
 
+**Intégrité reconstitution : 100% OU ÉCHEC**
+
+- Pas de zone grise acceptable
+- % seulement indicateur progression temporaire
+- Métrique finale : taux réussite (succès/tentatives totales)
+
+**Symétries composition/décomposition**
+
+- Découverte patterns symétriques parfaits
+- Candidats universaux = symétries cross-domaine
+- Nouveau paradigme : PAS limité langage/binaire
+
 ### 3. APPLICATIONS CIBLES OBLIGATOIRES
 
 **PaniniFS** : Filesystem virtuel compression sémantique
@@ -66,9 +78,12 @@
 ## 📁 FICHIERS DE RÉFÉRENCE
 
 ### Documentation Mission
-- [POINTS_CLES_MISSION_OFFICIEL.md](./POINTS_CLES_MISSION_OFFICIEL.md) - Points clés enregistrés
-- [CONTRAINTES_COMPATIBILITE_APPLICATIONS.md](./CONTRAINTES_COMPATIBILITE_APPLICATIONS.md) - Contraintes PaniniFS/PanLang
-- [STRATEGIE_AGENTS_UNIVERSAUX_SEMANTIQUES.md](./STRATEGIE_AGENTS_UNIVERSAUX_SEMANTIQUES.md) - Stratégie agents détaillée
+## 📚 DOCUMENTS DE RÉFÉRENCE
+
+- [POINTS_CLES_MISSION_OFFICIEL.md](POINTS_CLES_MISSION_OFFICIEL.md) - Points clés officiels
+- [CONTRAINTES_COMPATIBILITE_APPLICATIONS.md](CONTRAINTES_COMPATIBILITE_APPLICATIONS.md) - Contraintes PaniniFS/PanLang
+- [STRATEGIE_RAFFINEE_PLAN_TRAVAIL.md](STRATEGIE_RAFFINEE_PLAN_TRAVAIL.md) - Plan travail détaillé 9 semaines
+- [CLARIFICATIONS_MISSION_CRITIQUE.md](CLARIFICATIONS_MISSION_CRITIQUE.md) - Clarifications 2025-09-30 (IMPACT MAJEUR)
 
 ### Configuration Workflow
 - [GITHUB_COPILOT_CODING_AGENT_SETUP.md](./GITHUB_COPILOT_CODING_AGENT_SETUP.md) - Setup agents
