@@ -40,10 +40,12 @@
     
     "validators": {
       "pattern": "**/*_validator.py",
-      "description": "Scripts validation conformité ISO 8601/copilotage",
+      "description": "Scripts validation conformité ISO 8601/copilotage/PRs",
       "examples": [
         "validate_dates_iso.py",
-        "autonomous_system_validator.py"
+        "autonomous_system_validator.py",
+        "iso8601_compliance_validator.py",
+        "pr_compliance_validator.py"
       ],
       "constraints": {
         "max_execution_time_seconds": 120,
@@ -92,6 +94,20 @@
         "max_execution_time_seconds": 600,
         "output_format": "json",
         "read_only": true
+      }
+    },
+    
+    "orchestrators": {
+      "pattern": "**/*_orchestrator.py",
+      "description": "Scripts orchestration multi-agent (humain/copilot/colab/autonomous)",
+      "examples": [
+        "multi_agent_orchestrator.py"
+      ],
+      "constraints": {
+        "max_execution_time_seconds": 10,
+        "output_format": "json",
+        "read_only": true,
+        "reports_only": true
       }
     }
   },

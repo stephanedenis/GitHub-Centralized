@@ -1,0 +1,242 @@
+{
+  "timestamp": "2025-10-01T14:25:27.345864+00:00",
+  "agents": {
+    "human_stephane": {
+      "agent_id": "human_stephane",
+      "agent_type": "human",
+      "name": "Stéphane Denis",
+      "capabilities": [
+        "architecture",
+        "research",
+        "code_review",
+        "documentation"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 1,
+        "availability": "business_hours",
+        "requires_approval": false,
+        "avg_task_duration": {
+          "architecture": 3600,
+          "research": 7200,
+          "code_review": 1800
+        }
+      },
+      "cost_per_task": 0.0,
+      "current_tasks": [
+        "task_004"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    },
+    "copilot_agent": {
+      "agent_id": "copilot_agent",
+      "agent_type": "github_copilot",
+      "name": "GitHub Copilot SWE Agent",
+      "capabilities": [
+        "code_review",
+        "refactoring",
+        "documentation",
+        "validation",
+        "extraction"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 4,
+        "requires_issue_mention": true,
+        "avg_task_duration": {
+          "code_review": 300,
+          "refactoring": 600,
+          "documentation": 180,
+          "validation": 120
+        }
+      },
+      "cost_per_task": 0.0,
+      "current_tasks": [
+        "task_003"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    },
+    "colab_pro": {
+      "agent_id": "colab_pro",
+      "agent_type": "google_colab_pro",
+      "name": "Google Colab Pro (GPU)",
+      "capabilities": [
+        "ml_training",
+        "gpu_compute",
+        "data_analysis"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 1,
+        "requires_gpu": true,
+        "gpu_type": "T4/V100",
+        "max_runtime_hours": 12,
+        "avg_task_duration": {
+          "ml_training": 3600,
+          "gpu_compute": 1800,
+          "data_analysis": 900
+        }
+      },
+      "cost_per_task": 0.1,
+      "current_tasks": [
+        "task_002"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    },
+    "autonomous_wrapper": {
+      "agent_id": "autonomous_wrapper",
+      "agent_type": "autonomous_wrapper",
+      "name": "Autonomous Wrapper System",
+      "capabilities": [
+        "validation",
+        "extraction",
+        "data_analysis"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 10,
+        "requires_whitelist": true,
+        "script_patterns": [
+          "*_validator.py",
+          "*_extractor.py",
+          "*_analyzer.py"
+        ],
+        "avg_task_duration": {
+          "validation": 5,
+          "extraction": 10,
+          "data_analysis": 30
+        }
+      },
+      "cost_per_task": 0.0,
+      "current_tasks": [
+        "task_001",
+        "task_005"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    }
+  },
+  "tasks": {
+    "task_001": {
+      "task_id": "task_001",
+      "title": "Valider intégrité corpus multi-format",
+      "task_type": "validation",
+      "priority": 8,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "in_progress",
+      "started_at": "2025-10-01T14:25:27.345539+00:00",
+      "completed_at": null,
+      "result": null
+    },
+    "task_002": {
+      "task_id": "task_002",
+      "title": "Entraîner modèle dhātu sur GPU",
+      "task_type": "ml_training",
+      "priority": 9,
+      "estimated_duration": 3600,
+      "requires_gpu": true,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "colab_pro",
+      "status": "in_progress",
+      "started_at": "2025-10-01T14:25:27.345592+00:00",
+      "completed_at": null,
+      "result": null
+    },
+    "task_003": {
+      "task_id": "task_003",
+      "title": "Refactoriser validateurs PaniniFS",
+      "task_type": "refactoring",
+      "priority": 6,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "copilot_agent",
+      "status": "in_progress",
+      "started_at": "2025-10-01T14:25:27.345642+00:00",
+      "completed_at": null,
+      "result": null
+    },
+    "task_004": {
+      "task_id": "task_004",
+      "title": "Définir architecture système compression",
+      "task_type": "architecture",
+      "priority": 10,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": true,
+      "dependencies": [],
+      "assigned_to": "human_stephane",
+      "status": "in_progress",
+      "started_at": "2025-10-01T14:25:27.345712+00:00",
+      "completed_at": null,
+      "result": null
+    },
+    "task_005": {
+      "task_id": "task_005",
+      "title": "Extraire métadonnées traducteurs",
+      "task_type": "extraction",
+      "priority": 7,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "in_progress",
+      "started_at": "2025-10-01T14:25:27.345767+00:00",
+      "completed_at": null,
+      "result": null
+    }
+  },
+  "assignment_log": [
+    {
+      "timestamp": "2025-10-01T14:25:27.345489+00:00",
+      "task_id": "task_001",
+      "task_title": "Valider intégrité corpus multi-format",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 93.96666666666667,
+      "reason": "exécution locale rapide, gratuit, très rapide (5s)"
+    },
+    {
+      "timestamp": "2025-10-01T14:25:27.345564+00:00",
+      "task_id": "task_002",
+      "task_title": "Entraîner modèle dhātu sur GPU",
+      "agent_id": "colab_pro",
+      "agent_name": "Google Colab Pro (GPU)",
+      "score": 67.0,
+      "reason": "GPU disponible"
+    },
+    {
+      "timestamp": "2025-10-01T14:25:27.345623+00:00",
+      "task_id": "task_003",
+      "task_title": "Refactoriser validateurs PaniniFS",
+      "agent_id": "copilot_agent",
+      "agent_name": "GitHub Copilot SWE Agent",
+      "score": 90.0,
+      "reason": "spécialisé code, gratuit"
+    },
+    {
+      "timestamp": "2025-10-01T14:25:27.345697+00:00",
+      "task_id": "task_004",
+      "task_title": "Définir architecture système compression",
+      "agent_id": "human_stephane",
+      "agent_name": "Stéphane Denis",
+      "score": 70.0,
+      "reason": "gratuit"
+    },
+    {
+      "timestamp": "2025-10-01T14:25:27.345743+00:00",
+      "task_id": "task_005",
+      "task_title": "Extraire métadonnées traducteurs",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 92.93333333333334,
+      "reason": "exécution locale rapide, gratuit, très rapide (10s)"
+    }
+  ]
+}
