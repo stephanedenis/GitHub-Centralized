@@ -1,0 +1,179 @@
+{
+  "timestamp": "2025-10-01T05:23:24.005712+00:00",
+  "traducteurs_analyses": 3,
+  "patterns_culturels": {
+    "Occidental/Français": [
+      "Jean Dupont"
+    ],
+    "Type:culturel": [
+      "Jean Dupont",
+      "Maria González",
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Type:temporel": [
+      "Jean Dupont",
+      "Maria González",
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Type:académique": [
+      "Jean Dupont"
+    ],
+    "Occidental/Ibérique": [
+      "Maria González"
+    ],
+    "Type:personnel": [
+      "Maria González"
+    ],
+    "Oriental/Indien": [
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Type:religieux": [
+      "राज शर्मा (Raj Sharma)"
+    ]
+  },
+  "patterns_temporels": {
+    "Pré-2000": [
+      "Jean Dupont"
+    ],
+    "Biais:Post-structuralisme français années 80": [
+      "Jean Dupont"
+    ],
+    "Post-2010": [
+      "Maria González",
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Biais:Sensibilité contemporaine genre/inclusio": [
+      "Maria González"
+    ],
+    "Biais:Perspective traditionnelle intemporelle": [
+      "राज शर्मा (Raj Sharma)"
+    ]
+  },
+  "signatures_stylistiques": {
+    "Formalisation élevée": [
+      "Jean Dupont",
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Style complexe (sub>0.7)": [
+      "Jean Dupont",
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Pattern:formalisation": [
+      "Jean Dupont",
+      "Maria González",
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Pattern:vocabulaire_spécialisé": [
+      "Jean Dupont"
+    ],
+    "Pattern:notes_explicatives": [
+      "Jean Dupont"
+    ],
+    "Formalisation moyenne": [
+      "Maria González"
+    ],
+    "Style simple (sub<0.5)": [
+      "Maria González"
+    ],
+    "Pattern:accessibilité": [
+      "Maria González"
+    ],
+    "Pattern:adaptation_culturelle": [
+      "Maria González"
+    ],
+    "Pattern:références_scripturaires": [
+      "राज शर्मा (Raj Sharma)"
+    ],
+    "Pattern:commentaires_classiques": [
+      "राज शर्मा (Raj Sharma)"
+    ]
+  },
+  "cross_references": {
+    "profiles": [
+      {
+        "traducteur": "Jean Dupont",
+        "contexte_geo": "France",
+        "periode": "1985-2010",
+        "biais_dominants": [
+          "culturel",
+          "temporel",
+          "académique"
+        ],
+        "style_caracteristiques": [
+          "subordinations_complexes:0.78",
+          "formalisation:très élevée",
+          "vocabulaire_spécialisé:sanskrit translitéré systématiquement"
+        ]
+      },
+      {
+        "traducteur": "Maria González",
+        "contexte_geo": "Espagne",
+        "periode": "2015-2020",
+        "biais_dominants": [
+          "culturel",
+          "temporel",
+          "personnel"
+        ],
+        "style_caracteristiques": [
+          "subordinations_complexes:0.45",
+          "formalisation:moyenne",
+          "accessibilité:grand public"
+        ]
+      },
+      {
+        "traducteur": "राज शर्मा (Raj Sharma)",
+        "contexte_geo": "Inde",
+        "periode": "2010-2025",
+        "biais_dominants": [
+          "culturel",
+          "temporel",
+          "religieux"
+        ],
+        "style_caracteristiques": [
+          "subordinations_complexes:0.92",
+          "formalisation:extrêmement élevée",
+          "références_scripturaires:systématiques"
+        ]
+      }
+    ]
+  },
+  "universaux_vs_contextuels": {
+    "universal_candidates": {
+      "biais_recurrents": [
+        [
+          "culturel",
+          3
+        ],
+        [
+          "temporel",
+          3
+        ]
+      ],
+      "style_recurrents": [
+        [
+          "subordinations_complexes",
+          3
+        ],
+        [
+          "formalisation",
+          3
+        ]
+      ]
+    },
+    "contextual": {
+      "biais_uniques": [
+        "académique",
+        "personnel",
+        "religieux"
+      ],
+      "style_uniques": [
+        "vocabulaire_spécialisé",
+        "notes_explicatives",
+        "accessibilité",
+        "adaptation_culturelle",
+        "références_scripturaires",
+        "commentaires_classiques"
+      ]
+    }
+  }
+}

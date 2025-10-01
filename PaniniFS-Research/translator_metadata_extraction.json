@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-10-01T05:22:32.417100+00:00",
+  "scan_summary": {
+    "fichiers_scannes": 1,
+    "traducteurs_identifies": 0,
+    "total_findings": 0
+  },
+  "traducteurs": {},
+  "fichiers_corpus": [
+    "extracted_content.json"
+  ],
+  "extraction_log": []
+}

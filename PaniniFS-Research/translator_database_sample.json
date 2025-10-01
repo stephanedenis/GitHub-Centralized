@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-10-01T05:22:32.417453+00:00",
+  "description": "Base données exemple traducteurs (QUI/QUAND/OÙ + biais/styles)",
+  "principe": "Traducteur = auteur avec interprétation propre",
+  "focus": "Métadonnées > nombre",
+  "traducteurs": [
+    {
+      "qui": "Jean Dupont",
+      "quand": "1985-2010",
+      "ou": "France, Paris, milieu universitaire",
+      "langue_source": "en",
+      "langue_cible": "fr",
+      "corpus": [
+        "Bhagavad Gita",
+        "Upanishads",
+        "Yoga Sutras"
+      ],
+      "biais": {
+        "culturel": "Occidentalisation concepts orientaux",
+        "temporel": "Post-structuralisme français années 80",
+        "académique": "Formalisation excessive, vocabulaire technique"
+      },
+      "style_markers": {
+        "subordinations_complexes": 0.78,
+        "formalisation": "très élevée",
+        "vocabulaire_spécialisé": "sanskrit translitéré systématiquement",
+        "notes_explicatives": "nombreuses (ratio 1:3)"
+      }
+    },
+    {
+      "qui": "Maria González",
+      "quand": "2015-2020",
+      "ou": "Espagne, Madrid, traductrice indépendante",
+      "langue_source": "sa",
+      "langue_cible": "es",
+      "corpus": [
+        "Mahabharata",
+        "Ramayana excerpts"
+      ],
+      "biais": {
+        "culturel": "Catholicisme ibérique influence interprétation",
+        "temporel": "Sensibilité contemporaine genre/inclusion",
+        "personnel": "Accent sur aspects dévotionnels"
+      },
+      "style_markers": {
+        "subordinations_complexes": 0.45,
+        "formalisation": "moyenne",
+        "accessibilité": "grand public",
+        "adaptation_culturelle": "forte (équivalents chrétiens)"
+      }
+    },
+    {
+      "qui": "राज शर्मा (Raj Sharma)",
+      "quand": "2010-2025",
+      "ou": "Inde, Varanasi, pandit traditionnel",
+      "langue_source": "sa",
+      "langue_cible": "hi",
+      "corpus": [
+        "Vedas",
+        "Brahma Sutras",
+        "Dhatu Patha"
+      ],
+      "biais": {
+        "culturel": "Tradition védique orthodoxe",
+        "temporel": "Perspective traditionnelle intemporelle",
+        "religieux": "Cadre hindou brahmanique strict"
+      },
+      "style_markers": {
+        "subordinations_complexes": 0.92,
+        "formalisation": "extrêmement élevée",
+        "références_scripturaires": "systématiques",
+        "commentaires_classiques": "intégrés (Shankara, etc.)"
+      }
+    }
+  ]
+}
