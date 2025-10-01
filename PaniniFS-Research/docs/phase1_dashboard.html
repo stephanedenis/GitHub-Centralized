@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1 CORE - Monitoring Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-card .icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card .label {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .progress-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .progress-section h2 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .progress-bar-container {
+            background: #e0e0e0;
+            border-radius: 25px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 25px;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .status-starting { background: #3498db; color: white; }
+        .status-acceptable { background: #f39c12; color: white; }
+        .status-on-track { background: #27ae60; color: white; }
+        .status-at-risk { background: #e74c3c; color: white; }
+        
+        .tasks-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .task-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .task-card.completed {
+            border-left-color: #27ae60;
+            background: #e8f8f0;
+        }
+        
+        .task-card.in-progress {
+            border-left-color: #f39c12;
+            background: #fef5e7;
+        }
+        
+        .task-card.not-started {
+            border-left-color: #95a5a6;
+            background: #ecf0f1;
+        }
+        
+        .task-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .task-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        .task-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            flex: 1;
+        }
+        
+        .task-percent {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .task-status {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .task-evidence {
+            font-size: 0.85em;
+            color: #27ae60;
+            margin-top: 10px;
+        }
+        
+        .task-missing {
+            font-size: 0.85em;
+            color: #e74c3c;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        
+        .auto-refresh {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .error {
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Phase 1 CORE - Monitoring</h1>
+            <p class="subtitle">Surveillance temps réel du rendement</p>
+            <p class="subtitle" id="last-update">Chargement...</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="icon">⏱️</div>
+                <div class="label">Temps écoulé</div>
+                <div class="value" id="elapsed">--</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="icon">⏳</div>
+                <div class="label">Temps restant</div>
+                <div class="value" id="remaining">--</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="icon">📈</div>
+                <div class="label">Progression</div>
+                <div class="value" id="progress-percent">--%</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="icon">✅</div>
+                <div class="label">Tâches complétées</div>
+                <div class="value" id="tasks-completed">-</div>
+            </div>
+        </div>
+        
+        <div class="progress-section">
+            <h2>Progression Globale</h2>
+            <div id="status-badge" class="status-badge">🔵 STARTING</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar" style="width: 0%">
+                    0%
+                </div>
+            </div>
+            <p style="text-align: center; color: #666; font-size: 0.95em;">
+                🎯 Target: 37-50% (3-4 tâches complétées)
+            </p>
+        </div>
+        
+        <div class="progress-section">
+            <h2>Détail des Tâches</h2>
+            <div class="tasks-grid" id="tasks-grid">
+                <div class="error">
+                    Chargement des données...
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🔄 Mise à jour automatique toutes les 30 secondes</p>
+            <p class="auto-refresh" id="next-refresh">Prochain refresh dans --s</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/stephanedenis/GitHub-Centralized" 
+                   style="color: white; text-decoration: none;">
+                    🔗 GitHub Repository
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        const REPO_OWNER = 'stephanedenis';
+        const REPO_NAME = 'GitHub-Centralized';
+        const BRANCH = 'main';
+        const DATA_PATH = 'PaniniFS-Research/phase1_progress_report.json';
+        
+        let countdown = 30;
+        
+        async function fetchData() {
+            try {
+                const url = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/${DATA_PATH}`;
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                
+                const data = await response.json();
+                updateDashboard(data);
+                
+            } catch (error) {
+                console.error('Erreur chargement données:', error);
+                document.getElementById('tasks-grid').innerHTML = `
+                    <div class="error">
+                        ⚠️ Erreur chargement données<br>
+                        ${error.message}<br>
+                        <small>Vérifier que phase1_progress_report.json est commité sur GitHub</small>
+                    </div>
+                `;
+            }
+        }
+        
+        function updateDashboard(data) {
+            const progress = data.current_progress;
+            
+            // Last update
+            const lastUpdate = new Date(progress.timestamp);
+            document.getElementById('last-update').textContent = 
+                `Dernière mise à jour: ${lastUpdate.toLocaleString('fr-FR')}`;
+            
+            // Stats
+            document.getElementById('elapsed').textContent = 
+                `${progress.elapsed_hours.toFixed(1)}h`;
+            document.getElementById('remaining').textContent = 
+                `${progress.remaining_minutes}min`;
+            document.getElementById('progress-percent').textContent = 
+                `${progress.overall_percent.toFixed(1)}%`;
+            
+            // Count completed tasks
+            const taskResults = progress.task_results;
+            const completed = Object.values(taskResults).filter(
+                t => t.status === 'COMPLETED'
+            ).length;
+            document.getElementById('tasks-completed').textContent = 
+                `${completed}/5`;
+            
+            // Progress bar
+            const percent = progress.overall_percent;
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = `${percent}%`;
+            progressBar.textContent = `${percent.toFixed(1)}%`;
+            
+            // Status badge
+            const statusBadge = document.getElementById('status-badge');
+            const statusMap = {
+                'STARTING': { icon: '🔵', text: 'STARTING', class: 'status-starting' },
+                'ACCEPTABLE': { icon: '🟡', text: 'ACCEPTABLE', class: 'status-acceptable' },
+                'ON_TRACK': { icon: '✅', text: 'ON TRACK', class: 'status-on-track' },
+                'AT_RISK': { icon: '⚠️', text: 'AT RISK', class: 'status-at-risk' }
+            };
+            const status = statusMap[progress.status] || statusMap['STARTING'];
+            statusBadge.textContent = `${status.icon} ${status.text}`;
+            statusBadge.className = `status-badge ${status.class}`;
+            
+            // Tasks grid
+            const tasksGrid = document.getElementById('tasks-grid');
+            const taskNames = {
+                'human_architecture': {
+                    icon: '👤',
+                    title: 'Architecture compresseur (P9)',
+                    agent: 'Stéphane Denis'
+                },
+                'colab_training': {
+                    icon: '🎮',
+                    title: 'Training GPU dhātu (P9)',
+                    agent: 'Colab Pro'
+                },
+                'autonomous_validation': {
+                    icon: '🤖',
+                    title: 'Validation algo (P8)',
+                    agent: 'Autonomous'
+                },
+                'autonomous_benchmarks': {
+                    icon: '🤖',
+                    title: 'Benchmarks compression (P8)',
+                    agent: 'Autonomous'
+                },
+                'autonomous_metadata': {
+                    icon: '🤖',
+                    title: 'Extraction metadata (P8)',
+                    agent: 'Autonomous'
+                }
+            };
+            
+            const statusClasses = {
+                'COMPLETED': 'completed',
+                'IN_PROGRESS': 'in-progress',
+                'NOT_STARTED': 'not-started'
+            };
+            
+            const statusIcons = {
+                'COMPLETED': '✅',
+                'IN_PROGRESS': '🔄',
+                'NOT_STARTED': '⏸️'
+            };
+            
+            tasksGrid.innerHTML = Object.entries(taskResults).map(([taskId, result]) => {
+                const task = taskNames[taskId];
+                const statusClass = statusClasses[result.status] || 'not-started';
+                const statusIcon = statusIcons[result.status] || '❓';
+                
+                let evidenceHTML = '';
+                if (result.evidence && result.evidence.length > 0) {
+                    evidenceHTML = `
+                        <div class="task-evidence">
+                            ✓ ${result.evidence.slice(0, 2).join('<br>✓ ')}
+                        </div>
+                    `;
+                }
+                
+                let missingHTML = '';
+                if (result.missing && result.missing.length > 0) {
+                    missingHTML = `
+                        <div class="task-missing">
+                            ✗ ${result.missing.slice(0, 2).join('<br>✗ ')}
+                        </div>
+                    `;
+                }
+                
+                return `
+                    <div class="task-card ${statusClass}">
+                        <div class="task-header">
+                            <div class="task-icon">${task.icon}</div>
+                            <div class="task-title">${task.title}</div>
+                            <div class="task-percent">${result.completion_percent}%</div>
+                        </div>
+                        <div class="task-status">
+                            ${statusIcon} ${result.status} • Agent: ${task.agent}
+                        </div>
+                        ${evidenceHTML}
+                        ${missingHTML}
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function updateCountdown() {
+            document.getElementById('next-refresh').textContent = 
+                `Prochain refresh dans ${countdown}s`;
+            
+            countdown--;
+            if (countdown < 0) {
+                countdown = 30;
+                fetchData();
+            }
+        }
+        
+        // Initial load
+        fetchData();
+        
+        // Auto-refresh every 30s
+        setInterval(fetchData, 30000);
+        
+        // Countdown every second
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
