@@ -1,0 +1,168 @@
+{
+  "timestamp": "2025-10-01T15:48:06.780688+00:00",
+  "status": "COMPLETED",
+  "issues": [
+    {
+      "type": "OBSOLETE_PROJECTS",
+      "count": 5,
+      "details": [
+        {
+          "project_id": 10,
+          "name": "[INTERFACES] dhatu-api-gateway",
+          "issues": [
+            "Aucune tâche orchestrateur",
+            "Non mentionné docs stratégiques"
+          ],
+          "severity": "HIGH"
+        },
+        {
+          "project_id": 8,
+          "name": "[TOOLS] dhatu-evolution-simulator",
+          "issues": [
+            "Status PLANIFIÉ + Priority BASSE",
+            "Aucune tâche orchestrateur",
+            "Non mentionné docs stratégiques"
+          ],
+          "severity": "HIGH"
+        },
+        {
+          "project_id": 7,
+          "name": "[TOOLS] dhatu-space-visualizer",
+          "issues": [
+            "Status PLANIFIÉ + Priority BASSE",
+            "Aucune tâche orchestrateur",
+            "Non mentionné docs stratégiques"
+          ],
+          "severity": "HIGH"
+        },
+        {
+          "project_id": 6,
+          "name": "[TOOLS] dhatu-creative-generator",
+          "issues": [
+            "Status PLANIFIÉ + Priority BASSE",
+            "Aucune tâche orchestrateur",
+            "Non mentionné docs stratégiques"
+          ],
+          "severity": "HIGH"
+        },
+        {
+          "project_id": 3,
+          "name": "[CORE] dhatu-web-framework",
+          "issues": [
+            "Aucune tâche orchestrateur",
+            "Non mentionné docs stratégiques"
+          ],
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "type": "OBJECTIVE_CONTRADICTIONS",
+      "count": 1,
+      "details": [
+        {
+          "doc1": "PANINI_ECOSYSTEM_ORCHESTRATOR_GUIDE.md",
+          "doc2": "CLARIFICATIONS_MISSION_CRITIQUE.md",
+          "conflict": "écosystème vs seulement",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "type": "EFFORT_DUPLICATIONS",
+      "count": 1,
+      "details": [
+        {
+          "theme": "corpus",
+          "task_count": 3,
+          "task_ids": [
+            "panini_15_corpus_expansion",
+            "panini_2_corpus_validation",
+            "panini_12_multimodal_corpus"
+          ],
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "type": "STRATEGIC_GAPS",
+      "count": 2,
+      "details": [
+        {
+          "type": "MISSING_TASKS",
+          "project_id": 13,
+          "project_name": "PaniniFS Research Strategy 2025",
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "MISSING_TASKS",
+          "project_id": 1,
+          "project_name": "[CORE] dhatu-universal-compressor",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "type": "PRIORITY_CONFLICTS",
+      "count": 1,
+      "details": [
+        {
+          "type": "PRIORITY_MISMATCH",
+          "project_id": 1,
+          "project_name": "[CORE] dhatu-universal-compressor",
+          "issue": "Project CRITIQUE mais aucune tâche priority ≥8",
+          "severity": "HIGH"
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "ARCHIVE_PROJECTS",
+      "description": "Archiver 5 projets obsolètes",
+      "projects": [
+        10,
+        8,
+        7,
+        6,
+        3
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "CONSOLIDATE_TASKS",
+      "description": "Consolider 1 duplications"
+    },
+    {
+      "priority": "HIGH",
+      "action": "ADD_TASKS",
+      "description": "Créer tâches pour 2 gaps",
+      "details": [
+        {
+          "type": "MISSING_TASKS",
+          "project_id": 13,
+          "project_name": "PaniniFS Research Strategy 2025",
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "MISSING_TASKS",
+          "project_id": 1,
+          "project_name": "[CORE] dhatu-universal-compressor",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "action": "ADJUST_PRIORITIES",
+      "description": "Corriger 1 conflits priorités"
+    },
+    {
+      "priority": "CRITICAL",
+      "action": "STRATEGIC_REVIEW",
+      "description": "Session review stratégique complète recommandée"
+    }
+  ],
+  "coherence_score": 0
+}

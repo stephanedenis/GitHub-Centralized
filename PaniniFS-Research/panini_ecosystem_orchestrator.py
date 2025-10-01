@@ -33,23 +33,25 @@ class PaniniEcosystemOrchestrator(MultiAgentOrchestrator):
         """Initialise avec projets Panini."""
         super().__init__(workspace_root)
         
-        # Projets GitHub identifiés
+        # Projets GitHub identifiés (10 ACTIFS + 5 ARCHIVED)
         self.github_projects = {
+            # ACTIFS (10 projets prioritaires)
             15: "Panini - Théorie Information Universelle",
             14: "OntoWave Roadmap",
             13: "PaniniFS Research Strategy 2025",
             12: "[RESEARCH] dhatu-multimodal-learning",
             11: "[RESEARCH] dhatu-linguistics-engine",
-            10: "[INTERFACES] dhatu-api-gateway",
             9: "[INTERFACES] dhatu-dashboard",
-            8: "[TOOLS] dhatu-evolution-simulator",
-            7: "[TOOLS] dhatu-space-visualizer",
-            6: "[TOOLS] dhatu-creative-generator",
             5: "[TOOLS] dhatu-pattern-analyzer",
             4: "[CORE] dhatu-gpu-accelerator",
-            3: "[CORE] dhatu-web-framework",
             2: "[CORE] dhatu-corpus-manager",
-            1: "[CORE] dhatu-universal-compressor"
+            1: "[CORE] dhatu-universal-compressor",
+            # ARCHIVED (5 projets - backlog préservé)
+            # 10: "[INTERFACES] dhatu-api-gateway" - ARCHIVED (backlog_10_*)
+            # 8: "[TOOLS] dhatu-evolution-simulator" - ARCHIVED (backlog_08_*)
+            # 7: "[TOOLS] dhatu-space-visualizer" - ARCHIVED (backlog_07_*)
+            # 6: "[TOOLS] dhatu-creative-generator" - ARCHIVED (backlog_06_*)
+            # 3: "[CORE] dhatu-web-framework" - ARCHIVED (backlog_03_*)
         }
         
         # Repositories
@@ -60,32 +62,27 @@ class PaniniEcosystemOrchestrator(MultiAgentOrchestrator):
             "dhatu-multimodal": "https://github.com/stephanedenis/dhatu-multimodal-learning"
         }
         
-        # Mapping projets → repos
+        # Mapping projets → repos (10 actifs seulement)
         self.project_to_repo = {
             15: "PaniniFS-Research",
             14: "OntoWave",
             13: "PaniniFS-Research",
             12: "dhatu-multimodal",
             11: "Panini",
-            10: "Panini",
             9: "Panini",
-            8: "Panini",
-            7: "Panini",
-            6: "Panini",
             5: "Panini",
             4: "Panini",
-            3: "Panini",
             2: "Panini",
             1: "Panini"
         }
         
-        # Catégories projets
+        # Catégories projets (10 actifs)
         self.project_categories = {
-            "CORE": [1, 2, 3, 4],        # Infrastructure fondamentale
-            "TOOLS": [5, 6, 7, 8],       # Outils développement
-            "INTERFACES": [9, 10],        # APIs et dashboards
-            "RESEARCH": [11, 12, 13, 15], # Recherche fondamentale
-            "ROADMAP": [14]               # Stratégie
+            "CORE": [1, 2, 4],          # Infrastructure fondamentale
+            "TOOLS": [5],                # Outils développement
+            "INTERFACES": [9],           # APIs et dashboards
+            "RESEARCH": [11, 12, 13, 15],  # Recherche fondamentale
+            "ROADMAP": [14]              # Stratégie
         }
         
         # Initialisation tâches par projet
@@ -110,12 +107,24 @@ class PaniniEcosystemOrchestrator(MultiAgentOrchestrator):
             priority=7
         ))
         
+        # PIPELINE CORPUS: Tâche mère consolidée
+        self.add_task(Task(
+            "panini_corpus_pipeline_master",
+            "Pipeline Corpus Complet: Expansion → Validation → Multimodal",
+            TaskType.DATA_ANALYSIS,
+            priority=9,
+            estimated_duration=14400,  # Total pipeline
+            dependencies=[]
+        ))
+        
+        # Subtask 1: Expansion (commence immédiatement)
         self.add_task(Task(
             "panini_15_corpus_expansion",
             "Étendre corpus multi-format à 100+ contenus",
             TaskType.DATA_ANALYSIS,
             priority=8,
-            estimated_duration=7200
+            estimated_duration=7200,
+            dependencies=["panini_corpus_pipeline_master"]
         ))
         
         # PROJECT #4 - GPU Accelerator (CORE)
@@ -138,12 +147,14 @@ class PaniniEcosystemOrchestrator(MultiAgentOrchestrator):
         ))
         
         # PROJECT #2 - Corpus Manager (CORE)
+        # Subtask 2: Validation (après expansion)
         self.add_task(Task(
             "panini_2_corpus_validation",
             "Valider intégrité corpus 100k+ documents",
             TaskType.VALIDATION,
             priority=7,
-            estimated_duration=300
+            estimated_duration=300,
+            dependencies=["panini_15_corpus_expansion"]
         ))
         
         self.add_task(Task(
@@ -190,12 +201,14 @@ class PaniniEcosystemOrchestrator(MultiAgentOrchestrator):
         ))
         
         # PROJECT #12 - Multimodal Learning (RESEARCH)
+        # Subtask 3: Multimodal (après validation)
         self.add_task(Task(
             "panini_12_multimodal_corpus",
             "Créer corpus audio/vidéo/texte aligné",
             TaskType.DATA_ANALYSIS,
             priority=7,
-            estimated_duration=7200
+            estimated_duration=7200,
+            dependencies=["panini_2_corpus_validation"]
         ))
         
         # PROJECT #5 - Pattern Analyzer (TOOL)
@@ -214,6 +227,69 @@ class PaniniEcosystemOrchestrator(MultiAgentOrchestrator):
             TaskType.DOCUMENTATION,
             priority=6,
             requires_human_review=True
+        ))
+        
+        # PROJECT #1 - Universal Compressor (CORE CRITIQUE)
+        # Gap stratégique comblé: 4 tâches high-priority
+        self.add_task(Task(
+            "panini_1_compressor_architecture",
+            "Architecture compresseur universel linguistique v1.0",
+            TaskType.ARCHITECTURE,
+            priority=9,
+            requires_human_review=True,
+            estimated_duration=7200
+        ))
+        
+        self.add_task(Task(
+            "panini_1_algorithm_validation",
+            "Valider algorithme compression/décompression 100+ dhātu",
+            TaskType.VALIDATION,
+            priority=8,
+            estimated_duration=900
+        ))
+        
+        self.add_task(Task(
+            "panini_1_compression_benchmarks",
+            "Benchmarks compression rates vs gzip/bzip2/lz4",
+            TaskType.DATA_ANALYSIS,
+            priority=8,
+            estimated_duration=1800
+        ))
+        
+        self.add_task(Task(
+            "panini_1_api_documentation",
+            "Documentation API compresseur + exemples utilisation",
+            TaskType.DOCUMENTATION,
+            priority=7,
+            estimated_duration=3600
+        ))
+        
+        # PROJECT #13 - PaniniFS Research Strategy (RESEARCH)
+        # Gap stratégique comblé: 3 tâches stratégiques
+        self.add_task(Task(
+            "panini_13_strategy_q4_update",
+            "Update stratégie recherche Q4 2025 + roadmap Q1 2026",
+            TaskType.RESEARCH,
+            priority=8,
+            requires_human_review=True,
+            estimated_duration=7200
+        ))
+        
+        self.add_task(Task(
+            "panini_13_mission_analysis",
+            "Analyser résultats 7 missions complétées - métriques",
+            TaskType.DATA_ANALYSIS,
+            priority=7,
+            estimated_duration=1800
+        ))
+        
+        self.add_task(Task(
+            "panini_13_next_missions",
+            "Identifier prochaines 5 missions prioritaires Q4-Q1",
+            TaskType.RESEARCH,
+            priority=8,
+            requires_human_review=True,
+            estimated_duration=3600
         ))
     
     def assign_all_pending_tasks(self) -> Dict[str, Any]:
@@ -296,19 +372,29 @@ class PaniniEcosystemOrchestrator(MultiAgentOrchestrator):
         # Tasks by project (via task_id prefix panini_XX)
         for task_id, task in self.tasks.items():
             if task_id.startswith('panini_'):
-                project_num = int(task_id.split('_')[1])
-                project_name = self.github_projects.get(project_num, 'Unknown')
-                if project_name not in report['tasks']['by_project']:
-                    report['tasks']['by_project'][project_name] = 0
-                report['tasks']['by_project'][project_name] += 1
+                # Skip special tasks (e.g. panini_corpus_pipeline_master)
+                try:
+                    project_num = int(task_id.split('_')[1])
+                    project_name = self.github_projects.get(project_num, 'Unknown')
+                    if project_name not in report['tasks']['by_project']:
+                        report['tasks']['by_project'][project_name] = 0
+                    report['tasks']['by_project'][project_name] += 1
+                except ValueError:
+                    # Special task (e.g. corpus_pipeline_master)
+                    pass
         
         # Tasks by category
         for category, projects in self.project_categories.items():
-            count = sum(
-                1 for task_id in self.tasks
-                if task_id.startswith('panini_') and
-                int(task_id.split('_')[1]) in projects
-            )
+            count = 0
+            for task_id in self.tasks:
+                if task_id.startswith('panini_'):
+                    try:
+                        project_num = int(task_id.split('_')[1])
+                        if project_num in projects:
+                            count += 1
+                    except ValueError:
+                        # Skip special tasks
+                        pass
             report['tasks']['by_category'][category] = count
         
         # Agents

@@ -1,0 +1,734 @@
+{
+  "timestamp": "2025-10-01T15:48:50.198942+00:00",
+  "ecosystem": {
+    "projects": {
+      "15": "Panini - Théorie Information Universelle",
+      "14": "OntoWave Roadmap",
+      "13": "PaniniFS Research Strategy 2025",
+      "12": "[RESEARCH] dhatu-multimodal-learning",
+      "11": "[RESEARCH] dhatu-linguistics-engine",
+      "9": "[INTERFACES] dhatu-dashboard",
+      "5": "[TOOLS] dhatu-pattern-analyzer",
+      "4": "[CORE] dhatu-gpu-accelerator",
+      "2": "[CORE] dhatu-corpus-manager",
+      "1": "[CORE] dhatu-universal-compressor"
+    },
+    "repositories": {
+      "Panini": "https://github.com/stephanedenis/Panini",
+      "PaniniFS-Research": "https://github.com/stephanedenis/PaniniFS-Research",
+      "OntoWave": "https://github.com/stephanedenis/OntoWave",
+      "dhatu-multimodal": "https://github.com/stephanedenis/dhatu-multimodal-learning"
+    },
+    "project_to_repo": {
+      "15": "PaniniFS-Research",
+      "14": "OntoWave",
+      "13": "PaniniFS-Research",
+      "12": "dhatu-multimodal",
+      "11": "Panini",
+      "9": "Panini",
+      "5": "Panini",
+      "4": "Panini",
+      "2": "Panini",
+      "1": "Panini"
+    },
+    "categories": {
+      "CORE": [
+        1,
+        2,
+        4
+      ],
+      "TOOLS": [
+        5
+      ],
+      "INTERFACES": [
+        9
+      ],
+      "RESEARCH": [
+        11,
+        12,
+        13,
+        15
+      ],
+      "ROADMAP": [
+        14
+      ]
+    }
+  },
+  "agents": {
+    "human_stephane": {
+      "agent_id": "human_stephane",
+      "agent_type": "human",
+      "name": "Stéphane Denis",
+      "capabilities": [
+        "architecture",
+        "research",
+        "code_review",
+        "documentation"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 1,
+        "availability": "business_hours",
+        "requires_approval": false,
+        "avg_task_duration": {
+          "architecture": 3600,
+          "research": 7200,
+          "code_review": 1800
+        }
+      },
+      "cost_per_task": 0.0,
+      "current_tasks": [
+        "panini_9_dashboard_deploy"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    },
+    "copilot_agent": {
+      "agent_id": "copilot_agent",
+      "agent_type": "github_copilot",
+      "name": "GitHub Copilot SWE Agent",
+      "capabilities": [
+        "code_review",
+        "refactoring",
+        "documentation",
+        "validation",
+        "extraction"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 4,
+        "requires_issue_mention": true,
+        "avg_task_duration": {
+          "code_review": 300,
+          "refactoring": 600,
+          "documentation": 180,
+          "validation": 120
+        }
+      },
+      "cost_per_task": 0.0,
+      "current_tasks": [
+        "panini_15_pr_improvements",
+        "panini_15_iso8601_fixes",
+        "panini_9_realtime_metrics",
+        "panini_14_roadmap_update"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    },
+    "colab_pro": {
+      "agent_id": "colab_pro",
+      "agent_type": "google_colab_pro",
+      "name": "Google Colab Pro (GPU)",
+      "capabilities": [
+        "ml_training",
+        "gpu_compute",
+        "data_analysis"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 1,
+        "requires_gpu": true,
+        "gpu_type": "T4/V100",
+        "max_runtime_hours": 12,
+        "avg_task_duration": {
+          "ml_training": 3600,
+          "gpu_compute": 1800,
+          "data_analysis": 900
+        }
+      },
+      "cost_per_task": 0.1,
+      "current_tasks": [
+        "panini_4_gpu_dhatu_training"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    },
+    "autonomous_wrapper": {
+      "agent_id": "autonomous_wrapper",
+      "agent_type": "autonomous_wrapper",
+      "name": "Autonomous Wrapper System",
+      "capabilities": [
+        "validation",
+        "extraction",
+        "data_analysis"
+      ],
+      "constraints": {
+        "max_concurrent_tasks": 10,
+        "requires_whitelist": true,
+        "script_patterns": [
+          "*_validator.py",
+          "*_extractor.py",
+          "*_analyzer.py"
+        ],
+        "avg_task_duration": {
+          "validation": 5,
+          "extraction": 10,
+          "data_analysis": 30
+        }
+      },
+      "cost_per_task": 0.0,
+      "current_tasks": [
+        "panini_corpus_pipeline_master",
+        "panini_15_corpus_expansion",
+        "panini_2_corpus_validation",
+        "panini_2_metadata_extraction",
+        "panini_11_symmetry_validation",
+        "panini_12_multimodal_corpus",
+        "panini_5_bias_detection",
+        "panini_1_algorithm_validation",
+        "panini_1_compression_benchmarks",
+        "panini_13_mission_analysis"
+      ],
+      "completed_tasks": 0,
+      "total_time_seconds": 0.0
+    }
+  },
+  "tasks": {
+    "panini_15_pr_improvements": {
+      "task_id": "panini_15_pr_improvements",
+      "title": "Améliorer compliance PRs #15-18 (symétries + patterns)",
+      "task_type": "refactoring",
+      "priority": 9,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": true,
+      "dependencies": [],
+      "assigned_to": "copilot_agent",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_15_iso8601_fixes": {
+      "task_id": "panini_15_iso8601_fixes",
+      "title": "Corriger 14 violations ISO 8601 dans docs legacy",
+      "task_type": "refactoring",
+      "priority": 7,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "copilot_agent",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_corpus_pipeline_master": {
+      "task_id": "panini_corpus_pipeline_master",
+      "title": "Pipeline Corpus Complet: Expansion → Validation → Multimodal",
+      "task_type": "data_analysis",
+      "priority": 9,
+      "estimated_duration": 14400,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_15_corpus_expansion": {
+      "task_id": "panini_15_corpus_expansion",
+      "title": "Étendre corpus multi-format à 100+ contenus",
+      "task_type": "data_analysis",
+      "priority": 8,
+      "estimated_duration": 7200,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [
+        "panini_corpus_pipeline_master"
+      ],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_4_gpu_dhatu_training": {
+      "task_id": "panini_4_gpu_dhatu_training",
+      "title": "Entraîner modèles dhātu sur GPU T4/V100",
+      "task_type": "ml_training",
+      "priority": 9,
+      "estimated_duration": 3600,
+      "requires_gpu": true,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "colab_pro",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_4_embeddings_multilingue": {
+      "task_id": "panini_4_embeddings_multilingue",
+      "title": "Générer embeddings multilingues 10+ langues",
+      "task_type": "gpu_compute",
+      "priority": 8,
+      "estimated_duration": 1800,
+      "requires_gpu": true,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": null,
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_2_corpus_validation": {
+      "task_id": "panini_2_corpus_validation",
+      "title": "Valider intégrité corpus 100k+ documents",
+      "task_type": "validation",
+      "priority": 7,
+      "estimated_duration": 300,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [
+        "panini_15_corpus_expansion"
+      ],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_2_metadata_extraction": {
+      "task_id": "panini_2_metadata_extraction",
+      "title": "Extraire métadonnées traducteurs 100+ profils",
+      "task_type": "extraction",
+      "priority": 8,
+      "estimated_duration": 600,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_9_dashboard_deploy": {
+      "task_id": "panini_9_dashboard_deploy",
+      "title": "Déployer dashboard GitHub Pages multi-projets",
+      "task_type": "documentation",
+      "priority": 8,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": true,
+      "dependencies": [],
+      "assigned_to": "human_stephane",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_9_realtime_metrics": {
+      "task_id": "panini_9_realtime_metrics",
+      "title": "Implémenter métriques temps réel WebSocket",
+      "task_type": "refactoring",
+      "priority": 6,
+      "estimated_duration": 3600,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "copilot_agent",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_11_symmetry_validation": {
+      "task_id": "panini_11_symmetry_validation",
+      "title": "Valider symétries compose/decompose 50+ dhātu",
+      "task_type": "validation",
+      "priority": 9,
+      "estimated_duration": 1800,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_11_compression_empirical": {
+      "task_id": "panini_11_compression_empirical",
+      "title": "Tester compression empirique cross-lingue",
+      "task_type": "data_analysis",
+      "priority": 8,
+      "estimated_duration": 3600,
+      "requires_gpu": true,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": null,
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_12_multimodal_corpus": {
+      "task_id": "panini_12_multimodal_corpus",
+      "title": "Créer corpus audio/vidéo/texte aligné",
+      "task_type": "data_analysis",
+      "priority": 7,
+      "estimated_duration": 7200,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [
+        "panini_2_corpus_validation"
+      ],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_5_bias_detection": {
+      "task_id": "panini_5_bias_detection",
+      "title": "Détecter patterns biais culturels/temporels",
+      "task_type": "data_analysis",
+      "priority": 7,
+      "estimated_duration": 900,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_14_roadmap_update": {
+      "task_id": "panini_14_roadmap_update",
+      "title": "Mettre à jour roadmap Q1 2025 avec résultats",
+      "task_type": "documentation",
+      "priority": 6,
+      "estimated_duration": 60.0,
+      "requires_gpu": false,
+      "requires_human_review": true,
+      "dependencies": [],
+      "assigned_to": "copilot_agent",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_1_compressor_architecture": {
+      "task_id": "panini_1_compressor_architecture",
+      "title": "Architecture compresseur universel linguistique v1.0",
+      "task_type": "architecture",
+      "priority": 9,
+      "estimated_duration": 7200,
+      "requires_gpu": false,
+      "requires_human_review": true,
+      "dependencies": [],
+      "assigned_to": null,
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_1_algorithm_validation": {
+      "task_id": "panini_1_algorithm_validation",
+      "title": "Valider algorithme compression/décompression 100+ dhātu",
+      "task_type": "validation",
+      "priority": 8,
+      "estimated_duration": 900,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_1_compression_benchmarks": {
+      "task_id": "panini_1_compression_benchmarks",
+      "title": "Benchmarks compression rates vs gzip/bzip2/lz4",
+      "task_type": "data_analysis",
+      "priority": 8,
+      "estimated_duration": 1800,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_1_api_documentation": {
+      "task_id": "panini_1_api_documentation",
+      "title": "Documentation API compresseur + exemples utilisation",
+      "task_type": "documentation",
+      "priority": 7,
+      "estimated_duration": 3600,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": null,
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_13_strategy_q4_update": {
+      "task_id": "panini_13_strategy_q4_update",
+      "title": "Update stratégie recherche Q4 2025 + roadmap Q1 2026",
+      "task_type": "research",
+      "priority": 8,
+      "estimated_duration": 7200,
+      "requires_gpu": false,
+      "requires_human_review": true,
+      "dependencies": [],
+      "assigned_to": null,
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_13_mission_analysis": {
+      "task_id": "panini_13_mission_analysis",
+      "title": "Analyser résultats 7 missions complétées - métriques",
+      "task_type": "data_analysis",
+      "priority": 7,
+      "estimated_duration": 1800,
+      "requires_gpu": false,
+      "requires_human_review": false,
+      "dependencies": [],
+      "assigned_to": "autonomous_wrapper",
+      "status": "assigned",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    },
+    "panini_13_next_missions": {
+      "task_id": "panini_13_next_missions",
+      "title": "Identifier prochaines 5 missions prioritaires Q4-Q1",
+      "task_type": "research",
+      "priority": 8,
+      "estimated_duration": 3600,
+      "requires_gpu": false,
+      "requires_human_review": true,
+      "dependencies": [],
+      "assigned_to": null,
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "result": null
+    }
+  },
+  "assignments": [
+    {
+      "timestamp": "2025-10-01T15:48:50.198177+00:00",
+      "task_id": "panini_15_pr_improvements",
+      "task_title": "Améliorer compliance PRs #15-18 (symétries + patterns)",
+      "agent_id": "copilot_agent",
+      "agent_name": "GitHub Copilot SWE Agent",
+      "score": 90.0,
+      "reason": "spécialisé code, gratuit"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198217+00:00",
+      "task_id": "panini_15_iso8601_fixes",
+      "task_title": "Corriger 14 violations ISO 8601 dans docs legacy",
+      "agent_id": "copilot_agent",
+      "agent_name": "GitHub Copilot SWE Agent",
+      "score": 87.5,
+      "reason": "spécialisé code, gratuit"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198250+00:00",
+      "task_id": "panini_corpus_pipeline_master",
+      "task_title": "Pipeline Corpus Complet: Expansion → Validation → Multimodal",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 93.80000000000001,
+      "reason": "exécution locale rapide, gratuit, très rapide (30s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198288+00:00",
+      "task_id": "panini_15_corpus_expansion",
+      "task_title": "Étendre corpus multi-format à 100+ contenus",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 92.80000000000001,
+      "reason": "exécution locale rapide, gratuit, très rapide (30s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198315+00:00",
+      "task_id": "panini_4_gpu_dhatu_training",
+      "task_title": "Entraîner modèles dhātu sur GPU T4/V100",
+      "agent_id": "colab_pro",
+      "agent_name": "Google Colab Pro (GPU)",
+      "score": 67.0,
+      "reason": "GPU disponible"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198347+00:00",
+      "task_id": "panini_2_corpus_validation",
+      "task_title": "Valider intégrité corpus 100k+ documents",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 91.96666666666667,
+      "reason": "exécution locale rapide, gratuit, très rapide (5s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198373+00:00",
+      "task_id": "panini_2_metadata_extraction",
+      "task_title": "Extraire métadonnées traducteurs 100+ profils",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 90.93333333333334,
+      "reason": "exécution locale rapide, gratuit, très rapide (10s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198398+00:00",
+      "task_id": "panini_9_dashboard_deploy",
+      "task_title": "Déployer dashboard GitHub Pages multi-projets",
+      "agent_id": "human_stephane",
+      "agent_name": "Stéphane Denis",
+      "score": 93.6,
+      "reason": "gratuit"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198418+00:00",
+      "task_id": "panini_9_realtime_metrics",
+      "task_title": "Implémenter métriques temps réel WebSocket",
+      "agent_id": "copilot_agent",
+      "agent_name": "GitHub Copilot SWE Agent",
+      "score": 85.0,
+      "reason": "spécialisé code, gratuit"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198442+00:00",
+      "task_id": "panini_11_symmetry_validation",
+      "task_title": "Valider symétries compose/decompose 50+ dhātu",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 89.96666666666667,
+      "reason": "exécution locale rapide, gratuit, très rapide (5s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198470+00:00",
+      "task_id": "panini_12_multimodal_corpus",
+      "task_title": "Créer corpus audio/vidéo/texte aligné",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 88.80000000000001,
+      "reason": "exécution locale rapide, gratuit, très rapide (30s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198492+00:00",
+      "task_id": "panini_5_bias_detection",
+      "task_title": "Détecter patterns biais culturels/temporels",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 87.80000000000001,
+      "reason": "exécution locale rapide, gratuit, très rapide (30s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198514+00:00",
+      "task_id": "panini_14_roadmap_update",
+      "task_title": "Mettre à jour roadmap Q1 2025 avec résultats",
+      "agent_id": "copilot_agent",
+      "agent_name": "GitHub Copilot SWE Agent",
+      "score": 85.30000000000001,
+      "reason": "spécialisé code, gratuit"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198546+00:00",
+      "task_id": "panini_1_algorithm_validation",
+      "task_title": "Valider algorithme compression/décompression 100+ dhātu",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 86.96666666666667,
+      "reason": "exécution locale rapide, gratuit, très rapide (5s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198569+00:00",
+      "task_id": "panini_1_compression_benchmarks",
+      "task_title": "Benchmarks compression rates vs gzip/bzip2/lz4",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 85.80000000000001,
+      "reason": "exécution locale rapide, gratuit, très rapide (30s)"
+    },
+    {
+      "timestamp": "2025-10-01T15:48:50.198607+00:00",
+      "task_id": "panini_13_mission_analysis",
+      "task_title": "Analyser résultats 7 missions complétées - métriques",
+      "agent_id": "autonomous_wrapper",
+      "agent_name": "Autonomous Wrapper System",
+      "score": 84.80000000000001,
+      "reason": "exécution locale rapide, gratuit, très rapide (30s)"
+    }
+  ],
+  "report": {
+    "timestamp": "2025-10-01T15:48:50.199016+00:00",
+    "ecosystem": {
+      "projects": 10,
+      "repositories": 4,
+      "categories": 5
+    },
+    "tasks": {
+      "total": 22,
+      "by_status": {
+        "pending": 6,
+        "assigned": 16,
+        "in_progress": 0,
+        "completed": 0
+      },
+      "by_project": {
+        "Panini - Théorie Information Universelle": 3,
+        "[CORE] dhatu-gpu-accelerator": 2,
+        "[CORE] dhatu-corpus-manager": 2,
+        "[INTERFACES] dhatu-dashboard": 2,
+        "[RESEARCH] dhatu-linguistics-engine": 2,
+        "[RESEARCH] dhatu-multimodal-learning": 1,
+        "[TOOLS] dhatu-pattern-analyzer": 1,
+        "OntoWave Roadmap": 1,
+        "[CORE] dhatu-universal-compressor": 4,
+        "PaniniFS Research Strategy 2025": 3
+      },
+      "by_category": {
+        "CORE": 8,
+        "TOOLS": 1,
+        "INTERFACES": 2,
+        "RESEARCH": 9,
+        "ROADMAP": 1
+      }
+    },
+    "agents": {
+      "Stéphane Denis": {
+        "workload": 1,
+        "completed": 0,
+        "available": false,
+        "cost_per_task": 0.0
+      },
+      "GitHub Copilot SWE Agent": {
+        "workload": 4,
+        "completed": 0,
+        "available": false,
+        "cost_per_task": 0.0
+      },
+      "Google Colab Pro (GPU)": {
+        "workload": 1,
+        "completed": 0,
+        "available": false,
+        "cost_per_task": 0.1
+      },
+      "Autonomous Wrapper System": {
+        "workload": 10,
+        "completed": 0,
+        "available": false,
+        "cost_per_task": 0.0
+      }
+    },
+    "recommendations": [
+      "⚠️  6 tâches pending - Considérer augmenter capacité agents",
+      "🎮 3 tâches GPU waiting - Prioriser Colab Pro sessions",
+      "👤 6 tâches requièrent review humaine - Bloquer 30-60min pour review"
+    ]
+  }
+}

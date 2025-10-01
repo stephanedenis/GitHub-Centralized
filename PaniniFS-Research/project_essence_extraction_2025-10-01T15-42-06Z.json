@@ -1,0 +1,911 @@
+{
+  "timestamp": "2025-10-01T15:42:06.330757+00:00",
+  "projects_analyzed": [
+    {
+      "project_id": 10,
+      "name": "[INTERFACES] dhatu-api-gateway",
+      "category": "INTERFACES",
+      "original_status": "PLANIFIÉ",
+      "original_priority": "MOYENNE",
+      "inferred_motivation": "Centraliser accès APIs dhātu - Point d'entrée unifié écosystème",
+      "mentions_count": 7,
+      "mentioned_in_files": [
+        "STRATEGIC_REFACTORING_PLAN.md",
+        "mission_alignment_analyzer.py",
+        "panini_ecosystem_state_2025-10-01T14-55-21Z.json",
+        "panini_ecosystem_orchestrator.py",
+        "mission_alignment_report_2025-10-01T15-25-43Z.json",
+        "project_essence_extractor.py",
+        "PANINI_ECOSYSTEM_ORCHESTRATOR_GUIDE.md"
+      ],
+      "sample_contexts": [
+        "7. `[TOOLS] dhatu-space-visualizer` - Visualisation espace\n8. `[TOOLS] dhatu-evolution-simulator` - Simulation évolution\n9. `[INTERFACES] dhatu-dashboard` - Dashboard interface\n10. `[INTERFACES] dhatu-api-gateway` - API gateway\n11. `[RESEARCH] dhatu-linguistics-engine` - Moteur linguistique\n12. `[RE",
+        "\n**5 projets à archiver** (vestiges versions antérieures):\n\n1. **Project #10 - dhatu-api-gateway** [INTERFACES]\n   - ❌ Status: PLANIFIÉ\n   - ❌ Priority: MOYENNE\n   - ❌ Aucune tâche orchestrateur",
+        "      \"13\": \"PaniniFS Research Strategy 2025\",\n      \"12\": \"[RESEARCH] dhatu-multimodal-learning\",\n      \"11\": \"[RESEARCH] dhatu-linguistics-engine\",\n      \"10\": \"[INTERFACES] dhatu-api-gateway\",\n      \"9\": \"[INTERFACES] dhatu-dashboard\",\n      \"8\": \"[TOOLS] dhatu-evolution-simulator\",\n      \"7\": \"["
+      ],
+      "potential_value": {
+        "strategic_alignment": 7,
+        "innovation_potential": 6,
+        "ecosystem_impact": 8,
+        "effort_to_activate": 5,
+        "total_score": 26
+      },
+      "good_ideas": [
+        "Point d'entrée unifié pour tous services dhātu",
+        "Rate limiting et monitoring global",
+        "API versioning et backward compatibility",
+        "Authentification centralisée"
+      ],
+      "dependencies": {
+        "depends_on": [
+          1,
+          2,
+          4
+        ],
+        "required_by": [
+          9
+        ]
+      },
+      "archival_recommendation": {
+        "decision": "ARCHIVE_WITH_BACKLOG",
+        "confidence": 0.8,
+        "rationale": [
+          "Score valeur potentielle moyen (26.0/40) - Bonnes idées à préserver"
+        ],
+        "conditions_reactivation": [
+          "Complétion projets CORE (1, 2, 4) à ≥80%",
+          "Demande explicite use case spécifique",
+          "Capacité équipe: ≥2 devs disponibles",
+          "Budget: ≥40h estimation effort",
+          "CORE APIs stables et documentées"
+        ]
+      },
+      "backlog_items": [
+        {
+          "id": "backlog_10_01",
+          "title": "Point d'entrée unifié pour tous services dhātu",
+          "source_project": 10,
+          "source_project_name": "[INTERFACES] dhatu-api-gateway",
+          "category": "INTERFACES",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "CORE APIs stabilisées"
+          ],
+          "tags": [
+            "api"
+          ]
+        },
+        {
+          "id": "backlog_10_02",
+          "title": "Rate limiting et monitoring global",
+          "source_project": 10,
+          "source_project_name": "[INTERFACES] dhatu-api-gateway",
+          "category": "INTERFACES",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        },
+        {
+          "id": "backlog_10_03",
+          "title": "API versioning et backward compatibility",
+          "source_project": 10,
+          "source_project_name": "[INTERFACES] dhatu-api-gateway",
+          "category": "INTERFACES",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "CORE APIs stabilisées"
+          ],
+          "tags": [
+            "api"
+          ]
+        },
+        {
+          "id": "backlog_10_04",
+          "title": "Authentification centralisée",
+          "source_project": 10,
+          "source_project_name": "[INTERFACES] dhatu-api-gateway",
+          "category": "INTERFACES",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        }
+      ]
+    },
+    {
+      "project_id": 8,
+      "name": "[TOOLS] dhatu-evolution-simulator",
+      "category": "TOOLS",
+      "original_status": "PLANIFIÉ",
+      "original_priority": "BASSE",
+      "inferred_motivation": "Simuler évolution temporelle dhātu - Visualiser transformations linguistiques",
+      "mentions_count": 7,
+      "mentioned_in_files": [
+        "STRATEGIC_REFACTORING_PLAN.md",
+        "mission_alignment_analyzer.py",
+        "panini_ecosystem_state_2025-10-01T14-55-21Z.json",
+        "panini_ecosystem_orchestrator.py",
+        "mission_alignment_report_2025-10-01T15-25-43Z.json",
+        "project_essence_extractor.py",
+        "PANINI_ECOSYSTEM_ORCHESTRATOR_GUIDE.md"
+      ],
+      "sample_contexts": [
+        "5. `[TOOLS] dhatu-pattern-analyzer` - Analyse patterns\n6. `[TOOLS] dhatu-creative-generator` - Génération créative\n7. `[TOOLS] dhatu-space-visualizer` - Visualisation espace\n8. `[TOOLS] dhatu-evolution-simulator` - Simulation évolution\n9. `[INTERFACES] dhatu-dashboard` - Dashboard interface\n10. `[IN",
+        "   - ❌ Non mentionné docs stratégiques\n   - **Action**: Archiver → Status `ARCHIVED`, retirer orchestrateur\n\n2. **Project #8 - dhatu-evolution-simulator** [TOOLS]\n   - ❌ Status: PLANIFIÉ + Priority: BASSE\n   - ❌ Aucune tâche orchestrateur\n   - ❌ Non mentionné docs stratégiques",
+        "      \"11\": \"[RESEARCH] dhatu-linguistics-engine\",\n      \"10\": \"[INTERFACES] dhatu-api-gateway\",\n      \"9\": \"[INTERFACES] dhatu-dashboard\",\n      \"8\": \"[TOOLS] dhatu-evolution-simulator\",\n      \"7\": \"[TOOLS] dhatu-space-visualizer\",\n      \"6\": \"[TOOLS] dhatu-creative-generator\",\n      \"5\": \"[TOOLS] "
+      ],
+      "potential_value": {
+        "strategic_alignment": 5,
+        "innovation_potential": 8,
+        "ecosystem_impact": 8,
+        "effort_to_activate": 5,
+        "total_score": 26
+      },
+      "good_ideas": [
+        "Simuler dérivations linguistiques (dhātu → mots)",
+        "Benchmarks vitesse/précision transformations",
+        "Prédire évolutions futures patterns",
+        "Visualiser transformations dhātu temporelles"
+      ],
+      "dependencies": {
+        "depends_on": [
+          2,
+          4
+        ],
+        "required_by": []
+      },
+      "archival_recommendation": {
+        "decision": "ARCHIVE_WITH_BACKLOG",
+        "confidence": 0.8,
+        "rationale": [
+          "Score valeur potentielle moyen (26.0/40) - Bonnes idées à préserver",
+          "Status PLANIFIÉ + Priority BASSE suggère non-prioritaire"
+        ],
+        "conditions_reactivation": [
+          "Complétion projets CORE (1, 2, 4) à ≥80%",
+          "Demande explicite use case spécifique",
+          "Capacité équipe: ≥2 devs disponibles",
+          "Budget: ≥40h estimation effort",
+          "Corpus ≥100k validé et corpus manager opérationnel"
+        ]
+      },
+      "backlog_items": [
+        {
+          "id": "backlog_8_01",
+          "title": "Simuler dérivations linguistiques (dhātu → mots)",
+          "source_project": 8,
+          "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "simulation"
+          ]
+        },
+        {
+          "id": "backlog_8_02",
+          "title": "Benchmarks vitesse/précision transformations",
+          "source_project": 8,
+          "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "analytics"
+          ]
+        },
+        {
+          "id": "backlog_8_03",
+          "title": "Prédire évolutions futures patterns",
+          "source_project": 8,
+          "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "simulation"
+          ]
+        },
+        {
+          "id": "backlog_8_04",
+          "title": "Visualiser transformations dhātu temporelles",
+          "source_project": 8,
+          "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Framework visualisation choisi"
+          ],
+          "tags": [
+            "visualization"
+          ]
+        }
+      ]
+    },
+    {
+      "project_id": 7,
+      "name": "[TOOLS] dhatu-space-visualizer",
+      "category": "TOOLS",
+      "original_status": "PLANIFIÉ",
+      "original_priority": "BASSE",
+      "inferred_motivation": "Visualiser espace sémantique dhātu - Représentation géométrique multidimensionnelle",
+      "mentions_count": 7,
+      "mentioned_in_files": [
+        "STRATEGIC_REFACTORING_PLAN.md",
+        "mission_alignment_analyzer.py",
+        "panini_ecosystem_state_2025-10-01T14-55-21Z.json",
+        "panini_ecosystem_orchestrator.py",
+        "mission_alignment_report_2025-10-01T15-25-43Z.json",
+        "project_essence_extractor.py",
+        "PANINI_ECOSYSTEM_ORCHESTRATOR_GUIDE.md"
+      ],
+      "sample_contexts": [
+        "4. `[CORE] dhatu-gpu-accelerator` - Accélération GPU\n5. `[TOOLS] dhatu-pattern-analyzer` - Analyse patterns\n6. `[TOOLS] dhatu-creative-generator` - Génération créative\n7. `[TOOLS] dhatu-space-visualizer` - Visualisation espace\n8. `[TOOLS] dhatu-evolution-simulator` - Simulation évolution\n9. `[INTERF",
+        "   - ❌ Non mentionné docs stratégiques\n   - **Action**: Archiver → Status `ARCHIVED`\n\n3. **Project #7 - dhatu-space-visualizer** [TOOLS]\n   - ❌ Status: PLANIFIÉ + Priority: BASSE\n   - ❌ Aucune tâche orchestrateur\n   - ❌ Non mentionné docs stratégiques",
+        "      \"10\": \"[INTERFACES] dhatu-api-gateway\",\n      \"9\": \"[INTERFACES] dhatu-dashboard\",\n      \"8\": \"[TOOLS] dhatu-evolution-simulator\",\n      \"7\": \"[TOOLS] dhatu-space-visualizer\",\n      \"6\": \"[TOOLS] dhatu-creative-generator\",\n      \"5\": \"[TOOLS] dhatu-pattern-analyzer\",\n      \"4\": \"[CORE] dhatu-g"
+      ],
+      "potential_value": {
+        "strategic_alignment": 5,
+        "innovation_potential": 6,
+        "ecosystem_impact": 8,
+        "effort_to_activate": 5,
+        "total_score": 24
+      },
+      "good_ideas": [
+        "Export visualisations haute résolution",
+        "Navigation interactive géométrie linguistique",
+        "Représentation 3D espace sémantique dhātu",
+        "Clustering visuel patterns similaires"
+      ],
+      "dependencies": {
+        "depends_on": [
+          2,
+          4
+        ],
+        "required_by": []
+      },
+      "archival_recommendation": {
+        "decision": "ARCHIVE_WITH_BACKLOG",
+        "confidence": 0.8,
+        "rationale": [
+          "Score valeur potentielle moyen (24.0/40) - Bonnes idées à préserver",
+          "Status PLANIFIÉ + Priority BASSE suggère non-prioritaire"
+        ],
+        "conditions_reactivation": [
+          "Complétion projets CORE (1, 2, 4) à ≥80%",
+          "Demande explicite use case spécifique",
+          "Capacité équipe: ≥2 devs disponibles",
+          "Budget: ≥40h estimation effort",
+          "Corpus ≥100k validé et corpus manager opérationnel"
+        ]
+      },
+      "backlog_items": [
+        {
+          "id": "backlog_7_01",
+          "title": "Export visualisations haute résolution",
+          "source_project": 7,
+          "source_project_name": "[TOOLS] dhatu-space-visualizer",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Framework visualisation choisi"
+          ],
+          "tags": [
+            "visualization"
+          ]
+        },
+        {
+          "id": "backlog_7_02",
+          "title": "Navigation interactive géométrie linguistique",
+          "source_project": 7,
+          "source_project_name": "[TOOLS] dhatu-space-visualizer",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        },
+        {
+          "id": "backlog_7_03",
+          "title": "Représentation 3D espace sémantique dhātu",
+          "source_project": 7,
+          "source_project_name": "[TOOLS] dhatu-space-visualizer",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Framework visualisation choisi"
+          ],
+          "tags": [
+            "visualization"
+          ]
+        },
+        {
+          "id": "backlog_7_04",
+          "title": "Clustering visuel patterns similaires",
+          "source_project": 7,
+          "source_project_name": "[TOOLS] dhatu-space-visualizer",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        }
+      ]
+    },
+    {
+      "project_id": 6,
+      "name": "[TOOLS] dhatu-creative-generator",
+      "category": "TOOLS",
+      "original_status": "PLANIFIÉ",
+      "original_priority": "BASSE",
+      "inferred_motivation": "Générer variations créatives dhātu - Exploration espace linguistique",
+      "mentions_count": 7,
+      "mentioned_in_files": [
+        "STRATEGIC_REFACTORING_PLAN.md",
+        "mission_alignment_analyzer.py",
+        "panini_ecosystem_state_2025-10-01T14-55-21Z.json",
+        "panini_ecosystem_orchestrator.py",
+        "mission_alignment_report_2025-10-01T15-25-43Z.json",
+        "project_essence_extractor.py",
+        "PANINI_ECOSYSTEM_ORCHESTRATOR_GUIDE.md"
+      ],
+      "sample_contexts": [
+        "3. `[CORE] dhatu-web-framework` - Framework web\n4. `[CORE] dhatu-gpu-accelerator` - Accélération GPU\n5. `[TOOLS] dhatu-pattern-analyzer` - Analyse patterns\n6. `[TOOLS] dhatu-creative-generator` - Génération créative\n7. `[TOOLS] dhatu-space-visualizer` - Visualisation espace\n8. `[TOOLS] dhatu-evoluti",
+        "   - ❌ Non mentionné docs stratégiques\n   - **Action**: Archiver → Status `ARCHIVED`\n\n4. **Project #6 - dhatu-creative-generator** [TOOLS]\n   - ❌ Status: PLANIFIÉ + Priority: BASSE\n   - ❌ Aucune tâche orchestrateur\n   - ❌ Non mentionné docs stratégiques",
+        "      \"9\": \"[INTERFACES] dhatu-dashboard\",\n      \"8\": \"[TOOLS] dhatu-evolution-simulator\",\n      \"7\": \"[TOOLS] dhatu-space-visualizer\",\n      \"6\": \"[TOOLS] dhatu-creative-generator\",\n      \"5\": \"[TOOLS] dhatu-pattern-analyzer\",\n      \"4\": \"[CORE] dhatu-gpu-accelerator\",\n      \"3\": \"[CORE] dhatu-web-"
+      ],
+      "potential_value": {
+        "strategic_alignment": 5,
+        "innovation_potential": 8,
+        "ecosystem_impact": 8,
+        "effort_to_activate": 5,
+        "total_score": 26
+      },
+      "good_ideas": [
+        "Exploration guidée espace compositional",
+        "Générer variations linguistiques créatives",
+        "Mode découverte serendipité",
+        "Suggestions intelligence artificielle"
+      ],
+      "dependencies": {
+        "depends_on": [
+          2,
+          4
+        ],
+        "required_by": []
+      },
+      "archival_recommendation": {
+        "decision": "ARCHIVE_WITH_BACKLOG",
+        "confidence": 0.8,
+        "rationale": [
+          "Score valeur potentielle moyen (26.0/40) - Bonnes idées à préserver",
+          "Status PLANIFIÉ + Priority BASSE suggère non-prioritaire"
+        ],
+        "conditions_reactivation": [
+          "Complétion projets CORE (1, 2, 4) à ≥80%",
+          "Demande explicite use case spécifique",
+          "Capacité équipe: ≥2 devs disponibles",
+          "Budget: ≥40h estimation effort",
+          "Corpus ≥100k validé et corpus manager opérationnel"
+        ]
+      },
+      "backlog_items": [
+        {
+          "id": "backlog_6_01",
+          "title": "Exploration guidée espace compositional",
+          "source_project": 6,
+          "source_project_name": "[TOOLS] dhatu-creative-generator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        },
+        {
+          "id": "backlog_6_02",
+          "title": "Générer variations linguistiques créatives",
+          "source_project": 6,
+          "source_project_name": "[TOOLS] dhatu-creative-generator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "generation"
+          ]
+        },
+        {
+          "id": "backlog_6_03",
+          "title": "Mode découverte serendipité",
+          "source_project": 6,
+          "source_project_name": "[TOOLS] dhatu-creative-generator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        },
+        {
+          "id": "backlog_6_04",
+          "title": "Suggestions intelligence artificielle",
+          "source_project": 6,
+          "source_project_name": "[TOOLS] dhatu-creative-generator",
+          "category": "TOOLS",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "ml"
+          ]
+        }
+      ]
+    },
+    {
+      "project_id": 3,
+      "name": "[CORE] dhatu-web-framework",
+      "category": "CORE",
+      "original_status": "PLANIFIÉ",
+      "original_priority": "MOYENNE",
+      "inferred_motivation": "Framework web complet dhātu - Infrastructure applications linguistiques",
+      "mentions_count": 7,
+      "mentioned_in_files": [
+        "STRATEGIC_REFACTORING_PLAN.md",
+        "mission_alignment_analyzer.py",
+        "panini_ecosystem_state_2025-10-01T14-55-21Z.json",
+        "panini_ecosystem_orchestrator.py",
+        "mission_alignment_report_2025-10-01T15-25-43Z.json",
+        "project_essence_extractor.py",
+        "PANINI_ECOSYSTEM_ORCHESTRATOR_GUIDE.md"
+      ],
+      "sample_contexts": [
+        "**15 GitHub Projects** :\n1. `[CORE] dhatu-universal-compressor` - Compression universelle\n2. `[CORE] dhatu-corpus-manager` - Gestion corpus\n3. `[CORE] dhatu-web-framework` - Framework web\n4. `[CORE] dhatu-gpu-accelerator` - Accélération GPU\n5. `[TOOLS] dhatu-pattern-analyzer` - Analyse patterns\n6. `",
+        "   - ❌ Non mentionné docs stratégiques\n   - **Action**: Archiver → Status `ARCHIVED`\n\n5. **Project #3 - dhatu-web-framework** [CORE]\n   - ❌ Status: PLANIFIÉ\n   - ❌ Aucune tâche orchestrateur\n   - ❌ Non mentionné docs stratégiques",
+        "      \"6\": \"[TOOLS] dhatu-creative-generator\",\n      \"5\": \"[TOOLS] dhatu-pattern-analyzer\",\n      \"4\": \"[CORE] dhatu-gpu-accelerator\",\n      \"3\": \"[CORE] dhatu-web-framework\",\n      \"2\": \"[CORE] dhatu-corpus-manager\",\n      \"1\": \"[CORE] dhatu-universal-compressor\"\n    },"
+      ],
+      "potential_value": {
+        "strategic_alignment": 9,
+        "innovation_potential": 7,
+        "ecosystem_impact": 8,
+        "effort_to_activate": 7,
+        "total_score": 27
+      },
+      "good_ideas": [
+        "State management linguistique",
+        "Components réutilisables applications dhātu",
+        "Responsive design multi-devices",
+        "Real-time synchronization corpus"
+      ],
+      "dependencies": {
+        "depends_on": [
+          1,
+          2,
+          4
+        ],
+        "required_by": []
+      },
+      "archival_recommendation": {
+        "decision": "ARCHIVE_WITH_BACKLOG",
+        "confidence": 0.8,
+        "rationale": [
+          "Score valeur potentielle moyen (27.0/40) - Bonnes idées à préserver"
+        ],
+        "conditions_reactivation": [
+          "Complétion projets CORE (1, 2, 4) à ≥80%",
+          "Demande explicite use case spécifique",
+          "Capacité équipe: ≥2 devs disponibles",
+          "Budget: ≥40h estimation effort"
+        ]
+      },
+      "backlog_items": [
+        {
+          "id": "backlog_3_01",
+          "title": "State management linguistique",
+          "source_project": 3,
+          "source_project_name": "[CORE] dhatu-web-framework",
+          "category": "CORE",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        },
+        {
+          "id": "backlog_3_02",
+          "title": "Components réutilisables applications dhātu",
+          "source_project": 3,
+          "source_project_name": "[CORE] dhatu-web-framework",
+          "category": "CORE",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "general"
+          ]
+        },
+        {
+          "id": "backlog_3_03",
+          "title": "Responsive design multi-devices",
+          "source_project": 3,
+          "source_project_name": "[CORE] dhatu-web-framework",
+          "category": "CORE",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Aucun prérequis identifié"
+          ],
+          "tags": [
+            "ui"
+          ]
+        },
+        {
+          "id": "backlog_3_04",
+          "title": "Real-time synchronization corpus",
+          "source_project": 3,
+          "source_project_name": "[CORE] dhatu-web-framework",
+          "category": "CORE",
+          "priority": "FUTURE",
+          "estimated_effort": "TBD",
+          "prerequisites": [
+            "Corpus ≥100k validé",
+            "WebSocket infrastructure"
+          ],
+          "tags": [
+            "general"
+          ]
+        }
+      ]
+    }
+  ],
+  "backlog_items": [
+    {
+      "id": "backlog_10_01",
+      "title": "Point d'entrée unifié pour tous services dhātu",
+      "source_project": 10,
+      "source_project_name": "[INTERFACES] dhatu-api-gateway",
+      "category": "INTERFACES",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "CORE APIs stabilisées"
+      ],
+      "tags": [
+        "api"
+      ]
+    },
+    {
+      "id": "backlog_10_02",
+      "title": "Rate limiting et monitoring global",
+      "source_project": 10,
+      "source_project_name": "[INTERFACES] dhatu-api-gateway",
+      "category": "INTERFACES",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_10_03",
+      "title": "API versioning et backward compatibility",
+      "source_project": 10,
+      "source_project_name": "[INTERFACES] dhatu-api-gateway",
+      "category": "INTERFACES",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "CORE APIs stabilisées"
+      ],
+      "tags": [
+        "api"
+      ]
+    },
+    {
+      "id": "backlog_10_04",
+      "title": "Authentification centralisée",
+      "source_project": 10,
+      "source_project_name": "[INTERFACES] dhatu-api-gateway",
+      "category": "INTERFACES",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_8_01",
+      "title": "Simuler dérivations linguistiques (dhātu → mots)",
+      "source_project": 8,
+      "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "backlog_8_02",
+      "title": "Benchmarks vitesse/précision transformations",
+      "source_project": 8,
+      "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "analytics"
+      ]
+    },
+    {
+      "id": "backlog_8_03",
+      "title": "Prédire évolutions futures patterns",
+      "source_project": 8,
+      "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "backlog_8_04",
+      "title": "Visualiser transformations dhātu temporelles",
+      "source_project": 8,
+      "source_project_name": "[TOOLS] dhatu-evolution-simulator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Framework visualisation choisi"
+      ],
+      "tags": [
+        "visualization"
+      ]
+    },
+    {
+      "id": "backlog_7_01",
+      "title": "Export visualisations haute résolution",
+      "source_project": 7,
+      "source_project_name": "[TOOLS] dhatu-space-visualizer",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Framework visualisation choisi"
+      ],
+      "tags": [
+        "visualization"
+      ]
+    },
+    {
+      "id": "backlog_7_02",
+      "title": "Navigation interactive géométrie linguistique",
+      "source_project": 7,
+      "source_project_name": "[TOOLS] dhatu-space-visualizer",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_7_03",
+      "title": "Représentation 3D espace sémantique dhātu",
+      "source_project": 7,
+      "source_project_name": "[TOOLS] dhatu-space-visualizer",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Framework visualisation choisi"
+      ],
+      "tags": [
+        "visualization"
+      ]
+    },
+    {
+      "id": "backlog_7_04",
+      "title": "Clustering visuel patterns similaires",
+      "source_project": 7,
+      "source_project_name": "[TOOLS] dhatu-space-visualizer",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_6_01",
+      "title": "Exploration guidée espace compositional",
+      "source_project": 6,
+      "source_project_name": "[TOOLS] dhatu-creative-generator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_6_02",
+      "title": "Générer variations linguistiques créatives",
+      "source_project": 6,
+      "source_project_name": "[TOOLS] dhatu-creative-generator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "generation"
+      ]
+    },
+    {
+      "id": "backlog_6_03",
+      "title": "Mode découverte serendipité",
+      "source_project": 6,
+      "source_project_name": "[TOOLS] dhatu-creative-generator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_6_04",
+      "title": "Suggestions intelligence artificielle",
+      "source_project": 6,
+      "source_project_name": "[TOOLS] dhatu-creative-generator",
+      "category": "TOOLS",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "ml"
+      ]
+    },
+    {
+      "id": "backlog_3_01",
+      "title": "State management linguistique",
+      "source_project": 3,
+      "source_project_name": "[CORE] dhatu-web-framework",
+      "category": "CORE",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_3_02",
+      "title": "Components réutilisables applications dhātu",
+      "source_project": 3,
+      "source_project_name": "[CORE] dhatu-web-framework",
+      "category": "CORE",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "general"
+      ]
+    },
+    {
+      "id": "backlog_3_03",
+      "title": "Responsive design multi-devices",
+      "source_project": 3,
+      "source_project_name": "[CORE] dhatu-web-framework",
+      "category": "CORE",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Aucun prérequis identifié"
+      ],
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "backlog_3_04",
+      "title": "Real-time synchronization corpus",
+      "source_project": 3,
+      "source_project_name": "[CORE] dhatu-web-framework",
+      "category": "CORE",
+      "priority": "FUTURE",
+      "estimated_effort": "TBD",
+      "prerequisites": [
+        "Corpus ≥100k validé",
+        "WebSocket infrastructure"
+      ],
+      "tags": [
+        "general"
+      ]
+    }
+  ],
+  "preservation_recommendations": []
+}
