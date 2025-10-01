@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-10-01T13:51:28.402010+00:00",
+  "prs_analyzed": [
+    {
+      "pr_number": 15,
+      "title": "",
+      "description": "",
+      "files_changed": [],
+      "clarifications": {},
+      "compliance_score": 0.0,
+      "status": "NOT_FOUND",
+      "recommendations": [
+        "PR #15 not found or not accessible"
+      ]
+    },
+    {
+      "pr_number": 16,
+      "title": "",
+      "description": "",
+      "files_changed": [],
+      "clarifications": {},
+      "compliance_score": 0.0,
+      "status": "NOT_FOUND",
+      "recommendations": [
+        "PR #16 not found or not accessible"
+      ]
+    },
+    {
+      "pr_number": 17,
+      "title": "",
+      "description": "",
+      "files_changed": [],
+      "clarifications": {},
+      "compliance_score": 0.0,
+      "status": "NOT_FOUND",
+      "recommendations": [
+        "PR #17 not found or not accessible"
+      ]
+    },
+    {
+      "pr_number": 18,
+      "title": "",
+      "description": "",
+      "files_changed": [],
+      "clarifications": {},
+      "compliance_score": 0.0,
+      "status": "NOT_FOUND",
+      "recommendations": [
+        "PR #18 not found or not accessible"
+      ]
+    }
+  ],
+  "overall_compliance": 0.0,
+  "status": "NEEDS_IMPROVEMENT"
+}
