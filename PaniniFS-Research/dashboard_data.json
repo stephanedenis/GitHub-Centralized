@@ -1,0 +1,138 @@
+{
+  "success": true,
+  "dashboard_version": "1.0",
+  "timestamp": "2025-10-01T13:36:40.373933+00:00",
+  "project": {
+    "name": "PaniniFS-Research",
+    "mission": "Théorie Information Universelle",
+    "owner": "stephanedenis",
+    "repository": "github.com/stephanedenis/PaniniFS-Research"
+  },
+  "symmetry_analysis": {
+    "available": true,
+    "source_file": "symmetry_detection_real_panini_data.json",
+    "total_tests": 49,
+    "perfect_symmetries": 0,
+    "success_rate": 0,
+    "universal_candidates_count": 0,
+    "universal_candidates": [],
+    "cross_domain_patterns": 0
+  },
+  "translator_analysis": {
+    "available": true,
+    "source_file": "translator_bias_style_analysis.json",
+    "translators_analyzed": 3,
+    "cultural_patterns": 8,
+    "temporal_patterns": 5,
+    "style_signatures": 11,
+    "universal_bias": [
+      [
+        "culturel",
+        3
+      ],
+      [
+        "temporel",
+        3
+      ]
+    ],
+    "universal_styles": [
+      [
+        "subordinations_complexes",
+        3
+      ],
+      [
+        "formalisation",
+        3
+      ]
+    ]
+  },
+  "multiformat_corpus": {
+    "available": true,
+    "source_file": "multiformat_analysis_2025-10-01T13-15-08Z.json",
+    "formats_compared": 2,
+    "formats_list": [
+      "TXT",
+      "TXT"
+    ],
+    "universal_words": 202,
+    "universal_dhatu": 6,
+    "universal_concepts": 6,
+    "recurrence_rate": 1.0,
+    "integrity_validation": {
+      "all_formats_valid": true,
+      "content_hashes": {
+        "TXT": "769d94fbeff2f903e592da3f379adf565f352019e19b53b0f298ce6c353c2bd9"
+      },
+      "content_exactly_identical": true,
+      "integrity_percentage": 100.0,
+      "validation_status": "PASS"
+    }
+  },
+  "global_metrics": {
+    "files": {
+      "json": 15,
+      "python": 19,
+      "markdown": 31
+    },
+    "scripts_by_category": {
+      "extractors": 3,
+      "analyzers": 2,
+      "validators": 0,
+      "scanners": 1,
+      "collectors": 1
+    },
+    "tasks_completed": 4,
+    "tasks_total": 7,
+    "completion_rate": 0.571
+  },
+  "universal_candidates": {
+    "from_symmetries": [
+      {
+        "type": "symmetry",
+        "count": 0,
+        "success_rate": 0
+      }
+    ],
+    "from_translators": [
+      {
+        "type": "bias",
+        "name": "culturel",
+        "recurrence": 3
+      },
+      {
+        "type": "bias",
+        "name": "temporel",
+        "recurrence": 3
+      },
+      {
+        "type": "style",
+        "name": "subordinations_complexes",
+        "recurrence": 3
+      },
+      {
+        "type": "style",
+        "name": "formalisation",
+        "recurrence": 3
+      }
+    ],
+    "from_multiformat": [
+      {
+        "type": "semantic_word",
+        "count": 202
+      },
+      {
+        "type": "dhatu",
+        "count": 6
+      },
+      {
+        "type": "concept",
+        "count": 6
+      }
+    ],
+    "consolidated": {
+      "total_sources": 3,
+      "total_candidates": 8,
+      "cross_validated": true
+    }
+  }
+}

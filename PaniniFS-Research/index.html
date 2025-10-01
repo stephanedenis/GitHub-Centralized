@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Panini - Théorie Information Universelle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .timestamp {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .card h2 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-icon {
+            font-size: 1.8em;
+        }
+        
+        .metric {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .metric-value {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .metric-value.success {
+            color: #28a745;
+        }
+        
+        .metric-value.warning {
+            color: #ffc107;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e9ecef;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: width 1s ease;
+        }
+        
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .status-badge.pass {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-badge.fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        footer {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .loader {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Dashboard Panini</h1>
+            <div class="subtitle">Théorie Information Universelle - Recherche Sémantique</div>
+            <div class="timestamp" id="timestamp">Chargement...</div>
+        </header>
+        
+        <div id="content" class="loader">
+            <h2>⏳ Chargement des données...</h2>
+        </div>
+        
+        <footer>
+            <p><strong>PaniniFS-Research</strong> | github.com/stephanedenis</p>
+            <p>Dashboard modular | UHD/4K optimisé | ISO 8601 conforme</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Chargement données dashboard
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('dashboard_data.json');
+                const data = await response.json();
+                renderDashboard(data);
+            } catch (error) {
+                document.getElementById('content').innerHTML = `
+                    <div class="card">
+                        <h2>❌ Erreur Chargement</h2>
+                        <p>Impossible de charger dashboard_data.json</p>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function renderDashboard(data) {
+            // Timestamp
+            document.getElementById('timestamp').textContent = 
+                `Dernière mise à jour: ${new Date(data.timestamp).toLocaleString('fr-FR')}`;
+            
+            // Contenu dashboard
+            const content = document.getElementById('content');
+            content.innerHTML = '';
+            
+            // Section Symétries
+            if (data.symmetry_analysis.available) {
+                content.innerHTML += renderSymmetryCard(data.symmetry_analysis);
+            }
+            
+            // Section Traducteurs
+            if (data.translator_analysis.available) {
+                content.innerHTML += renderTranslatorCard(data.translator_analysis);
+            }
+            
+            // Section Multi-Format
+            if (data.multiformat_corpus.available) {
+                content.innerHTML += renderMultiformatCard(data.multiformat_corpus);
+            }
+            
+            // Section Universaux
+            content.innerHTML += renderUniversalsCard(data.universal_candidates);
+            
+            // Section Métriques
+            content.innerHTML += renderMetricsCard(data.global_metrics);
+        }
+        
+        function renderSymmetryCard(sym) {
+            const successRate = sym.success_rate || 0;
+            return `
+                <div class="card">
+                    <h2><span class="card-icon">⚖️</span>Détection Symétries</h2>
+                    <div class="metric">
+                        <span class="metric-label">Tests Exécutés</span>
+                        <span class="metric-value">${sym.total_tests}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Symétries Parfaites</span>
+                        <span class="metric-value success">${sym.perfect_symmetries}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Taux Succès</span>
+                        <span class="metric-value">${successRate}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${successRate}%">
+                            ${successRate}%
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Universaux Candidats</span>
+                        <span class="metric-value">${sym.universal_candidates_count}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Patterns Cross-Domaine</span>
+                        <span class="metric-value">${sym.cross_domain_patterns}</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderTranslatorCard(trans) {
+            return `
+                <div class="card">
+                    <h2><span class="card-icon">👥</span>Analyse Traducteurs</h2>
+                    <div class="metric">
+                        <span class="metric-label">Traducteurs Analysés</span>
+                        <span class="metric-value">${trans.translators_analyzed}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Patterns Culturels</span>
+                        <span class="metric-value">${trans.cultural_patterns}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Patterns Temporels</span>
+                        <span class="metric-value">${trans.temporal_patterns}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Signatures Stylistiques</span>
+                        <span class="metric-value">${trans.style_signatures}</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <strong>Biais Universels:</strong>
+                        <div class="tag-list">
+                            ${trans.universal_bias.map(b => `<span class="tag">${b[0]} (${b[1]})</span>`).join('')}
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <strong>Styles Universels:</strong>
+                        <div class="tag-list">
+                            ${trans.universal_styles.map(s => `<span class="tag">${s[0]} (${s[1]})</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderMultiformatCard(multi) {
+            const integ = multi.integrity_validation || {};
+            const statusClass = integ.validation_status === 'PASS' ? 'pass' : 'fail';
+            
+            return `
+                <div class="card">
+                    <h2><span class="card-icon">📄</span>Corpus Multi-Format</h2>
+                    <div class="metric">
+                        <span class="metric-label">Formats Comparés</span>
+                        <span class="metric-value">${multi.formats_compared}</span>
+                    </div>
+                    <div class="tag-list">
+                        ${multi.formats_list.map(f => `<span class="tag">${f}</span>`).join('')}
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Mots Universels</span>
+                        <span class="metric-value">${multi.universal_words}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Dhātu Universels</span>
+                        <span class="metric-value">${multi.universal_dhatu}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Concepts Universels</span>
+                        <span class="metric-value">${multi.universal_concepts}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Taux Récurrence</span>
+                        <span class="metric-value">${(multi.recurrence_rate * 100).toFixed(1)}%</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <strong>Validation Intégrité:</strong>
+                        <span class="status-badge ${statusClass}">${integ.validation_status || 'UNKNOWN'} (${integ.integrity_percentage || 0}%)</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderUniversalsCard(univ) {
+            return `
+                <div class="card">
+                    <h2><span class="card-icon">🌐</span>Universaux Candidats</h2>
+                    <div class="metric">
+                        <span class="metric-label">Sources Analyse</span>
+                        <span class="metric-value">${univ.consolidated.total_sources}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Total Candidats</span>
+                        <span class="metric-value success">${univ.consolidated.total_candidates}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Cross-Validation</span>
+                        <span class="metric-value">${univ.consolidated.cross_validated ? '✅ Oui' : '❌ Non'}</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <strong>Depuis Symétries:</strong> ${univ.from_symmetries.length} candidats<br>
+                        <strong>Depuis Traducteurs:</strong> ${univ.from_translators.length} patterns<br>
+                        <strong>Depuis Multi-Format:</strong> ${univ.from_multiformat.length} types
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderMetricsCard(metrics) {
+            const completion = metrics.completion_rate * 100;
+            return `
+                <div class="card">
+                    <h2><span class="card-icon">📊</span>Métriques Globales</h2>
+                    <div class="metric">
+                        <span class="metric-label">Fichiers Python</span>
+                        <span class="metric-value">${metrics.files.python}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Fichiers JSON</span>
+                        <span class="metric-value">${metrics.files.json}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Documentation MD</span>
+                        <span class="metric-value">${metrics.files.markdown}</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <strong>Scripts par Catégorie:</strong>
+                        <div class="tag-list">
+                            <span class="tag">Extractors: ${metrics.scripts_by_category.extractors}</span>
+                            <span class="tag">Analyzers: ${metrics.scripts_by_category.analyzers}</span>
+                            <span class="tag">Validators: ${metrics.scripts_by_category.validators}</span>
+                            <span class="tag">Scanners: ${metrics.scripts_by_category.scanners}</span>
+                            <span class="tag">Collectors: ${metrics.scripts_by_category.collectors}</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <strong>Progression Projet:</strong>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${completion}%">
+                                ${metrics.tasks_completed}/${metrics.tasks_total} (${completion.toFixed(1)}%)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Chargement au démarrage
+        loadDashboardData();
+        
+        // Rafraîchissement automatique toutes les 30 secondes
+        setInterval(loadDashboardData, 30000);
+    </script>
+</body>
+</html>
