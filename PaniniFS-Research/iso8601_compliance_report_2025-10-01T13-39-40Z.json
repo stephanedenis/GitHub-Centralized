@@ -1,0 +1,124 @@
+{
+  "success": true,
+  "timestamp": "2025-10-01T13:39:40.021007+00:00",
+  "project_root": "/home/stephane/GitHub/PaniniFS-Research",
+  "total_violations": 14,
+  "total_compliant": 0,
+  "compliance_status": "FAIL",
+  "violations_by_type": {
+    "markdown_content": 14
+  },
+  "violations_by_file": {
+    "COPILOTAGE_DATES_ISO_APPLIQUE.md": 4,
+    "STANDARDS_DASHBOARD_ECOSYSTEME_PANINI.md": 3,
+    "COMMENTAIRES_PRS_CLARIFICATIONS.md": 2,
+    "pr14_comment.md": 2,
+    "SYNTHESE_CLARIFICATIONS_INTEGREES.md": 3
+  },
+  "top_violations": [
+    {
+      "file": "COPILOTAGE_DATES_ISO_APPLIQUE.md",
+      "type": "markdown_content",
+      "violation": "29/09/2025",
+      "line": 14,
+      "context": "- ❌ `29/09/2025`, `09-29-2025`, `Sep 29, 2025`"
+    },
+    {
+      "file": "COPILOTAGE_DATES_ISO_APPLIQUE.md",
+      "type": "markdown_content",
+      "violation": "Sep 29, 2025",
+      "line": 14,
+      "context": "- ❌ `29/09/2025`, `09-29-2025`, `Sep 29, 2025`"
+    },
+    {
+      "file": "COPILOTAGE_DATES_ISO_APPLIQUE.md",
+      "type": "markdown_content",
+      "violation": "29/09/2025",
+      "line": 81,
+      "context": "\"bad_date\": \"29/09/2025\"                // ❌ VIOLATION"
+    },
+    {
+      "file": "COPILOTAGE_DATES_ISO_APPLIQUE.md",
+      "type": "markdown_content",
+      "violation": "29/09/2025",
+      "line": 88,
+      "context": "[29/09/2025 20:15] INFO Message                   ❌ VIOLATION"
+    },
+    {
+      "file": "STANDARDS_DASHBOARD_ECOSYSTEME_PANINI.md",
+      "type": "markdown_content",
+      "violation": "09/30/2025",
+      "line": 163,
+      "context": "09/30/2025              # Format US ambigu"
+    },
+    {
+      "file": "STANDARDS_DASHBOARD_ECOSYSTEME_PANINI.md",
+      "type": "markdown_content",
+      "violation": "30/09/2025",
+      "line": 164,
+      "context": "30/09/2025              # Format EU ambigu"
+    },
+    {
+      "file": "STANDARDS_DASHBOARD_ECOSYSTEME_PANINI.md",
+      "type": "markdown_content",
+      "violation": "Sept 30, 2025",
+      "line": 165,
+      "context": "Sept 30, 2025           # Texte localisé"
+    },
+    {
+      "file": "COMMENTAIRES_PRS_CLARIFICATIONS.md",
+      "type": "markdown_content",
+      "violation": "09/30/2025",
+      "line": 241,
+      "context": "const timestamp = \"09/30/2025\";  // Format US ambigu"
+    },
+    {
+      "file": "COMMENTAIRES_PRS_CLARIFICATIONS.md",
+      "type": "markdown_content",
+      "violation": "30/09/2025",
+      "line": 242,
+      "context": "const timestamp = \"30/09/2025\";  // Format EU ambigu"
+    },
+    {
+      "file": "pr14_comment.md",
+      "type": "markdown_content",
+      "violation": "09/30/2025",
+      "line": 73,
+      "context": "const timestamp = \"09/30/2025\";  // Format US ambigu"
+    },
+    {
+      "file": "pr14_comment.md",
+      "type": "markdown_content",
+      "violation": "30/09/2025",
+      "line": 74,
+      "context": "const timestamp = \"30/09/2025\";  // Format EU ambigu"
+    },
+    {
+      "file": "SYNTHESE_CLARIFICATIONS_INTEGREES.md",
+      "type": "markdown_content",
+      "violation": "09/30/2025",
+      "line": 177,
+      "context": "- `09/30/2025` (US ambigu)"
+    },
+    {
+      "file": "SYNTHESE_CLARIFICATIONS_INTEGREES.md",
+      "type": "markdown_content",
+      "violation": "30/09/2025",
+      "line": 178,
+      "context": "- `30/09/2025` (EU ambigu)"
+    },
+    {
+      "file": "SYNTHESE_CLARIFICATIONS_INTEGREES.md",
+      "type": "markdown_content",
+      "violation": "Sept 30, 2025",
+      "line": 179,
+      "context": "- `Sept 30, 2025` (texte localisé)"
+    }
+  ],
+  "statistics": {
+    "filenames": 0,
+    "json_fields": 0,
+    "markdown_content": 14,
+    "python_strings": 0
+  }
+}
