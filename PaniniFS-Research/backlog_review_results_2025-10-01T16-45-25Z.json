@@ -1,0 +1,591 @@
+{
+  "timestamp": "2025-10-01T16:45:25.868369+00:00",
+  "total_items": 20,
+  "items_reviewed": [
+    {
+      "item_id": "backlog_10_01",
+      "title": "Point d'entrée unifié pour tous services dhātu",
+      "source_project": 10,
+      "category": "INTERFACES",
+      "scores": {
+        "innovation": 15.0,
+        "strategic_fit": 15.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 0.0,
+        "total": 45.0
+      },
+      "prerequisites_status": {
+        "all_met": false,
+        "count_met": 0,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "CORE APIs stabilisées",
+            "met": false,
+            "reason": "CORE APIs pas encore stables"
+          }
+        ]
+      },
+      "priority": "low"
+    },
+    {
+      "item_id": "backlog_10_02",
+      "title": "Rate limiting et monitoring global",
+      "source_project": 10,
+      "category": "INTERFACES",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 15.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 75.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_10_03",
+      "title": "API versioning et backward compatibility",
+      "source_project": 10,
+      "category": "INTERFACES",
+      "scores": {
+        "innovation": 15.0,
+        "strategic_fit": 15.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 0.0,
+        "total": 45.0
+      },
+      "prerequisites_status": {
+        "all_met": false,
+        "count_met": 0,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "CORE APIs stabilisées",
+            "met": false,
+            "reason": "CORE APIs pas encore stables"
+          }
+        ]
+      },
+      "priority": "low"
+    },
+    {
+      "item_id": "backlog_10_04",
+      "title": "Authentification centralisée",
+      "source_project": 10,
+      "category": "INTERFACES",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 15.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 75.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_8_01",
+      "title": "Simuler dérivations linguistiques (dhātu → mots)",
+      "source_project": 8,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 25.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 85.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_8_02",
+      "title": "Benchmarks vitesse/précision transformations",
+      "source_project": 8,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 15.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 75.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_8_03",
+      "title": "Prédire évolutions futures patterns",
+      "source_project": 8,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 25.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 85.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_8_04",
+      "title": "Visualiser transformations dhātu temporelles",
+      "source_project": 8,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 20.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 0.0,
+        "total": 45.0
+      },
+      "prerequisites_status": {
+        "all_met": false,
+        "count_met": 0,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Framework visualisation choisi",
+            "met": false,
+            "reason": "Framework visualisation pas choisi"
+          }
+        ]
+      },
+      "priority": "low"
+    },
+    {
+      "item_id": "backlog_7_01",
+      "title": "Export visualisations haute résolution",
+      "source_project": 7,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 20.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 0.0,
+        "total": 45.0
+      },
+      "prerequisites_status": {
+        "all_met": false,
+        "count_met": 0,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Framework visualisation choisi",
+            "met": false,
+            "reason": "Framework visualisation pas choisi"
+          }
+        ]
+      },
+      "priority": "low"
+    },
+    {
+      "item_id": "backlog_7_02",
+      "title": "Navigation interactive géométrie linguistique",
+      "source_project": 7,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 70.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "medium"
+    },
+    {
+      "item_id": "backlog_7_03",
+      "title": "Représentation 3D espace sémantique dhātu",
+      "source_project": 7,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 20.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 0.0,
+        "total": 45.0
+      },
+      "prerequisites_status": {
+        "all_met": false,
+        "count_met": 0,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Framework visualisation choisi",
+            "met": false,
+            "reason": "Framework visualisation pas choisi"
+          }
+        ]
+      },
+      "priority": "low"
+    },
+    {
+      "item_id": "backlog_7_04",
+      "title": "Clustering visuel patterns similaires",
+      "source_project": 7,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 70.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "medium"
+    },
+    {
+      "item_id": "backlog_6_01",
+      "title": "Exploration guidée espace compositional",
+      "source_project": 6,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 70.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "medium"
+    },
+    {
+      "item_id": "backlog_6_02",
+      "title": "Générer variations linguistiques créatives",
+      "source_project": 6,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 20.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 80.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_6_03",
+      "title": "Mode découverte serendipité",
+      "source_project": 6,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 70.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "medium"
+    },
+    {
+      "item_id": "backlog_6_04",
+      "title": "Suggestions intelligence artificielle",
+      "source_project": 6,
+      "category": "TOOLS",
+      "scores": {
+        "innovation": 25.0,
+        "strategic_fit": 10.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 85.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_3_01",
+      "title": "State management linguistique",
+      "source_project": 3,
+      "category": "CORE",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 25.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 85.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_3_02",
+      "title": "Components réutilisables applications dhātu",
+      "source_project": 3,
+      "category": "CORE",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 25.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 85.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_3_03",
+      "title": "Responsive design multi-devices",
+      "source_project": 3,
+      "category": "CORE",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 25.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 35.0,
+        "total": 85.0
+      },
+      "prerequisites_status": {
+        "all_met": true,
+        "count_met": 1,
+        "count_total": 1,
+        "details": [
+          {
+            "prerequisite": "Aucun prérequis identifié",
+            "met": true,
+            "reason": "Aucun prérequis"
+          }
+        ]
+      },
+      "priority": "high"
+    },
+    {
+      "item_id": "backlog_3_04",
+      "title": "Real-time synchronization corpus",
+      "source_project": 3,
+      "category": "CORE",
+      "scores": {
+        "innovation": 10.0,
+        "strategic_fit": 25.0,
+        "effort_low": 15.0,
+        "prerequisites_met": 0.0,
+        "total": 50.0
+      },
+      "prerequisites_status": {
+        "all_met": false,
+        "count_met": 0,
+        "count_total": 2,
+        "details": [
+          {
+            "prerequisite": "Corpus ≥100k validé",
+            "met": false,
+            "reason": "Corpus 100k validation en cours"
+          },
+          {
+            "prerequisite": "WebSocket infrastructure",
+            "met": false,
+            "reason": "WebSocket infrastructure pas démarrée"
+          }
+        ]
+      },
+      "priority": "medium"
+    }
+  ],
+  "prioritization": {
+    "high": [
+      "backlog_10_02",
+      "backlog_10_04",
+      "backlog_8_01",
+      "backlog_8_02",
+      "backlog_8_03",
+      "backlog_6_02",
+      "backlog_6_04",
+      "backlog_3_01",
+      "backlog_3_02",
+      "backlog_3_03"
+    ],
+    "medium": [
+      "backlog_7_02",
+      "backlog_7_04",
+      "backlog_6_01",
+      "backlog_6_03",
+      "backlog_3_04"
+    ],
+    "low": [
+      "backlog_10_01",
+      "backlog_10_03",
+      "backlog_8_04",
+      "backlog_7_01",
+      "backlog_7_03"
+    ],
+    "deferred": []
+  },
+  "reactivation_candidates": [
+    "backlog_10_02",
+    "backlog_10_04",
+    "backlog_8_01",
+    "backlog_8_02",
+    "backlog_8_03",
+    "backlog_6_02",
+    "backlog_6_04",
+    "backlog_3_01",
+    "backlog_3_02",
+    "backlog_3_03"
+  ],
+  "statistics": {
+    "by_priority": {
+      "high": 10,
+      "medium": 5,
+      "low": 5,
+      "deferred": 0
+    },
+    "by_category": {
+      "INTERFACES": 4,
+      "TOOLS": 12,
+      "CORE": 4
+    },
+    "prerequisites_analysis": {
+      "all_met": 14,
+      "partial": 0,
+      "none_met": 6
+    },
+    "reactivation_ready": 10
+  }
+}
