@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "format": "TXT",
+  "source_file": "test_multiformat_source.txt",
+  "content": "# Texte Test Multi-Format - Universaux Sémantiques\n\n## Métadonnées\n- **Titre:** Test Universaux Sémantiques Panini\n- **Date:** 2025-10-01\n- **Objectif:** Valider extraction contenu identique depuis PDF, TXT, EPUB, MP3\n- **Mission:** Théorie Information Universelle\n\n## Texte Principal\n\nLes universaux sémantiques sont des patterns de composition qui transcendent le support physique.\n\n### Concept 1: Composition Fractale\n\nLa décomposition révèle des atomes sémantiques (dhātu) invariants. Ces dhātu se composent selon des règles universelles, indépendantes du format de stockage.\n\n**Exemple dhātu:**\n- BHŪ (être, devenir) → existence fondamentale\n- KṚ (faire) → action transformatrice\n- GĀ (aller) → mouvement directionnel\n\n### Concept 2: Symétries de Transformation\n\nLa relation compose(decompose(x)) == x valide l'intégrité sémantique. Un texte décomposé puis recomposé doit être identique à 100%, sinon échec.\n\n**Test Symétrie:**\n1. Texte original → décomposition → atomes sémantiques\n2. Atomes sémantiques → recomposition → texte reconstruit\n3. Validation: texte_original === texte_reconstruit\n\n### Concept 3: Indépendance du Support\n\nLe même contenu sémantique dans différents formats (PDF, TXT, EPUB, MP3) doit produire les mêmes atomes sémantiques après décomposition.\n\n**Formats testés:**\n- **PDF:** Rendu visuel + métadonnées document\n- **TXT:** Texte brut UTF-8 sans formatage\n- **EPUB:** HTML structuré + navigation\n- **MP3:** Audio transcrit (text-to-speech)\n\n### Concept 4: Compression Sémantique\n\nLe taux de compression mesure l'efficacité du dictionnaire dhātu:\n- Compression = 1 - (taille_dictionnaire / taille_corpus)\n- Objectif: Maximiser compression tout en gardant intégrité 100%\n\n**Métriques attendues:**\n- Taux compression: 60-80%\n- Intégrité: 100% ou FAIL\n- Temps extraction: < 5s par format\n\n## Résultats Attendus\n\n### Universaux Candidats (Cross-Format)\n\nLes patterns suivants devraient être identiques dans tous formats:\n\n1. **Dhātu fondamentaux:** BHŪ, KṚ, GĀ (récurrence 100%)\n2. **Structures composition:** sujet-verbe-objet (invariant)\n3. **Relations sémantiques:** cause-effet, partie-tout\n4. **Quantification:** numérique vs intensité (traducteurs: QUI/QUAND > nombre)\n\n### Divergences Contextuelles\n\nÉléments variant selon format (non-universels):\n\n1. **Formatage visuel:** gras, italique, couleurs (PDF/EPUB)\n2. **Métadonnées techniques:** timestamps création, auteur software\n3. **Encodage phonétique:** prosodie, intonation (MP3)\n4. **Navigation:** chapitres, TOC, ancres (EPUB)\n\n## Conclusion\n\nCe test valide:\n- ✅ Extraction contenu identique multi-format\n- ✅ Indépendance sémantique vs support physique\n- ✅ Symétries compose/decompose\n- ✅ Métriques compression + intégrité\n\n**Timestamp:** 2025-10-01T06:00:00Z\n**Format source:** TXT (UTF-8)\n**Encodage:** Unicode normalisé (NFC)\n",
+  "content_length_chars": 2817,
+  "content_length_lines": 83,
+  "metadata": {
+    "filename": "test_multiformat_source.txt",
+    "file_size_bytes": 2917,
+    "encoding": "utf-8",
+    "line_endings": "LF (Unix)",
+    "titre": "Test Universaux Sémantiques Panini",
+    "date": "2025-10-01",
+    "objectif": "Valider extraction contenu identique depuis PDF, TXT, EPUB, MP3",
+    "mission": "Théorie Information Universelle"
+  },
+  "integrity": {
+    "valid": true,
+    "sha256": "769d94fbeff2f903e592da3f379adf565f352019e19b53b0f298ce6c353c2bd9",
+    "validation_method": "basic_printable_check",
+    "integrity_percentage": 100.0
+  },
+  "semantic_analysis": {
+    "total_words": 335,
+    "unique_words": 202,
+    "vocabulary_richness": 0.603,
+    "dhatu_candidates": [
+      "PDF",
+      "TXT",
+      "EPUB",
+      "BHŪ",
+      "KṚ",
+      "GĀ",
+      "PDF",
+      "TXT",
+      "EPUB",
+      "PDF"
+    ],
+    "concepts_detected": [
+      "Concept 1: Composition Fractale",
+      "Concept 2: Symétries de Transformation",
+      "Concept 3: Indépendance du Support",
+      "Concept 4: Compression Sémantique",
+      "Universaux Candidats (Cross-Format)",
+      "Divergences Contextuelles"
+    ],
+    "compound_words_sample": [
+      "Sémantiques",
+      "Métadonnées",
+      "Sémantiques",
+      "Information",
+      "Universelle"
+    ],
+    "avg_word_length": 6.35
+  },
+  "timestamp": "2025-10-01T13:02:45.935830+00:00"
+}

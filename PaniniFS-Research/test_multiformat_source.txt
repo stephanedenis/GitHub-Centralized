@@ -1,0 +1,82 @@
+# Texte Test Multi-Format - Universaux Sémantiques
+
+## Métadonnées
+- **Titre:** Test Universaux Sémantiques Panini
+- **Date:** 2025-10-01
+- **Objectif:** Valider extraction contenu identique depuis PDF, TXT, EPUB, MP3
+- **Mission:** Théorie Information Universelle
+
+## Texte Principal
+
+Les universaux sémantiques sont des patterns de composition qui transcendent le support physique.
+
+### Concept 1: Composition Fractale
+
+La décomposition révèle des atomes sémantiques (dhātu) invariants. Ces dhātu se composent selon des règles universelles, indépendantes du format de stockage.
+
+**Exemple dhātu:**
+- BHŪ (être, devenir) → existence fondamentale
+- KṚ (faire) → action transformatrice
+- GĀ (aller) → mouvement directionnel
+
+### Concept 2: Symétries de Transformation
+
+La relation compose(decompose(x)) == x valide l'intégrité sémantique. Un texte décomposé puis recomposé doit être identique à 100%, sinon échec.
+
+**Test Symétrie:**
+1. Texte original → décomposition → atomes sémantiques
+2. Atomes sémantiques → recomposition → texte reconstruit
+3. Validation: texte_original === texte_reconstruit
+
+### Concept 3: Indépendance du Support
+
+Le même contenu sémantique dans différents formats (PDF, TXT, EPUB, MP3) doit produire les mêmes atomes sémantiques après décomposition.
+
+**Formats testés:**
+- **PDF:** Rendu visuel + métadonnées document
+- **TXT:** Texte brut UTF-8 sans formatage
+- **EPUB:** HTML structuré + navigation
+- **MP3:** Audio transcrit (text-to-speech)
+
+### Concept 4: Compression Sémantique
+
+Le taux de compression mesure l'efficacité du dictionnaire dhātu:
+- Compression = 1 - (taille_dictionnaire / taille_corpus)
+- Objectif: Maximiser compression tout en gardant intégrité 100%
+
+**Métriques attendues:**
+- Taux compression: 60-80%
+- Intégrité: 100% ou FAIL
+- Temps extraction: < 5s par format
+
+## Résultats Attendus
+
+### Universaux Candidats (Cross-Format)
+
+Les patterns suivants devraient être identiques dans tous formats:
+
+1. **Dhātu fondamentaux:** BHŪ, KṚ, GĀ (récurrence 100%)
+2. **Structures composition:** sujet-verbe-objet (invariant)
+3. **Relations sémantiques:** cause-effet, partie-tout
+4. **Quantification:** numérique vs intensité (traducteurs: QUI/QUAND > nombre)
+
+### Divergences Contextuelles
+
+Éléments variant selon format (non-universels):
+
+1. **Formatage visuel:** gras, italique, couleurs (PDF/EPUB)
+2. **Métadonnées techniques:** timestamps création, auteur software
+3. **Encodage phonétique:** prosodie, intonation (MP3)
+4. **Navigation:** chapitres, TOC, ancres (EPUB)
+
+## Conclusion
+
+Ce test valide:
+- ✅ Extraction contenu identique multi-format
+- ✅ Indépendance sémantique vs support physique
+- ✅ Symétries compose/decompose
+- ✅ Métriques compression + intégrité
+
+**Timestamp:** 2025-10-01T06:00:00Z
+**Format source:** TXT (UTF-8)
+**Encodage:** Unicode normalisé (NFC)

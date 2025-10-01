@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "num_formats_compared": 2,
+  "formats": [
+    "TXT",
+    "TXT"
+  ],
+  "universals": {
+    "universal_words": [
+      "00",
+      "00z",
+      "01",
+      "01t06",
+      "1",
+      "10",
+      "100",
+      "2",
+      "2025",
+      "3",
+      "4",
+      "5s",
+      "60",
+      "8",
+      "80",
+      "action",
+      "aller",
+      "ancres",
+      "après",
+      "atomes",
+      "attendues",
+      "attendus",
+      "audio",
+      "auteur",
+      "bhū",
+      "brut",
+      "candidats",
+      "cause",
+      "ce",
+      "ces",
+      "chapitres",
+      "compose",
+      "composent",
+      "composition",
+      "compression",
+      "concept",
+      "conclusion",
+      "contenu",
+      "contextuelles",
+      "couleurs",
+      "cross",
+      "création",
+      "dans",
+      "date",
+      "de",
+      "decompose",
+      "depuis",
+      "des",
+      "devenir",
+      "devraient"
+    ],
+    "universal_words_count": 202,
+    "universal_dhatu": [
+      "BHŪ",
+      "EPUB",
+      "GĀ",
+      "KṚ",
+      "PDF",
+      "TXT"
+    ],
+    "universal_dhatu_count": 6,
+    "universal_concepts": [
+      "Concept 1: Composition Fractale",
+      "Concept 2: Symétries de Transformation",
+      "Concept 3: Indépendance du Support",
+      "Concept 4: Compression Sémantique",
+      "Divergences Contextuelles",
+      "Universaux Candidats (Cross-Format)"
+    ],
+    "universal_concepts_count": 6,
+    "recurrence_rate": 1.0
+  },
+  "contextuals": {
+    "TXT": {
+      "unique_words": [
+        "00",
+        "00z",
+        "01",
+        "01t06",
+        "1",
+        "10",
+        "100",
+        "2",
+        "2025",
+        "3",
+        "4",
+        "5s",
+        "60",
+        "8",
+        "80",
+        "action",
+        "aller",
+        "ancres",
+        "après",
+        "atomes"
+      ],
+      "unique_words_count": 202,
+      "format_specific_features": [
+        "Encoding: utf-8",
+        "Line endings: LF (Unix)"
+      ]
+    }
+  },
+  "cross_format_metrics": {
+    "content_length_mean": 2817,
+    "content_length_variance": 0,
+    "content_length_consistency": 1.0,
+    "vocabulary_richness_mean": 0.603,
+    "total_words_mean": 335,
+    "total_words_variance": 0
+  },
+  "integrity_validation": {
+    "all_formats_valid": true,
+    "content_hashes": {
+      "TXT": "769d94fbeff2f903e592da3f379adf565f352019e19b53b0f298ce6c353c2bd9"
+    },
+    "content_exactly_identical": true,
+    "integrity_percentage": 100.0,
+    "validation_status": "PASS"
+  },
+  "timestamp": "2025-10-01T13:15:08.343513+00:00"
+}
