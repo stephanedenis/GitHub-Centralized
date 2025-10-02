@@ -1,0 +1,1157 @@
+{
+  "meta": {
+    "timestamp": "2025-10-02T21:16:38.877030+00:00",
+    "analyzer_version": "1.0.0",
+    "domains_analyzed": 7,
+    "violations_detected": 47,
+    "invariants_detected": 0
+  },
+  "domains": {
+    "translations": {
+      "file": "translator_bias_style_analysis.json",
+      "loaded_at": "2025-10-02T21:16:38.760775+00:00"
+    },
+    "extractions": {
+      "file": "project_essence_extraction_2025-10-01T15-42-06Z.json",
+      "loaded_at": "2025-10-02T21:16:38.761330+00:00"
+    },
+    "formats": {
+      "file": "multiformat_analysis_2025-10-01T13-15-08Z.json",
+      "loaded_at": "2025-10-02T21:16:38.761453+00:00"
+    },
+    "compressions": {
+      "file": "compression_validation_results.json",
+      "loaded_at": "2025-10-02T21:16:38.761720+00:00"
+    },
+    "projects": {
+      "file": "project_essence_extraction_2025-10-01T15-42-06Z.json",
+      "loaded_at": "2025-10-02T21:16:38.762310+00:00"
+    },
+    "validations": {
+      "file": "compression_validation_results.json",
+      "loaded_at": "2025-10-02T21:16:38.762537+00:00"
+    },
+    "analyses": {
+      "file": "semantic_patterns_analysis_2025-10-02T21-16-38Z.json",
+      "loaded_at": "2025-10-02T21:16:38.762743+00:00"
+    }
+  },
+  "coherence_violations": [
+    {
+      "violation_id": "temporal_translations_extractions",
+      "violation_type": "temporal_inconsistency",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "extractions"
+      ],
+      "description": "Écart temporel important: 29.6h",
+      "evidence": {
+        "timestamp_a": "2025-10-02T21:16:38.222353+00:00",
+        "timestamp_b": "2025-10-01T15:42:06.330757+00:00",
+        "time_diff_hours": 29.575525443333333
+      },
+      "confidence": 0.8,
+      "timestamp": "2025-10-02T21:16:38.762794+00:00"
+    },
+    {
+      "violation_id": "semantic_translations_extractions",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "extractions"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.005321507760532151,
+        "sample_text_a": "2025-10-02T21:16:38.222353+00:00 Jean Dupont Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González Maria González राज शर्मा (Ra",
+        "sample_text_b": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.765547+00:00"
+    },
+    {
+      "violation_id": "temporal_translations_formats",
+      "violation_type": "temporal_inconsistency",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "formats"
+      ],
+      "description": "Écart temporel important: 32.0h",
+      "evidence": {
+        "timestamp_a": "2025-10-02T21:16:38.222353+00:00",
+        "timestamp_b": "2025-10-01T13:15:08.343513+00:00",
+        "time_diff_hours": 32.024966344444444
+      },
+      "confidence": 0.8,
+      "timestamp": "2025-10-02T21:16:38.765640+00:00"
+    },
+    {
+      "violation_id": "structural_translations_formats",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "translations",
+        "formats"
+      ],
+      "description": "Structures très différentes: 0.07 similarité",
+      "evidence": {
+        "keys_a": [
+          "patterns_temporels",
+          "timestamp",
+          "traducteurs_analyses",
+          "cross_references",
+          "patterns_culturels",
+          "universaux_vs_contextuels",
+          "signatures_stylistiques"
+        ],
+        "keys_b": [
+          "contextuals",
+          "universals",
+          "timestamp",
+          "success",
+          "integrity_validation",
+          "formats",
+          "cross_format_metrics",
+          "num_formats_compared"
+        ],
+        "similarity": 0.07142857142857142,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.765684+00:00"
+    },
+    {
+      "violation_id": "semantic_translations_formats",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "formats"
+      ],
+      "description": "Faible cohérence sémantique: 0.00",
+      "evidence": {
+        "semantic_similarity": 0.003127443315089914,
+        "sample_text_a": "2025-10-02T21:16:38.222353+00:00 Jean Dupont Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González Maria González राज शर्मा (Ra",
+        "sample_text_b": "composition compression contextuelles Concept 1: Composition Fractale Concept 2: Symétries de Transformation Concept 3: Indépendance du Support Concept 4: Compression Sémantique Divergences Contextuel"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.767735+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_translations_compressions",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "translations",
+        "compressions"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.767879+00:00"
+    },
+    {
+      "violation_id": "structural_translations_compressions",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "translations",
+        "compressions"
+      ],
+      "description": "Structures très différentes: 0.07 similarité",
+      "evidence": {
+        "keys_a": [
+          "patterns_temporels",
+          "timestamp",
+          "traducteurs_analyses",
+          "cross_references",
+          "patterns_culturels",
+          "universaux_vs_contextuels",
+          "signatures_stylistiques"
+        ],
+        "keys_b": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "similarity": 0.06666666666666667,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.767907+00:00"
+    },
+    {
+      "violation_id": "semantic_translations_compressions",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "compressions"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.007986688851913478,
+        "sample_text_a": "2025-10-02T21:16:38.222353+00:00 Jean Dupont Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González Maria González राज शर्मा (Ra",
+        "sample_text_b": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.771310+00:00"
+    },
+    {
+      "violation_id": "temporal_translations_projects",
+      "violation_type": "temporal_inconsistency",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "projects"
+      ],
+      "description": "Écart temporel important: 29.6h",
+      "evidence": {
+        "timestamp_a": "2025-10-02T21:16:38.222353+00:00",
+        "timestamp_b": "2025-10-01T15:42:06.330757+00:00",
+        "time_diff_hours": 29.575525443333333
+      },
+      "confidence": 0.8,
+      "timestamp": "2025-10-02T21:16:38.771401+00:00"
+    },
+    {
+      "violation_id": "semantic_translations_projects",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "projects"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.005321507760532151,
+        "sample_text_a": "2025-10-02T21:16:38.222353+00:00 Jean Dupont Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González Maria González राज शर्मा (Ra",
+        "sample_text_b": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.774060+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_translations_validations",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "translations",
+        "validations"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.774137+00:00"
+    },
+    {
+      "violation_id": "structural_translations_validations",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "translations",
+        "validations"
+      ],
+      "description": "Structures très différentes: 0.07 similarité",
+      "evidence": {
+        "keys_a": [
+          "patterns_temporels",
+          "timestamp",
+          "traducteurs_analyses",
+          "cross_references",
+          "patterns_culturels",
+          "universaux_vs_contextuels",
+          "signatures_stylistiques"
+        ],
+        "keys_b": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "similarity": 0.06666666666666667,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.774161+00:00"
+    },
+    {
+      "violation_id": "semantic_translations_validations",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "validations"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.007986688851913478,
+        "sample_text_a": "2025-10-02T21:16:38.222353+00:00 Jean Dupont Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González Maria González राज शर्मा (Ra",
+        "sample_text_b": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.777554+00:00"
+    },
+    {
+      "violation_id": "structural_translations_analyses",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "translations",
+        "analyses"
+      ],
+      "description": "Structures très différentes: 0.00 similarité",
+      "evidence": {
+        "keys_a": [
+          "patterns_temporels",
+          "timestamp",
+          "traducteurs_analyses",
+          "cross_references",
+          "patterns_culturels",
+          "universaux_vs_contextuels",
+          "signatures_stylistiques"
+        ],
+        "keys_b": [
+          "universal_invariants",
+          "meta",
+          "analyzer_sources",
+          "patterns",
+          "patterns_summary",
+          "cross_correlations",
+          "recommendations"
+        ],
+        "similarity": 0.0,
+        "common_keys": []
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.777663+00:00"
+    },
+    {
+      "violation_id": "semantic_translations_analyses",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "translations",
+        "analyses"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.011955168119551683,
+        "sample_text_a": "2025-10-02T21:16:38.222353+00:00 Jean Dupont Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González राज शर्मा (Raj Sharma) Jean Dupont Maria González Maria González राज शर्मा (Ra",
+        "sample_text_b": "2025-10-02T21:16:38.504243+00:00 cultural_bias_type:culturel translator_bias_analyzer cultural_recurrence 2025-10-02T21:16:38.503991+00:00 cultural_bias_type:temporel translator_bias_analyzer cultural"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.781043+00:00"
+    },
+    {
+      "violation_id": "structural_extractions_formats",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "extractions",
+        "formats"
+      ],
+      "description": "Structures très différentes: 0.09 similarité",
+      "evidence": {
+        "keys_a": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "keys_b": [
+          "contextuals",
+          "universals",
+          "timestamp",
+          "success",
+          "integrity_validation",
+          "formats",
+          "cross_format_metrics",
+          "num_formats_compared"
+        ],
+        "similarity": 0.09090909090909091,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.781153+00:00"
+    },
+    {
+      "violation_id": "semantic_extractions_formats",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "extractions",
+        "formats"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.009320138706552345,
+        "sample_text_a": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy",
+        "sample_text_b": "composition compression contextuelles Concept 1: Composition Fractale Concept 2: Symétries de Transformation Concept 3: Indépendance du Support Concept 4: Compression Sémantique Divergences Contextuel"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.783280+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_extractions_compressions",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "extractions",
+        "compressions"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.783347+00:00"
+    },
+    {
+      "violation_id": "structural_extractions_compressions",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "extractions",
+        "compressions"
+      ],
+      "description": "Structures très différentes: 0.08 similarité",
+      "evidence": {
+        "keys_a": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "keys_b": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "similarity": 0.08333333333333333,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.783367+00:00"
+    },
+    {
+      "violation_id": "semantic_extractions_compressions",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "extractions",
+        "compressions"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.009518413597733713,
+        "sample_text_a": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy",
+        "sample_text_b": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.787174+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_extractions_validations",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "extractions",
+        "validations"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.788933+00:00"
+    },
+    {
+      "violation_id": "structural_extractions_validations",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "extractions",
+        "validations"
+      ],
+      "description": "Structures très différentes: 0.08 similarité",
+      "evidence": {
+        "keys_a": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "keys_b": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "similarity": 0.08333333333333333,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.788956+00:00"
+    },
+    {
+      "violation_id": "semantic_extractions_validations",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "extractions",
+        "validations"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.009518413597733713,
+        "sample_text_a": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy",
+        "sample_text_b": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.792593+00:00"
+    },
+    {
+      "violation_id": "structural_extractions_analyses",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "extractions",
+        "analyses"
+      ],
+      "description": "Structures très différentes: 0.00 similarité",
+      "evidence": {
+        "keys_a": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "keys_b": [
+          "universal_invariants",
+          "meta",
+          "analyzer_sources",
+          "patterns",
+          "patterns_summary",
+          "cross_correlations",
+          "recommendations"
+        ],
+        "similarity": 0.0,
+        "common_keys": []
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.792664+00:00"
+    },
+    {
+      "violation_id": "semantic_extractions_analyses",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "extractions",
+        "analyses"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.01326530612244898,
+        "sample_text_a": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy",
+        "sample_text_b": "2025-10-02T21:16:38.504243+00:00 cultural_bias_type:culturel translator_bias_analyzer cultural_recurrence 2025-10-02T21:16:38.503991+00:00 cultural_bias_type:temporel translator_bias_analyzer cultural"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.795897+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_formats_compressions",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "formats",
+        "compressions"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.795967+00:00"
+    },
+    {
+      "violation_id": "structural_formats_compressions",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "formats",
+        "compressions"
+      ],
+      "description": "Structures très différentes: 0.06 similarité",
+      "evidence": {
+        "keys_a": [
+          "contextuals",
+          "universals",
+          "timestamp",
+          "success",
+          "integrity_validation",
+          "formats",
+          "cross_format_metrics",
+          "num_formats_compared"
+        ],
+        "keys_b": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "similarity": 0.0625,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.795988+00:00"
+    },
+    {
+      "violation_id": "semantic_formats_compressions",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "formats",
+        "compressions"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.011612903225806452,
+        "sample_text_a": "composition compression contextuelles Concept 1: Composition Fractale Concept 2: Symétries de Transformation Concept 3: Indépendance du Support Concept 4: Compression Sémantique Divergences Contextuel",
+        "sample_text_b": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.796847+00:00"
+    },
+    {
+      "violation_id": "structural_formats_projects",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "formats",
+        "projects"
+      ],
+      "description": "Structures très différentes: 0.09 similarité",
+      "evidence": {
+        "keys_a": [
+          "contextuals",
+          "universals",
+          "timestamp",
+          "success",
+          "integrity_validation",
+          "formats",
+          "cross_format_metrics",
+          "num_formats_compared"
+        ],
+        "keys_b": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "similarity": 0.09090909090909091,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.796931+00:00"
+    },
+    {
+      "violation_id": "semantic_formats_projects",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "formats",
+        "projects"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.012543345797607946,
+        "sample_text_a": "composition compression contextuelles Concept 1: Composition Fractale Concept 2: Symétries de Transformation Concept 3: Indépendance du Support Concept 4: Compression Sémantique Divergences Contextuel",
+        "sample_text_b": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.798408+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_formats_validations",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "formats",
+        "validations"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.798473+00:00"
+    },
+    {
+      "violation_id": "structural_formats_validations",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "formats",
+        "validations"
+      ],
+      "description": "Structures très différentes: 0.06 similarité",
+      "evidence": {
+        "keys_a": [
+          "contextuals",
+          "universals",
+          "timestamp",
+          "success",
+          "integrity_validation",
+          "formats",
+          "cross_format_metrics",
+          "num_formats_compared"
+        ],
+        "keys_b": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "similarity": 0.0625,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.798493+00:00"
+    },
+    {
+      "violation_id": "semantic_formats_validations",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "formats",
+        "validations"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.011612903225806452,
+        "sample_text_a": "composition compression contextuelles Concept 1: Composition Fractale Concept 2: Symétries de Transformation Concept 3: Indépendance du Support Concept 4: Compression Sémantique Divergences Contextuel",
+        "sample_text_b": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.799327+00:00"
+    },
+    {
+      "violation_id": "structural_formats_analyses",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "formats",
+        "analyses"
+      ],
+      "description": "Structures très différentes: 0.00 similarité",
+      "evidence": {
+        "keys_a": [
+          "contextuals",
+          "universals",
+          "timestamp",
+          "success",
+          "integrity_validation",
+          "formats",
+          "cross_format_metrics",
+          "num_formats_compared"
+        ],
+        "keys_b": [
+          "universal_invariants",
+          "meta",
+          "analyzer_sources",
+          "patterns",
+          "patterns_summary",
+          "cross_correlations",
+          "recommendations"
+        ],
+        "similarity": 0.0,
+        "common_keys": []
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.799408+00:00"
+    },
+    {
+      "violation_id": "semantic_formats_analyses",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "formats",
+        "analyses"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.01419265692854323,
+        "sample_text_a": "composition compression contextuelles Concept 1: Composition Fractale Concept 2: Symétries de Transformation Concept 3: Indépendance du Support Concept 4: Compression Sémantique Divergences Contextuel",
+        "sample_text_b": "2025-10-02T21:16:38.504243+00:00 cultural_bias_type:culturel translator_bias_analyzer cultural_recurrence 2025-10-02T21:16:38.503991+00:00 cultural_bias_type:temporel translator_bias_analyzer cultural"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.800465+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_compressions_projects",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "compressions",
+        "projects"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.800554+00:00"
+    },
+    {
+      "violation_id": "structural_compressions_projects",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "compressions",
+        "projects"
+      ],
+      "description": "Structures très différentes: 0.08 similarité",
+      "evidence": {
+        "keys_a": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "keys_b": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "similarity": 0.08333333333333333,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.800574+00:00"
+    },
+    {
+      "violation_id": "semantic_compressions_projects",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "compressions",
+        "projects"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.007252124645892351,
+        "sample_text_a": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e",
+        "sample_text_b": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.802433+00:00"
+    },
+    {
+      "violation_id": "structural_compressions_analyses",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "compressions",
+        "analyses"
+      ],
+      "description": "Structures très différentes: 0.00 similarité",
+      "evidence": {
+        "keys_a": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "keys_b": [
+          "universal_invariants",
+          "meta",
+          "analyzer_sources",
+          "patterns",
+          "patterns_summary",
+          "cross_correlations",
+          "recommendations"
+        ],
+        "similarity": 0.0,
+        "common_keys": []
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.804520+00:00"
+    },
+    {
+      "violation_id": "semantic_compressions_analyses",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "compressions",
+        "analyses"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.012763241863433313,
+        "sample_text_a": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e",
+        "sample_text_b": "2025-10-02T21:16:38.504243+00:00 cultural_bias_type:culturel translator_bias_analyzer cultural_recurrence 2025-10-02T21:16:38.503991+00:00 cultural_bias_type:temporel translator_bias_analyzer cultural"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.809478+00:00"
+    },
+    {
+      "violation_id": "temporal_parse_projects_validations",
+      "violation_type": "temporal_parse_error",
+      "severity": "low",
+      "domains": [
+        "projects",
+        "validations"
+      ],
+      "description": "Impossible de parser timestamps: can't subtract offset-naive and offset-aware datetimes",
+      "evidence": {
+        "error": "can't subtract offset-naive and offset-aware datetimes"
+      },
+      "confidence": 0.9,
+      "timestamp": "2025-10-02T21:16:38.809565+00:00"
+    },
+    {
+      "violation_id": "structural_projects_validations",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "projects",
+        "validations"
+      ],
+      "description": "Structures très différentes: 0.08 similarité",
+      "evidence": {
+        "keys_a": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "keys_b": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "similarity": 0.08333333333333333,
+        "common_keys": [
+          "timestamp"
+        ]
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.809586+00:00"
+    },
+    {
+      "violation_id": "semantic_projects_validations",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "projects",
+        "validations"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.009518413597733713,
+        "sample_text_a": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy",
+        "sample_text_b": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.813437+00:00"
+    },
+    {
+      "violation_id": "structural_projects_analyses",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "projects",
+        "analyses"
+      ],
+      "description": "Structures très différentes: 0.00 similarité",
+      "evidence": {
+        "keys_a": [
+          "preservation_recommendations",
+          "projects_analyzed",
+          "backlog_items",
+          "timestamp"
+        ],
+        "keys_b": [
+          "universal_invariants",
+          "meta",
+          "analyzer_sources",
+          "patterns",
+          "patterns_summary",
+          "cross_correlations",
+          "recommendations"
+        ],
+        "similarity": 0.0,
+        "common_keys": []
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.813500+00:00"
+    },
+    {
+      "violation_id": "semantic_projects_analyses",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "projects",
+        "analyses"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.01326530612244898,
+        "sample_text_a": "2025-10-01T15:42:06.330757+00:00 [INTERFACES] dhatu-api-gateway Centraliser accès APIs dhātu - Point d'entrée unifié écosystème STRATEGIC_REFACTORING_PLAN.md mission_alignment_analyzer.py panini_ecosy",
+        "sample_text_b": "2025-10-02T21:16:38.504243+00:00 cultural_bias_type:culturel translator_bias_analyzer cultural_recurrence 2025-10-02T21:16:38.503991+00:00 cultural_bias_type:temporel translator_bias_analyzer cultural"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.816701+00:00"
+    },
+    {
+      "violation_id": "structural_validations_analyses",
+      "violation_type": "structural_divergence",
+      "severity": "high",
+      "domains": [
+        "validations",
+        "analyses"
+      ],
+      "description": "Structures très différentes: 0.00 similarité",
+      "evidence": {
+        "keys_a": [
+          "total_tests",
+          "properties_validated",
+          "timestamp",
+          "validation_notes",
+          "failed_tests",
+          "passed_tests",
+          "theoretical_guarantees",
+          "tests",
+          "success_rate"
+        ],
+        "keys_b": [
+          "universal_invariants",
+          "meta",
+          "analyzer_sources",
+          "patterns",
+          "patterns_summary",
+          "cross_correlations",
+          "recommendations"
+        ],
+        "similarity": 0.0,
+        "common_keys": []
+      },
+      "confidence": 0.85,
+      "timestamp": "2025-10-02T21:16:38.816774+00:00"
+    },
+    {
+      "violation_id": "semantic_validations_analyses",
+      "violation_type": "semantic_incoherence",
+      "severity": "medium",
+      "domains": [
+        "validations",
+        "analyses"
+      ],
+      "description": "Faible cohérence sémantique: 0.01",
+      "evidence": {
+        "semantic_similarity": 0.012763241863433313,
+        "sample_text_a": "2025-10-01T21:55:18.681914 compress(text) → decompress() must equal text text == decompress(compress(text)) Original: 42 chars, Decompressed: 42 chars, Match: True compress(text) → decompress() must e",
+        "sample_text_b": "2025-10-02T21:16:38.504243+00:00 cultural_bias_type:culturel translator_bias_analyzer cultural_recurrence 2025-10-02T21:16:38.503991+00:00 cultural_bias_type:temporel translator_bias_analyzer cultural"
+      },
+      "confidence": 0.7,
+      "timestamp": "2025-10-02T21:16:38.821630+00:00"
+    }
+  ],
+  "semantic_invariants": [],
+  "statistics": {
+    "violation_types": {
+      "temporal_inconsistency": 3,
+      "semantic_incoherence": 19,
+      "structural_divergence": 17,
+      "temporal_parse_error": 8
+    },
+    "severity_distribution": {
+      "medium": 22,
+      "high": 17,
+      "low": 8
+    },
+    "average_preservation_rate": 0.0,
+    "coherence_score": 0.04081632653061229
+  },
+  "recommendations": [
+    "Synchroniser les timestamps entre domaines",
+    "Harmoniser les structures de données entre domaines"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "timestamp": "2025-10-02T21:20:38.029170+00:00",
+    "dashboard_version": "1.0.0 (text)",
+    "analysis_scope": "semantic_ecosystem"
+  },
+  "executive_summary": {
+    "global_semantic_score": 0.4858276643990929,
+    "analyzer_success_rate": 0.75,
+    "patterns_detected": 3,
+    "universal_patterns": 2,
+    "coherence_violations": 47,
+    "critical_violations": 0,
+    "coherence_score": 0.04081632653061229
+  },
+  "key_insights": [
+    "Base solide: 2 patterns universaux validés",
+    "Analyse cohérence cross-domain sur 7 domaines",
+    "Performance excellente: analyse complète sous 1 seconde",
+    "Biais culturels universels confirmés: 2 patterns"
+  ],
+  "recommendations": [
+    "Réparer 1 analyseurs défaillants",
+    "Score global faible - audit complet recommandé"
+  ],
+  "data_completeness": {
+    "orchestration": true,
+    "patterns": true,
+    "coherence": true,
+    "translators": true
+  }
+}

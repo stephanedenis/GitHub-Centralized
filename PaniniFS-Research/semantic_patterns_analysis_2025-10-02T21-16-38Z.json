@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "timestamp": "2025-10-02T21:16:38.504243+00:00",
+    "engine_version": "1.0.0",
+    "analyzers_count": 6,
+    "patterns_detected": 3,
+    "invariants_detected": 2
+  },
+  "patterns_summary": {
+    "universal": 2,
+    "hybrid": 1,
+    "contextual": 0,
+    "average_strength": 1.0,
+    "average_confidence": 0.8166666666666668
+  },
+  "patterns": [
+    {
+      "pattern_id": "cultural_bias_type:culturel",
+      "pattern_type": "universal",
+      "strength": 1.0,
+      "confidence": 0.85,
+      "sources": [
+        "translator_bias_analyzer"
+      ],
+      "evidence": [
+        {
+          "type": "cultural_recurrence",
+          "translators": [
+            "Jean Dupont",
+            "Maria González",
+            "राज शर्मा (Raj Sharma)"
+          ]
+        }
+      ],
+      "timestamp": "2025-10-02T21:16:38.503991+00:00"
+    },
+    {
+      "pattern_id": "cultural_bias_type:temporel",
+      "pattern_type": "universal",
+      "strength": 1.0,
+      "confidence": 0.85,
+      "sources": [
+        "translator_bias_analyzer"
+      ],
+      "evidence": [
+        {
+          "type": "cultural_recurrence",
+          "translators": [
+            "Jean Dupont",
+            "Maria González",
+            "राज शर्मा (Raj Sharma)"
+          ]
+        }
+      ],
+      "timestamp": "2025-10-02T21:16:38.504032+00:00"
+    },
+    {
+      "pattern_id": "meta_correlation_extraction_project_essence",
+      "pattern_type": "hybrid",
+      "strength": 1.0,
+      "confidence": 0.75,
+      "sources": [
+        "extraction",
+        "project_essence"
+      ],
+      "evidence": [
+        {
+          "correlation_score": 1.0
+        }
+      ],
+      "timestamp": "2025-10-02T21:16:38.504134+00:00"
+    }
+  ],
+  "universal_invariants": [
+    {
+      "invariant_id": "cultural_bias_universality",
+      "description": "Certains biais culturels apparaissent de manière universelle chez tous les traducteurs",
+      "mathematical_form": "∀ translator ∈ T: ∃ bias ∈ B_universal",
+      "evidence_count": 2,
+      "cross_format_validation": false,
+      "cross_analyzer_validation": true,
+      "universality_score": 0.7
+    },
+    {
+      "invariant_id": "semantic_structure_consistency",
+      "description": "Les structures sémantiques fondamentales sont cohérentes entre analyseurs",
+      "mathematical_form": "Structure(A₁) ≅ Structure(A₂) ≅ ... ≅ Structure(Aₙ)",
+      "evidence_count": 6,
+      "cross_format_validation": true,
+      "cross_analyzer_validation": true,
+      "universality_score": 1.0
+    }
+  ],
+  "analyzer_sources": [
+    "translator_bias",
+    "multiformat",
+    "extraction",
+    "project_essence",
+    "corpus_validation",
+    "compression_benchmarks"
+  ],
+  "cross_correlations": {
+    "translator_bias_x_multiformat": 0.07142857142857142,
+    "translator_bias_x_extraction": 0.1,
+    "translator_bias_x_project_essence": 0.1,
+    "translator_bias_x_corpus_validation": 0.08333333333333333,
+    "translator_bias_x_compression_benchmarks": 0.1,
+    "multiformat_x_extraction": 0.09090909090909091,
+    "multiformat_x_project_essence": 0.09090909090909091,
+    "multiformat_x_corpus_validation": 0.07692307692307693,
+    "multiformat_x_compression_benchmarks": 0.09090909090909091,
+    "extraction_x_project_essence": 1.0,
+    "extraction_x_corpus_validation": 0.1111111111111111,
+    "extraction_x_compression_benchmarks": 0.14285714285714285,
+    "project_essence_x_corpus_validation": 0.1111111111111111,
+    "project_essence_x_compression_benchmarks": 0.14285714285714285,
+    "corpus_validation_x_compression_benchmarks": 0.1111111111111111
+  },
+  "recommendations": []
+}

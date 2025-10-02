@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "timestamp": "2025-10-02T21:16:38.912487+00:00",
+    "orchestrator_version": "1.0.0",
+    "total_execution_time": 0.7377917766571045
+  },
+  "summary": {
+    "total_analyzers": 4,
+    "successful_analyzers": 3,
+    "failed_analyzers": 1,
+    "total_execution_time": 0.7377917766571045,
+    "output_files": [
+      "translator_bias_style_analysis.json",
+      "semantic_patterns_analysis_2025-10-02T21-16-38Z.json",
+      "semantic_coherence_analysis_2025-10-02T21-16-38Z.json"
+    ],
+    "cross_validation_score": 0.04242424242424242,
+    "unified_insights": [
+      "Détection de 2 patterns universaux cross-analyseurs",
+      "Couverture 7 domaines: analyses, compressions, extractions, formats, projects, translations, validations",
+      "Performance: 75.0% succès en 0.7s"
+    ]
+  },
+  "analyzer_results": [
+    {
+      "analyzer_name": "translator_bias",
+      "success": true,
+      "execution_time": 0.05811882019042969,
+      "output_file": "translator_bias_style_analysis.json",
+      "error_message": null,
+      "metadata": {
+        "stdout_lines": 109,
+        "stderr_lines": 0
+      }
+    },
+    {
+      "analyzer_name": "multiformat",
+      "success": false,
+      "execution_time": 0.06278705596923828,
+      "output_file": null,
+      "error_message": "Erreur inconnue",
+      "metadata": {}
+    },
+    {
+      "analyzer_name": "pattern_engine",
+      "success": true,
+      "execution_time": 0.23878955841064453,
+      "output_file": "semantic_patterns_analysis_2025-10-02T21-16-38Z.json",
+      "error_message": null,
+      "metadata": {
+        "stdout_lines": 48,
+        "stderr_lines": 0
+      }
+    },
+    {
+      "analyzer_name": "coherence",
+      "success": true,
+      "execution_time": 0.3744771480560303,
+      "output_file": "semantic_coherence_analysis_2025-10-02T21-16-38Z.json",
+      "error_message": null,
+      "metadata": {
+        "stdout_lines": 83,
+        "stderr_lines": 0
+      }
+    }
+  ],
+  "successful_outputs": [
+    "translator_bias_style_analysis.json",
+    "semantic_patterns_analysis_2025-10-02T21-16-38Z.json",
+    "semantic_coherence_analysis_2025-10-02T21-16-38Z.json"
+  ],
+  "failed_analyzers": [
+    "multiformat"
+  ],
+  "cross_validation": {
+    "score": 0.04242424242424242,
+    "interpretation": "Faible cohérence - problèmes méthodologiques"
+  },
+  "unified_insights": [
+    "Détection de 2 patterns universaux cross-analyseurs",
+    "Couverture 7 domaines: analyses, compressions, extractions, formats, projects, translations, validations",
+    "Performance: 75.0% succès en 0.7s"
+  ],
+  "recommendations": [
+    "Améliorer robustesse analyseurs - taux échec élevé"
+  ]
+}

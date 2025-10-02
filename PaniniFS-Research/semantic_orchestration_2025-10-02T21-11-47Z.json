@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "timestamp": "2025-10-02T21:11:47.600908+00:00",
+    "orchestrator_version": "1.0.0",
+    "total_execution_time": 0.7351269721984863
+  },
+  "summary": {
+    "total_analyzers": 4,
+    "successful_analyzers": 3,
+    "failed_analyzers": 1,
+    "total_execution_time": 0.7351269721984863,
+    "output_files": [
+      "translator_bias_style_analysis.json"
+    ],
+    "cross_validation_score": 0.0,
+    "unified_insights": [
+      "Performance: 75.0% succès en 0.7s"
+    ]
+  },
+  "analyzer_results": [
+    {
+      "analyzer_name": "translator_bias",
+      "success": true,
+      "execution_time": 0.058359622955322266,
+      "output_file": "translator_bias_style_analysis.json",
+      "error_message": null,
+      "metadata": {
+        "stdout_lines": 109,
+        "stderr_lines": 0
+      }
+    },
+    {
+      "analyzer_name": "multiformat",
+      "success": false,
+      "execution_time": 0.06498932838439941,
+      "output_file": null,
+      "error_message": "Erreur inconnue",
+      "metadata": {}
+    },
+    {
+      "analyzer_name": "pattern_engine",
+      "success": true,
+      "execution_time": 0.24486827850341797,
+      "output_file": null,
+      "error_message": null,
+      "metadata": {
+        "stdout_lines": 31,
+        "stderr_lines": 0
+      }
+    },
+    {
+      "analyzer_name": "coherence",
+      "success": true,
+      "execution_time": 0.36308813095092773,
+      "output_file": null,
+      "error_message": null,
+      "metadata": {
+        "stdout_lines": 75,
+        "stderr_lines": 0
+      }
+    }
+  ],
+  "successful_outputs": [
+    "translator_bias_style_analysis.json"
+  ],
+  "failed_analyzers": [
+    "multiformat"
+  ],
+  "cross_validation": {
+    "score": 0.0,
+    "interpretation": "Faible cohérence - problèmes méthodologiques"
+  },
+  "unified_insights": [
+    "Performance: 75.0% succès en 0.7s"
+  ],
+  "recommendations": [
+    "Améliorer robustesse analyseurs - taux échec élevé",
+    "Augmenter nombre sorties pour validation croisée"
+  ]
+}
