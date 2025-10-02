@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-10-01T22:22:19.455570",
+  "target_size": 100000,
+  "statistics": {
+    "total_sentences": 100000,
+    "unique_sentences": 15,
+    "duplication_rate": 99.98,
+    "languages": {
+      "fr": 20000,
+      "en": 20000,
+      "sa": 20000,
+      "es": 20000,
+      "de": 20000
+    },
+    "length_statistics": {
+      "average": 35.0,
+      "min": 24,
+      "max": 43
+    },
+    "quality": {
+      "malformed_count": 0,
+      "malformed_rate": 0.0
+    }
+  },
+  "quality_checks": {
+    "size_sufficient": {
+      "passed": true,
+      "target": 100000,
+      "actual": 100000,
+      "message": "✅ Taille: 100,000 / 100,000"
+    },
+    "duplicates_acceptable": {
+      "passed": false,
+      "threshold": 10,
+      "actual": 99.98,
+      "message": "⚠️ Doublons: 100.0% (seuil: <10%)"
+    },
+    "language_diversity": {
+      "passed": true,
+      "threshold": 3,
+      "actual": 5,
+      "message": "✅ Diversité: 5 langues (seuil: ≥3)"
+    },
+    "format_quality": {
+      "passed": true,
+      "threshold": 5,
+      "actual": 0.0,
+      "message": "✅ Format: 0.0% erreurs (seuil: <5%)"
+    },
+    "length_reasonable": {
+      "passed": true,
+      "min_threshold": 10,
+      "max_threshold": 200,
+      "actual": 35.0,
+      "message": "✅ Longueur moyenne: 35.0 caractères"
+    },
+    "overall_verdict": {
+      "passed": false,
+      "passed_count": 4,
+      "total_checks": 5
+    }
+  },
+  "validation_status": "FAILED",
+  "recommendations": [
+    "Réduire taux doublons (deduplication)",
+    "Résoudre checks échoués avant entraînement"
+  ]
+}

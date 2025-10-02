@@ -1,0 +1,258 @@
+{
+  "timestamp": "2025-10-01T21:55:18.681914",
+  "total_tests": 23,
+  "passed_tests": 23,
+  "failed_tests": 0,
+  "success_rate": 100.0,
+  "tests": [
+    {
+      "name": "symmetry_1",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 42,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 42 chars, Decompressed: 42 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.8203983306884766
+    },
+    {
+      "name": "symmetry_2",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 43,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 43 chars, Decompressed: 43 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.1628398895263672
+    },
+    {
+      "name": "symmetry_3",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 24,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 24 chars, Decompressed: 24 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.04792213439941406
+    },
+    {
+      "name": "symmetry_4",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 100,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 100 chars, Decompressed: 100 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.0362396240234375
+    },
+    {
+      "name": "symmetry_5",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 130,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 130 chars, Decompressed: 130 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.03933906555175781
+    },
+    {
+      "name": "symmetry_6",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 65,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 65 chars, Decompressed: 65 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.046253204345703125
+    },
+    {
+      "name": "symmetry_7",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 26,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 26 chars, Decompressed: 26 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.04315376281738281
+    },
+    {
+      "name": "symmetry_8",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 5,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 5 chars, Decompressed: 5 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.03337860107421875
+    },
+    {
+      "name": "symmetry_9",
+      "description": "compress(text) → decompress() must equal text",
+      "input_length": 1000,
+      "expected_property": "text == decompress(compress(text))",
+      "passed": true,
+      "actual_result": "Original: 1000 chars, Decompressed: 1000 chars, Match: True",
+      "error": null,
+      "execution_time_ms": 0.05245208740234375
+    },
+    {
+      "name": "determinism",
+      "description": "compress(text) must produce same output across 10 calls",
+      "input_length": 42,
+      "expected_property": "all compressed outputs identical",
+      "passed": true,
+      "actual_result": "10 iterations, All same: True",
+      "error": null,
+      "execution_time_ms": 0.015020370483398438
+    },
+    {
+      "name": "idempotence",
+      "description": "compress(compress(text)) should fail or equal compress(text)",
+      "input_length": 42,
+      "expected_property": "compression is one-way operation",
+      "passed": true,
+      "actual_result": "Once: 64 bytes, Twice: 118 bytes, Different: True",
+      "error": null,
+      "execution_time_ms": 0.046253204345703125
+    },
+    {
+      "name": "monotonicity_1",
+      "description": "Longer text should produce longer (or equal) compressed output",
+      "input_length": 67,
+      "expected_property": "len(compress(long)) >= len(compress(short))",
+      "passed": true,
+      "actual_result": "Short: 10→34 bytes, Long: 37→58 bytes, Monotonic: True",
+      "error": null,
+      "execution_time_ms": 0.0591278076171875
+    },
+    {
+      "name": "monotonicity_2",
+      "description": "Longer text should produce longer (or equal) compressed output",
+      "input_length": 80,
+      "expected_property": "len(compress(long)) >= len(compress(short))",
+      "passed": true,
+      "actual_result": "Short: 10→27 bytes, Long: 100→28 bytes, Monotonic: True",
+      "error": null,
+      "execution_time_ms": 0.030755996704101562
+    },
+    {
+      "name": "monotonicity_3",
+      "description": "Longer text should produce longer (or equal) compressed output",
+      "input_length": 64,
+      "expected_property": "len(compress(long)) >= len(compress(short))",
+      "passed": true,
+      "actual_result": "Short: 5→29 bytes, Long: 39→61 bytes, Monotonic: True",
+      "error": null,
+      "execution_time_ms": 0.05245208740234375
+    },
+    {
+      "name": "integrity_1",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 42,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: 9014f4b26ed17379..., Decompressed hash: 9014f4b26ed17379..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.025272369384765625
+    },
+    {
+      "name": "integrity_2",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 43,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: 59b0eeaefed2a7ba..., Decompressed hash: 59b0eeaefed2a7ba..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.018358230590820312
+    },
+    {
+      "name": "integrity_3",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 24,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: cc430b856fce4df6..., Decompressed hash: cc430b856fce4df6..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.0171661376953125
+    },
+    {
+      "name": "integrity_4",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 100,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: d82c6aa133a0fc25..., Decompressed hash: d82c6aa133a0fc25..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.013589859008789062
+    },
+    {
+      "name": "integrity_5",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 130,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: d8a7d3e7d620aa3c..., Decompressed hash: d8a7d3e7d620aa3c..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.0152587890625
+    },
+    {
+      "name": "integrity_6",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 65,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: 63b930d7424894e5..., Decompressed hash: 63b930d7424894e5..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.01621246337890625
+    },
+    {
+      "name": "integrity_7",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 26,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: 6ab47610a0481643..., Decompressed hash: 6ab47610a0481643..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.014543533325195312
+    },
+    {
+      "name": "integrity_8",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 5,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: f5d61ead3eefbf5c..., Decompressed hash: f5d61ead3eefbf5c..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.01239776611328125
+    },
+    {
+      "name": "integrity_9",
+      "description": "Hash of original must equal hash of decompressed",
+      "input_length": 1000,
+      "expected_property": "hash(text) == hash(decompress(compress(text)))",
+      "passed": true,
+      "actual_result": "Original hash: c2e686823489ced2..., Decompressed hash: c2e686823489ced2..., Match: True",
+      "error": null,
+      "execution_time_ms": 0.02956390380859375
+    }
+  ],
+  "properties_validated": {
+    "symmetry": true,
+    "determinism": true,
+    "idempotence": true,
+    "monotonicity": true,
+    "integrity": true
+  },
+  "theoretical_guarantees": {
+    "lossless": "YES",
+    "reproducible": "YES",
+    "one_way": "YES",
+    "monotonic_soft": "YES"
+  },
+  "validation_notes": {
+    "compose_decompose_symmetry": "compress → decompress cycle validated with 100% success rate",
+    "compose_operation": "Semantic compression with hash-based integrity",
+    "decompose_operation": "Lossless decompression with validation",
+    "cycle_integrity": "23/23 tests passed (symmetry + integrity combined)"
+  }
+}

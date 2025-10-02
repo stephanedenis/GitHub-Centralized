@@ -1,0 +1,158 @@
+{
+  "timestamp": "2025-10-01T22:20:23.831962",
+  "source": "/home/stephane/GitHub/PaniniFS-Research/COMPRESSOR_ARCHITECTURE_v1.md",
+  "compressed_api": {
+    "original_size_bytes": 1622,
+    "compressed_size_bytes": 411,
+    "compression_ratio_percent": 74.66,
+    "semantic_units_count": 9,
+    "semantic_units": [
+      "√dṛś",
+      "√gup",
+      "√jan",
+      "√kṛ",
+      "√kṣip",
+      "√nī",
+      "√pramā",
+      "√vicāra",
+      "√vṛdh"
+    ],
+    "methods_documented": 9,
+    "methods": [
+      {
+        "name": "compress",
+        "description": "Compress text to semantic representation with guide",
+        "parameters": [
+          {
+            "name": "text",
+            "type": "str"
+          },
+          {
+            "name": "target_lang",
+            "type": "str",
+            "optional": "True"
+          }
+        ],
+        "returns": "CompressedData",
+        "complexity": "O(n*d)"
+      },
+      {
+        "name": "decompress",
+        "description": "Decompress semantic stream to original text (100% identical)",
+        "parameters": [
+          {
+            "name": "compressed",
+            "type": "CompressedData"
+          }
+        ],
+        "returns": "str",
+        "complexity": "O(n*g)"
+      },
+      {
+        "name": "validate_integrity",
+        "description": "Validate decompressed output matches original",
+        "parameters": [
+          {
+            "name": "original",
+            "type": "str"
+          },
+          {
+            "name": "decompressed",
+            "type": "str"
+          }
+        ],
+        "returns": "bool",
+        "complexity": "O(n)"
+      },
+      {
+        "name": "analyze_guide",
+        "description": "Analyze restitution guide for research insights",
+        "parameters": [
+          {
+            "name": "compressed",
+            "type": "CompressedData"
+          }
+        ],
+        "returns": "GuideAnalysis",
+        "complexity": "O(g)"
+      },
+      {
+        "name": "extract_dhatu",
+        "description": "Extract dhātu roots from text",
+        "parameters": [
+          {
+            "name": "text",
+            "type": "str"
+          },
+          {
+            "name": "lang",
+            "type": "str"
+          }
+        ],
+        "returns": "List[DhatuMatch]",
+        "complexity": "O(n*d)"
+      },
+      {
+        "name": "detect_patterns",
+        "description": "Detect linguistic patterns in text",
+        "parameters": [
+          {
+            "name": "text",
+            "type": "str"
+          }
+        ],
+        "returns": "List[Pattern]",
+        "complexity": "O(n*p)"
+      },
+      {
+        "name": "build_semantic_graph",
+        "description": "Build semantic graph from text",
+        "parameters": [
+          {
+            "name": "text",
+            "type": "str"
+          }
+        ],
+        "returns": "SemanticGraph",
+        "complexity": "O(n^2)"
+      },
+      {
+        "name": "encode_huffman",
+        "description": "Encode data with Huffman compression",
+        "parameters": [
+          {
+            "name": "data",
+            "type": "bytes"
+          },
+          {
+            "name": "freq_table",
+            "type": "Dict[str, int]"
+          }
+        ],
+        "returns": "bytes",
+        "complexity": "O(n log n)"
+      },
+      {
+        "name": "generate_from_semantic",
+        "description": "Generate text from semantic representation",
+        "parameters": [
+          {
+            "name": "semantic",
+            "type": "SemanticRepresentation"
+          },
+          {
+            "name": "target_lang",
+            "type": "str"
+          }
+        ],
+        "returns": "str",
+        "complexity": "O(n*g)"
+      }
+    ]
+  },
+  "conclusion": {
+    "semantic_compression_viable": true,
+    "methods_covered": 9,
+    "dhatu_roots_used": 9
+  }
+}

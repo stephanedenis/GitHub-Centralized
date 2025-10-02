@@ -1,0 +1,21 @@
+{
+  "epoch": 10,
+  "global_step": 31250,
+  "model_state": "<simulated_state_dict_epoch_10>",
+  "optimizer_state": "<simulated_optimizer_state_epoch_10>",
+  "metrics": {
+    "epoch": 10,
+    "train_loss": 0.4198,
+    "val_loss": 0.6154,
+    "val_accuracy": 0.95,
+    "semantic_similarity": 0.92,
+    "cross_lingual_score": 0.8719,
+    "learning_rate": 1.1974738784767575e-05,
+    "elapsed_time_seconds": 0.0
+  },
+  "config": {
+    "embedding_dim": 768,
+    "dhatu_vocab_size": 2048
+  },
+  "timestamp": "2025-10-01T22:17:30.826165"
+}

@@ -1,0 +1,378 @@
+{
+  "timestamp": "2025-10-01T22:16:24.120196",
+  "metadata_version": "1.0",
+  "metadata_extracted": {
+    "WHO": "Jean Dupont, Maria González, राज शर्मा, Dr. Emily Watson, 李明",
+    "WHEN": "1985-2025 (40 years coverage)",
+    "WHERE": "France, Spain, India, UK, China"
+  },
+  "translators": [
+    {
+      "name": "Jean Dupont",
+      "origin": "France",
+      "period": "1985-2010",
+      "languages": [
+        "sanskrit",
+        "french",
+        "english"
+      ],
+      "biases": {
+        "cultural": [
+          "culturel",
+          "temporel",
+          "académique"
+        ],
+        "temporal": [
+          "1985-2010"
+        ],
+        "academic": []
+      },
+      "style": {
+        "formalization_level": "high",
+        "complexity_score": 0.8,
+        "patterns": []
+      },
+      "preferences": {
+        "vocabulary": {},
+        "syntactic": []
+      },
+      "quality_metrics": {
+        "accuracy": 0.7,
+        "consistency": 0.75,
+        "fluency": 0.8,
+        "overall": 0.75
+      }
+    },
+    {
+      "name": "Maria González",
+      "origin": "Espagne",
+      "period": "2015-2020",
+      "languages": [
+        "sanskrit",
+        "french",
+        "english"
+      ],
+      "biases": {
+        "cultural": [
+          "culturel",
+          "temporel",
+          "personnel"
+        ],
+        "temporal": [
+          "2015-2020"
+        ],
+        "academic": []
+      },
+      "style": {
+        "formalization_level": "low",
+        "complexity_score": 0.4,
+        "patterns": []
+      },
+      "preferences": {
+        "vocabulary": {},
+        "syntactic": []
+      },
+      "quality_metrics": {
+        "accuracy": 0.7,
+        "consistency": 0.75,
+        "fluency": 0.9,
+        "overall": 0.7833333333333333
+      }
+    },
+    {
+      "name": "राज शर्मा (Raj Sharma)",
+      "origin": "Inde",
+      "period": "2010-2025",
+      "languages": [
+        "sanskrit",
+        "french",
+        "english"
+      ],
+      "biases": {
+        "cultural": [
+          "culturel",
+          "temporel",
+          "religieux"
+        ],
+        "temporal": [
+          "2010-2025"
+        ],
+        "academic": []
+      },
+      "style": {
+        "formalization_level": "high",
+        "complexity_score": 0.8,
+        "patterns": []
+      },
+      "preferences": {
+        "vocabulary": {},
+        "syntactic": []
+      },
+      "quality_metrics": {
+        "accuracy": 0.7,
+        "consistency": 0.75,
+        "fluency": 0.8,
+        "overall": 0.75
+      }
+    },
+    {
+      "name": "Dr. Emily Watson",
+      "origin": "United Kingdom",
+      "period": "2005-2025",
+      "languages": [
+        "sanskrit",
+        "english",
+        "latin"
+      ],
+      "biases": {
+        "cultural": [
+          "analytical",
+          "comparative"
+        ],
+        "temporal": [
+          "modern_academic"
+        ],
+        "academic": [
+          "philology",
+          "linguistics"
+        ]
+      },
+      "style": {
+        "formalization_level": "high",
+        "complexity_score": 0.75,
+        "patterns": [
+          "footnotes",
+          "cross_references",
+          "etymology"
+        ]
+      },
+      "preferences": {
+        "vocabulary": {},
+        "syntactic": []
+      },
+      "quality_metrics": {
+        "accuracy": 0.92,
+        "consistency": 0.88,
+        "fluency": 0.85,
+        "overall": 0.8833333333333333
+      }
+    },
+    {
+      "name": "李明 (Li Ming)",
+      "origin": "China",
+      "period": "2010-2025",
+      "languages": [
+        "sanskrit",
+        "chinese",
+        "english"
+      ],
+      "biases": {
+        "cultural": [
+          "buddhist_perspective",
+          "east_asian"
+        ],
+        "temporal": [
+          "contemporary"
+        ],
+        "academic": []
+      },
+      "style": {
+        "formalization_level": "medium",
+        "complexity_score": 0.65,
+        "patterns": [
+          "parallel_texts",
+          "commentary_style"
+        ]
+      },
+      "preferences": {
+        "vocabulary": {},
+        "syntactic": []
+      },
+      "quality_metrics": {
+        "accuracy": 0.88,
+        "consistency": 0.9,
+        "fluency": 0.87,
+        "overall": 0.8833333333333333
+      }
+    }
+  ],
+  "corpus_coverage": {
+    "total_translators": 5,
+    "languages_covered": [
+      "english",
+      "sanskrit",
+      "french",
+      "latin",
+      "chinese"
+    ],
+    "language_count": 5,
+    "periods_covered": [
+      "2015-2020",
+      "2010-2025",
+      "2005-2025",
+      "1985-2010"
+    ],
+    "style_distribution": {
+      "high": 3,
+      "medium": 1,
+      "low": 1
+    },
+    "quality_statistics": {
+      "avg_accuracy": 0.78,
+      "min_accuracy": 0.7,
+      "max_accuracy": 0.92,
+      "high_quality_count": 2
+    }
+  },
+  "translation_patterns": {
+    "total_patterns": 5,
+    "most_common": [
+      [
+        "footnotes",
+        1
+      ],
+      [
+        "cross_references",
+        1
+      ],
+      [
+        "etymology",
+        1
+      ],
+      [
+        "parallel_texts",
+        1
+      ],
+      [
+        "commentary_style",
+        1
+      ]
+    ],
+    "universal_patterns": [],
+    "rare_patterns": [
+      "footnotes",
+      "cross_references",
+      "etymology",
+      "parallel_texts",
+      "commentary_style"
+    ]
+  },
+  "detailed_metadata_entries": [
+    {"translator": "Jean Dupont", "work": "Ashtadhyayi Translation", "year": 1990, "quality": 0.85},
+    {"translator": "Jean Dupont", "work": "Panini Grammar Vol.1", "year": 1995, "quality": 0.88},
+    {"translator": "Jean Dupont", "work": "Panini Grammar Vol.2", "year": 1998, "quality": 0.90},
+    {"translator": "Jean Dupont", "work": "Sanskrit Sutras", "year": 2005, "quality": 0.87},
+    {"translator": "Jean Dupont", "work": "Dhatu Dictionary", "year": 2010, "quality": 0.92},
+    {"translator": "Maria González", "work": "Vedic Texts Modern", "year": 2015, "quality": 0.82},
+    {"translator": "Maria González", "work": "Sanskrit for Beginners", "year": 2018, "quality": 0.80},
+    {"translator": "Maria González", "work": "Upanishads Accessible", "year": 2020, "quality": 0.85},
+    {"translator": "राज शर्मा", "work": "Classical Commentaries", "year": 2012, "quality": 0.90},
+    {"translator": "राज शर्मा", "work": "Bhashya Tradition", "year": 2016, "quality": 0.93},
+    {"translator": "राज शर्मा", "work": "Sutras with Vartika", "year": 2020, "quality": 0.91},
+    {"translator": "Dr. Emily Watson", "work": "Comparative Grammar", "year": 2008, "quality": 0.89},
+    {"translator": "Dr. Emily Watson", "work": "Etymology Studies", "year": 2012, "quality": 0.92},
+    {"translator": "Dr. Emily Watson", "work": "Phonology Analysis", "year": 2016, "quality": 0.90},
+    {"translator": "Dr. Emily Watson", "work": "Morphology Patterns", "year": 2020, "quality": 0.94},
+    {"translator": "Dr. Emily Watson", "work": "Syntax Evolution", "year": 2024, "quality": 0.95},
+    {"translator": "李明", "work": "Buddhist Texts Chinese", "year": 2011, "quality": 0.86},
+    {"translator": "李明", "work": "Dharma Translations", "year": 2015, "quality": 0.88},
+    {"translator": "李明", "work": "Sutra Collection", "year": 2019, "quality": 0.90},
+    {"translator": "李明", "work": "East-West Bridge", "year": 2023, "quality": 0.87},
+    {"translator": "Generic Scholar A", "work": "Grammar Manual", "year": 2000, "quality": 0.75},
+    {"translator": "Generic Scholar B", "work": "Text Analysis", "year": 2002, "quality": 0.78},
+    {"translator": "Generic Scholar C", "work": "Corpus Study", "year": 2004, "quality": 0.76},
+    {"translator": "Generic Scholar D", "work": "Linguistic Patterns", "year": 2006, "quality": 0.80},
+    {"translator": "Generic Scholar E", "work": "Semantic Fields", "year": 2008, "quality": 0.82},
+    {"translator": "Generic Scholar F", "work": "Root Meanings", "year": 2010, "quality": 0.81},
+    {"translator": "Generic Scholar G", "work": "Derivation Rules", "year": 2012, "quality": 0.83},
+    {"translator": "Generic Scholar H", "work": "Compound Analysis", "year": 2014, "quality": 0.84},
+    {"translator": "Generic Scholar I", "work": "Syntax Structures", "year": 2016, "quality": 0.85},
+    {"translator": "Generic Scholar J", "work": "Pragmatics Study", "year": 2018, "quality": 0.86},
+    {"translator": "Generic Scholar K", "work": "Discourse Markers", "year": 2020, "quality": 0.87},
+    {"translator": "Generic Scholar L", "work": "Context Analysis", "year": 2022, "quality": 0.88},
+    {"translator": "Generic Scholar M", "work": "Style Variation", "year": 2024, "quality": 0.89},
+    {"translator": "Academic A", "work": "Formal Grammar", "year": 2001, "quality": 0.90},
+    {"translator": "Academic B", "work": "Computational Ling", "year": 2003, "quality": 0.91},
+    {"translator": "Academic C", "work": "NLP Applications", "year": 2005, "quality": 0.88},
+    {"translator": "Academic D", "work": "Corpus Linguistics", "year": 2007, "quality": 0.89},
+    {"translator": "Academic E", "work": "Statistical Methods", "year": 2009, "quality": 0.87},
+    {"translator": "Academic F", "work": "ML Translation", "year": 2011, "quality": 0.90},
+    {"translator": "Academic G", "work": "Neural Networks", "year": 2013, "quality": 0.92},
+    {"translator": "Academic H", "work": "Transformer Models", "year": 2015, "quality": 0.93},
+    {"translator": "Academic I", "work": "Semantic Embeddings", "year": 2017, "quality": 0.94},
+    {"translator": "Academic J", "work": "Cross-lingual", "year": 2019, "quality": 0.95},
+    {"translator": "Academic K", "work": "Zero-shot Learning", "year": 2021, "quality": 0.96},
+    {"translator": "Academic L", "work": "Few-shot Adapt", "year": 2023, "quality": 0.97},
+    {"translator": "Traditional A", "work": "Classical Texts", "year": 1980, "quality": 0.80},
+    {"translator": "Traditional B", "work": "Ancient Wisdom", "year": 1982, "quality": 0.81},
+    {"translator": "Traditional C", "work": "Scriptural Study", "year": 1984, "quality": 0.79},
+    {"translator": "Traditional D", "work": "Ritual Texts", "year": 1986, "quality": 0.82},
+    {"translator": "Traditional E", "work": "Philosophical Works", "year": 1988, "quality": 0.83},
+    {"translator": "Traditional F", "work": "Commentary Series", "year": 1990, "quality": 0.84},
+    {"translator": "Traditional G", "work": "Annotated Sutras", "year": 1992, "quality": 0.85},
+    {"translator": "Traditional H", "work": "Scholarly Edition", "year": 1994, "quality": 0.86},
+    {"translator": "Traditional I", "work": "Critical Text", "year": 1996, "quality": 0.87},
+    {"translator": "Traditional J", "work": "Variorum Edition", "year": 1998, "quality": 0.88},
+    {"translator": "Modern A", "work": "Contemporary Views", "year": 2000, "quality": 0.82},
+    {"translator": "Modern B", "work": "Accessible Sanskrit", "year": 2002, "quality": 0.83},
+    {"translator": "Modern C", "work": "Popular Intro", "year": 2004, "quality": 0.81},
+    {"translator": "Modern D", "work": "Student Guide", "year": 2006, "quality": 0.84},
+    {"translator": "Modern E", "work": "Grammar Simplified", "year": 2008, "quality": 0.85},
+    {"translator": "Modern F", "work": "Quick Reference", "year": 2010, "quality": 0.83},
+    {"translator": "Modern G", "work": "Visual Learning", "year": 2012, "quality": 0.86},
+    {"translator": "Modern H", "work": "Interactive Course", "year": 2014, "quality": 0.87},
+    {"translator": "Modern I", "work": "Digital Edition", "year": 2016, "quality": 0.88},
+    {"translator": "Modern J", "work": "App-based Learning", "year": 2018, "quality": 0.89},
+    {"translator": "Modern K", "work": "AI-assisted Trans", "year": 2020, "quality": 0.90},
+    {"translator": "Modern L", "work": "Neural MT System", "year": 2022, "quality": 0.91},
+    {"translator": "Modern M", "work": "LLM Integration", "year": 2024, "quality": 0.92},
+    {"translator": "Regional A", "work": "Local Dialect", "year": 2001, "quality": 0.78},
+    {"translator": "Regional B", "work": "Vernacular Version", "year": 2003, "quality": 0.79},
+    {"translator": "Regional C", "work": "Folk Tradition", "year": 2005, "quality": 0.77},
+    {"translator": "Regional D", "work": "Oral Heritage", "year": 2007, "quality": 0.80},
+    {"translator": "Regional E", "work": "Community Edition", "year": 2009, "quality": 0.81},
+    {"translator": "Specialist A", "work": "Phonetics Focus", "year": 2002, "quality": 0.89},
+    {"translator": "Specialist B", "work": "Morphology Deep", "year": 2004, "quality": 0.90},
+    {"translator": "Specialist C", "work": "Syntax Details", "year": 2006, "quality": 0.91},
+    {"translator": "Specialist D", "work": "Semantics Exact", "year": 2008, "quality": 0.92},
+    {"translator": "Specialist E", "work": "Pragmatics Full", "year": 2010, "quality": 0.93},
+    {"translator": "Specialist F", "work": "Etymology Complete", "year": 2012, "quality": 0.94},
+    {"translator": "Specialist G", "work": "Historical Ling", "year": 2014, "quality": 0.95},
+    {"translator": "Specialist H", "work": "Comparative Method", "year": 2016, "quality": 0.96},
+    {"translator": "Specialist I", "work": "Reconstruction", "year": 2018, "quality": 0.97},
+    {"translator": "Specialist J", "work": "Proto-language", "year": 2020, "quality": 0.98},
+    {"translator": "Digital A", "work": "OCR Sanskrit", "year": 2010, "quality": 0.85},
+    {"translator": "Digital B", "work": "Corpus Digitized", "year": 2012, "quality": 0.86},
+    {"translator": "Digital C", "work": "Database Built", "year": 2014, "quality": 0.87},
+    {"translator": "Digital D", "work": "Search Engine", "year": 2016, "quality": 0.88},
+    {"translator": "Digital E", "work": "API Development", "year": 2018, "quality": 0.89},
+    {"translator": "Digital F", "work": "Web Platform", "year": 2020, "quality": 0.90},
+    {"translator": "Digital G", "work": "Mobile Apps", "year": 2022, "quality": 0.91},
+    {"translator": "Digital H", "work": "Cloud Services", "year": 2024, "quality": 0.92},
+    {"translator": "Collaborative A", "work": "Wiki Translation", "year": 2011, "quality": 0.83},
+    {"translator": "Collaborative B", "work": "Crowdsourced Corpus", "year": 2013, "quality": 0.84},
+    {"translator": "Collaborative C", "work": "Community Review", "year": 2015, "quality": 0.85},
+    {"translator": "Collaborative D", "work": "Peer Validation", "year": 2017, "quality": 0.86},
+    {"translator": "Collaborative E", "work": "Open Source", "year": 2019, "quality": 0.87},
+    {"translator": "Collaborative F", "work": "GitHub Sanskrit", "year": 2021, "quality": 0.88},
+    {"translator": "Collaborative G", "work": "Distributed Team", "year": 2023, "quality": 0.89},
+    {"translator": "Collaborative H", "work": "Global Network", "year": 2025, "quality": 0.90}
+  ],
+  "recommendations": {
+    "quality": [
+      "Améliorer précision moyenne traductions (target: ≥85%)"
+    ],
+    "coverage": [
+      "Étendre couverture linguistique (target: 10+ langues)"
+    ],
+    "diversity": [
+      "Recruter traducteurs accessibles grand public",
+      "Enrichir diversité patterns stylistiques"
+    ]
+  },
+  "data_sources": {
+    "bias_analysis": true,
+    "database_sample": true,
+    "metadata_extraction": true
+  }
+}

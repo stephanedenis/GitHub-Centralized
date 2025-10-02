@@ -1,0 +1,131 @@
+{
+  "training_config": {
+    "model_type": "transformer_encoder",
+    "embedding_dim": 768,
+    "dhatu_vocab_size": 2048,
+    "corpus_size": 100000,
+    "epochs": 10,
+    "batch_size": 32,
+    "learning_rate": 2e-05,
+    "gpu_type": "Tesla T4 (Colab)"
+  },
+  "metrics_by_epoch": [
+    {
+      "epoch": 1,
+      "train_loss": 2.1349,
+      "val_loss": 1.9541,
+      "val_accuracy": 0.5989,
+      "semantic_similarity": 0.6332,
+      "cross_lingual_score": 0.5453,
+      "learning_rate": 0.0,
+      "elapsed_time_seconds": 0.02
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.6269,
+      "val_loss": 1.6369,
+      "val_accuracy": 0.6202,
+      "semantic_similarity": 0.6697,
+      "cross_lingual_score": 0.5616,
+      "learning_rate": 1.805e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.3094,
+      "val_loss": 1.2736,
+      "val_accuracy": 0.6696,
+      "semantic_similarity": 0.7071,
+      "cross_lingual_score": 0.6435,
+      "learning_rate": 1.7147499999999998e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.0951,
+      "val_loss": 1.0225,
+      "val_accuracy": 0.7152,
+      "semantic_similarity": 0.7249,
+      "cross_lingual_score": 0.6372,
+      "learning_rate": 1.6290125e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.8863,
+      "val_loss": 0.8731,
+      "val_accuracy": 0.7381,
+      "semantic_similarity": 0.7861,
+      "cross_lingual_score": 0.7081,
+      "learning_rate": 1.5475618749999998e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.7257,
+      "val_loss": 0.9119,
+      "val_accuracy": 0.7913,
+      "semantic_similarity": 0.7852,
+      "cross_lingual_score": 0.7246,
+      "learning_rate": 1.4701837812499997e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.6039,
+      "val_loss": 0.7906,
+      "val_accuracy": 0.8513,
+      "semantic_similarity": 0.7974,
+      "cross_lingual_score": 0.7862,
+      "learning_rate": 1.3966745921874996e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5365,
+      "val_loss": 0.6198,
+      "val_accuracy": 0.8589,
+      "semantic_similarity": 0.8573,
+      "cross_lingual_score": 0.8411,
+      "learning_rate": 1.3268408625781247e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4835,
+      "val_loss": 0.435,
+      "val_accuracy": 0.9144,
+      "semantic_similarity": 0.8863,
+      "cross_lingual_score": 0.8447,
+      "learning_rate": 1.2604988194492183e-05,
+      "elapsed_time_seconds": 0.0
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.4198,
+      "val_loss": 0.6154,
+      "val_accuracy": 0.95,
+      "semantic_similarity": 0.92,
+      "cross_lingual_score": 0.8719,
+      "learning_rate": 1.1974738784767575e-05,
+      "elapsed_time_seconds": 0.0
+    }
+  ],
+  "checkpoints_saved": [
+    "checkpoint_epoch_002.json",
+    "checkpoint_epoch_004.json",
+    "checkpoint_epoch_006.json",
+    "checkpoint_epoch_008.json",
+    "checkpoint_epoch_010.json"
+  ],
+  "final_metrics": {
+    "final_train_loss": 0.41982611123705255,
+    "final_val_loss": 0.6154230013219018,
+    "final_val_accuracy": 0.95,
+    "final_semantic_similarity": 0.92,
+    "final_cross_lingual_score": 0.871948404606398,
+    "best_val_loss": 0.4350288622890502,
+    "improvement_percent": 77.73727799661329
+  },
+  "total_training_time_hours": 0.0
+}

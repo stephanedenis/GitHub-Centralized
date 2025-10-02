@@ -1,0 +1,487 @@
+{
+  "timestamp": "2025-10-01T22:15:04.745293",
+  "benchmarks_by_corpus": [
+    {
+      "timestamp": "2025-10-01T22:15:04.526933",
+      "corpus": {
+        "name": "sanskrit_panini",
+        "size_bytes": 1169,
+        "languages": [
+          "sanskrit_panini",
+          "french_literary",
+          "english_technical",
+          "python_code",
+          "json_structured"
+        ]
+      },
+      "results": [
+        {
+          "algorithm": "gzip-9",
+          "original_size_bytes": 1169,
+          "compressed_size_bytes": 372,
+          "compression_ratio_percent": 68.18,
+          "compression_time_ms": 0.308,
+          "decompression_time_ms": 0.063,
+          "compression_speed_mbps": 3.62,
+          "decompression_speed_mbps": 17.78,
+          "integrity_valid": true,
+          "memory_peak_kb": 1
+        },
+        {
+          "algorithm": "bzip2-9",
+          "original_size_bytes": 1169,
+          "compressed_size_bytes": 296,
+          "compression_ratio_percent": 74.68,
+          "compression_time_ms": 0.337,
+          "decompression_time_ms": 0.084,
+          "compression_speed_mbps": 3.31,
+          "decompression_speed_mbps": 13.28,
+          "integrity_valid": true,
+          "memory_peak_kb": 1
+        },
+        {
+          "algorithm": "lzma-9",
+          "original_size_bytes": 1169,
+          "compressed_size_bytes": 412,
+          "compression_ratio_percent": 64.76,
+          "compression_time_ms": 20.906,
+          "decompression_time_ms": 0.096,
+          "compression_speed_mbps": 0.05,
+          "decompression_speed_mbps": 11.6,
+          "integrity_valid": true,
+          "memory_peak_kb": 1
+        },
+        {
+          "algorithm": "zlib-9",
+          "original_size_bytes": 1169,
+          "compressed_size_bytes": 360,
+          "compression_ratio_percent": 69.2,
+          "compression_time_ms": 0.178,
+          "decompression_time_ms": 0.02,
+          "compression_speed_mbps": 6.25,
+          "decompression_speed_mbps": 57.02,
+          "integrity_valid": true,
+          "memory_peak_kb": 1
+        },
+        {
+          "algorithm": "semantic-mock",
+          "original_size_bytes": 1169,
+          "compressed_size_bytes": 428,
+          "compression_ratio_percent": 63.39,
+          "compression_time_ms": 20.748,
+          "decompression_time_ms": 0.117,
+          "compression_speed_mbps": 0.05,
+          "decompression_speed_mbps": 9.54,
+          "integrity_valid": true,
+          "memory_peak_kb": 1
+        }
+      ],
+      "winners": {
+        "best_ratio": "bzip2-9",
+        "fastest_compression": "zlib-9",
+        "fastest_decompression": "zlib-9"
+      },
+      "summary": {
+        "best_compression_ratio": "bzip2-9",
+        "fastest_compression": "zlib-9",
+        "fastest_decompression": "zlib-9",
+        "avg_compression_ratio": 68.04,
+        "avg_compression_time_ms": 8.5
+      }
+    },
+    {
+      "timestamp": "2025-10-01T22:15:04.570299",
+      "corpus": {
+        "name": "french_literary",
+        "size_bytes": 787,
+        "languages": [
+          "sanskrit_panini",
+          "french_literary",
+          "english_technical",
+          "python_code",
+          "json_structured"
+        ]
+      },
+      "results": [
+        {
+          "algorithm": "gzip-9",
+          "original_size_bytes": 787,
+          "compressed_size_bytes": 460,
+          "compression_ratio_percent": 41.55,
+          "compression_time_ms": 0.095,
+          "decompression_time_ms": 0.049,
+          "compression_speed_mbps": 7.89,
+          "decompression_speed_mbps": 15.21,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "bzip2-9",
+          "original_size_bytes": 787,
+          "compressed_size_bytes": 474,
+          "compression_ratio_percent": 39.77,
+          "compression_time_ms": 0.26,
+          "decompression_time_ms": 0.087,
+          "compression_speed_mbps": 2.89,
+          "decompression_speed_mbps": 8.67,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "lzma-9",
+          "original_size_bytes": 787,
+          "compressed_size_bytes": 576,
+          "compression_ratio_percent": 26.81,
+          "compression_time_ms": 20.857,
+          "decompression_time_ms": 0.105,
+          "compression_speed_mbps": 0.04,
+          "decompression_speed_mbps": 7.12,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "zlib-9",
+          "original_size_bytes": 787,
+          "compressed_size_bytes": 448,
+          "compression_ratio_percent": 43.07,
+          "compression_time_ms": 0.124,
+          "decompression_time_ms": 0.022,
+          "compression_speed_mbps": 6.07,
+          "decompression_speed_mbps": 33.85,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "semantic-mock",
+          "original_size_bytes": 787,
+          "compressed_size_bytes": 592,
+          "compression_ratio_percent": 24.78,
+          "compression_time_ms": 20.631,
+          "decompression_time_ms": 0.136,
+          "compression_speed_mbps": 0.04,
+          "decompression_speed_mbps": 5.53,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        }
+      ],
+      "winners": {
+        "best_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9"
+      },
+      "summary": {
+        "best_compression_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9",
+        "avg_compression_ratio": 35.2,
+        "avg_compression_time_ms": 8.39
+      }
+    },
+    {
+      "timestamp": "2025-10-01T22:15:04.613096",
+      "corpus": {
+        "name": "english_technical",
+        "size_bytes": 980,
+        "languages": [
+          "sanskrit_panini",
+          "french_literary",
+          "english_technical",
+          "python_code",
+          "json_structured"
+        ]
+      },
+      "results": [
+        {
+          "algorithm": "gzip-9",
+          "original_size_bytes": 980,
+          "compressed_size_bytes": 571,
+          "compression_ratio_percent": 41.73,
+          "compression_time_ms": 0.102,
+          "decompression_time_ms": 0.046,
+          "compression_speed_mbps": 9.16,
+          "decompression_speed_mbps": 20.21,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "bzip2-9",
+          "original_size_bytes": 980,
+          "compressed_size_bytes": 609,
+          "compression_ratio_percent": 37.86,
+          "compression_time_ms": 0.329,
+          "decompression_time_ms": 0.101,
+          "compression_speed_mbps": 2.84,
+          "decompression_speed_mbps": 9.27,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "lzma-9",
+          "original_size_bytes": 980,
+          "compressed_size_bytes": 680,
+          "compression_ratio_percent": 30.61,
+          "compression_time_ms": 21.618,
+          "decompression_time_ms": 0.121,
+          "compression_speed_mbps": 0.04,
+          "decompression_speed_mbps": 7.72,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "zlib-9",
+          "original_size_bytes": 980,
+          "compressed_size_bytes": 559,
+          "compression_ratio_percent": 42.96,
+          "compression_time_ms": 0.148,
+          "decompression_time_ms": 0.024,
+          "compression_speed_mbps": 6.31,
+          "decompression_speed_mbps": 38.81,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "semantic-mock",
+          "original_size_bytes": 980,
+          "compressed_size_bytes": 696,
+          "compression_ratio_percent": 28.98,
+          "compression_time_ms": 21.245,
+          "decompression_time_ms": 0.13,
+          "compression_speed_mbps": 0.04,
+          "decompression_speed_mbps": 7.17,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        }
+      ],
+      "winners": {
+        "best_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9"
+      },
+      "summary": {
+        "best_compression_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9",
+        "avg_compression_ratio": 36.43,
+        "avg_compression_time_ms": 8.69
+      }
+    },
+    {
+      "timestamp": "2025-10-01T22:15:04.657425",
+      "corpus": {
+        "name": "python_code",
+        "size_bytes": 855,
+        "languages": [
+          "sanskrit_panini",
+          "french_literary",
+          "english_technical",
+          "python_code",
+          "json_structured"
+        ]
+      },
+      "results": [
+        {
+          "algorithm": "gzip-9",
+          "original_size_bytes": 855,
+          "compressed_size_bytes": 414,
+          "compression_ratio_percent": 51.58,
+          "compression_time_ms": 0.095,
+          "decompression_time_ms": 0.042,
+          "compression_speed_mbps": 8.57,
+          "decompression_speed_mbps": 19.21,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "bzip2-9",
+          "original_size_bytes": 855,
+          "compressed_size_bytes": 453,
+          "compression_ratio_percent": 47.02,
+          "compression_time_ms": 0.302,
+          "decompression_time_ms": 0.082,
+          "compression_speed_mbps": 2.7,
+          "decompression_speed_mbps": 9.97,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "lzma-9",
+          "original_size_bytes": 855,
+          "compressed_size_bytes": 488,
+          "compression_ratio_percent": 42.92,
+          "compression_time_ms": 21.445,
+          "decompression_time_ms": 0.109,
+          "compression_speed_mbps": 0.04,
+          "decompression_speed_mbps": 7.48,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "zlib-9",
+          "original_size_bytes": 855,
+          "compressed_size_bytes": 402,
+          "compression_ratio_percent": 52.98,
+          "compression_time_ms": 0.129,
+          "decompression_time_ms": 0.02,
+          "compression_speed_mbps": 6.35,
+          "decompression_speed_mbps": 40.71,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "semantic-mock",
+          "original_size_bytes": 855,
+          "compressed_size_bytes": 504,
+          "compression_ratio_percent": 41.05,
+          "compression_time_ms": 21.27,
+          "decompression_time_ms": 0.13,
+          "compression_speed_mbps": 0.04,
+          "decompression_speed_mbps": 6.29,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        }
+      ],
+      "winners": {
+        "best_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9"
+      },
+      "summary": {
+        "best_compression_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9",
+        "avg_compression_ratio": 47.11,
+        "avg_compression_time_ms": 8.65
+      }
+    },
+    {
+      "timestamp": "2025-10-01T22:15:04.701502",
+      "corpus": {
+        "name": "json_structured",
+        "size_bytes": 420,
+        "languages": [
+          "sanskrit_panini",
+          "french_literary",
+          "english_technical",
+          "python_code",
+          "json_structured"
+        ]
+      },
+      "results": [
+        {
+          "algorithm": "gzip-9",
+          "original_size_bytes": 420,
+          "compressed_size_bytes": 288,
+          "compression_ratio_percent": 31.43,
+          "compression_time_ms": 0.088,
+          "decompression_time_ms": 0.056,
+          "compression_speed_mbps": 4.57,
+          "decompression_speed_mbps": 7.18,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "bzip2-9",
+          "original_size_bytes": 420,
+          "compressed_size_bytes": 324,
+          "compression_ratio_percent": 22.86,
+          "compression_time_ms": 0.223,
+          "decompression_time_ms": 0.063,
+          "compression_speed_mbps": 1.8,
+          "decompression_speed_mbps": 6.36,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "lzma-9",
+          "original_size_bytes": 420,
+          "compressed_size_bytes": 332,
+          "compression_ratio_percent": 20.95,
+          "compression_time_ms": 21.226,
+          "decompression_time_ms": 0.077,
+          "compression_speed_mbps": 0.02,
+          "decompression_speed_mbps": 5.19,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "zlib-9",
+          "original_size_bytes": 420,
+          "compressed_size_bytes": 276,
+          "compression_ratio_percent": 34.29,
+          "compression_time_ms": 0.121,
+          "decompression_time_ms": 0.017,
+          "compression_speed_mbps": 3.3,
+          "decompression_speed_mbps": 23.01,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        },
+        {
+          "algorithm": "semantic-mock",
+          "original_size_bytes": 420,
+          "compressed_size_bytes": 348,
+          "compression_ratio_percent": 17.14,
+          "compression_time_ms": 20.966,
+          "decompression_time_ms": 0.116,
+          "compression_speed_mbps": 0.02,
+          "decompression_speed_mbps": 3.45,
+          "integrity_valid": true,
+          "memory_peak_kb": 0
+        }
+      ],
+      "winners": {
+        "best_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9"
+      },
+      "summary": {
+        "best_compression_ratio": "zlib-9",
+        "fastest_compression": "gzip-9",
+        "fastest_decompression": "zlib-9",
+        "avg_compression_ratio": 25.33,
+        "avg_compression_time_ms": 8.52
+      }
+    }
+  ],
+  "aggregate_statistics": {
+    "gzip-9": {
+      "avg_compression_ratio_percent": 46.89,
+      "avg_compression_time_ms": 0.138,
+      "avg_decompression_time_ms": 0.051,
+      "min_ratio": 31.43,
+      "max_ratio": 68.18
+    },
+    "bzip2-9": {
+      "avg_compression_ratio_percent": 44.44,
+      "avg_compression_time_ms": 0.29,
+      "avg_decompression_time_ms": 0.083,
+      "min_ratio": 22.86,
+      "max_ratio": 74.68
+    },
+    "lzma-9": {
+      "avg_compression_ratio_percent": 37.21,
+      "avg_compression_time_ms": 21.211,
+      "avg_decompression_time_ms": 0.102,
+      "min_ratio": 20.95,
+      "max_ratio": 64.76
+    },
+    "zlib-9": {
+      "avg_compression_ratio_percent": 48.5,
+      "avg_compression_time_ms": 0.14,
+      "avg_decompression_time_ms": 0.021,
+      "min_ratio": 34.29,
+      "max_ratio": 69.2
+    },
+    "semantic-mock": {
+      "avg_compression_ratio_percent": 35.07,
+      "avg_compression_time_ms": 20.972,
+      "avg_decompression_time_ms": 0.126,
+      "min_ratio": 17.14,
+      "max_ratio": 63.39
+    }
+  },
+  "conclusion": {
+    "best_overall_ratio": "zlib-9",
+    "fastest_overall": "gzip-9",
+    "semantic_performance": "competitive"
+  }
+}
