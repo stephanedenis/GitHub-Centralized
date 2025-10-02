@@ -1,0 +1,79 @@
+# Python
+
+__pycache__/# Fichiers temporaires et logs
+
+*.py[cod]temp/logs/
+
+*$py.classtemp/cache/
+
+*.sotemp/build/
+
+.Python*.tmp
+
+*.log
+
+# Logs__pycache__/
+
+*.log.python-version
+
+
+
+# Environments# Configuration locale
+
+.envconfig/local_*.json
+
+.venvconfig/secrets.json
+
+env/.env
+
+venv/.env.local
+
+
+
+# IDE# Archives et sauvegardes
+
+.vscode/colab_results_archive_full/
+
+.idea/legacy/
+
+*.swp*.backup
+
+*.swo*.bak
+
+*~
+
+# Wikipedia dumps - GROS FICHIERS (27+ GB)
+
+# OSwikipedia_dumps/
+
+.DS_Store*.sql.gz
+
+Thumbs.db*.xml.bz2
+
+wikipedia_*.json
+
+# Project specificwikipedia_*.csv
+
+phase1_monitoring.log
+
+auto_update_dashboard.log# Cache Python et VS Code
+
+autonomous_execution.log__pycache__/
+
+*.pyc
+*.pyo
+.vscode/launch.json
+.vscode/.ropeproject/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Git temporaires
+.github_last_check
+github_sync_tracking.json
+
+# Environnements virtuels
+.venv/
+venv/
+env/
